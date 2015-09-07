@@ -1,0 +1,333 @@
+\batchmode
+\documentclass[11pt,twoside]{book}
+\makeatletter
+\usepackage{epsf,makeidx}
+
+\scrollmode 
+ 
+\sloppy
+
+\setlength {\textwidth}{110mm}
+ 
+
+\setlength {\textheight}{190mm}
+ 
+
+\setlength {\headsep}{5mm}
+ 
+
+\setlength {\headheight}{10mm}
+ 
+
+\setlength {\topmargin}{17.5mm}
+ 
+
+\setlength {\oddsidemargin}{27mm}
+ 
+
+\setlength {\evensidemargin}{21mm}
+ 
+
+\setlength {\footnotesep}{12pt}
+ 
+
+\addtolength {\parskip}{3pt}
+ 
+\setlength {\parindent}{12pt}
+ 
+
+\setlength {\leftmargini}{20pt}
+ 
+
+\setlength {\leftmarginii}{28pt}
+ 
+
+
+
+
+\newfont {\titlei}{pplb at 12pt}
+ 
+
+\newfont {\titleii}{pplb at 10pt}
+ 
+
+\newfont {\titleiii}{pplb at 12pt}
+ 
+
+\newfont {\titleiv}{pplb at 14.4pt}
+ 
+
+\newfont {\titlev}{pplb at 12pt}
+ 
+
+\newfont {\titlevi}{pplb at 8pt}
+ 
+
+
+
+\newfont {\chapfig}{pplb at 29.9pt}
+ 
+
+\newfont {\chaphead}{pplb at 20.7pt}
+ 
+
+\newfont {\mischead}{pplb at 20.7pt}
+ 
+
+\newfont {\secthead}{pplb at 14.4pt}
+ 
+
+\newfont {\subjhead}{pplb at 12pt}
+ 
+
+\newfont {\unithead}{pplb at 11pt}
+ 
+
+\newfont {\subjit}{pplbi at 11pt}
+ 
+
+
+
+\newfont {\pagehead}{pplr at 11pt}
+ 
+
+
+\hyphenation{geom-etry geom-etr-ic geom-etr-ic-al}
+\hyphenation{Middle-ditch}
+
+\setcounter{capctr}{0}
+
+\title{\mbox{SvLis}\ --- Introduction and User Manual}
+\author{Adrian Bowyer}
+
+\makeindex
+
+\raggedbottom
+
+\newcommand{\smlgap}{\vspace{3mm}\\}
+
+\newcommand{\svtri}{\raisebox{-3.85mm}[0mm][0mm]{{\Huge\^{}}\hspace{-3.43mm}\rule[4.63mm]{2.37mm}{0.1mm}\hspace{-2.47mm}\rule[4.53mm]{2.57mm}{0.1mm}\hspace{-3.0mm}\rule[3.88mm]{3.4mm}{0.08mm}}}
+
+\newenvironment{alist}{\begin{list}{$\svtri$}{
+\addtolength{\topsep}{-0.65\topsep}\setlength{\partopsep}{0.0mm}\addtolength{\itemsep}{-0.65\itemsep}\addtolength{\parsep}{-0.65\parsep}}}{\end{list}}
+
+\newenvironment{blist}{\begin{list}{$\circ$}{\addtolength{\topsep}{-0.65\topsep}\setlength{\partopsep}{0.0mm}\addtolength{\itemsep}{-0.65\itemsep}\addtolength{\parsep}{-0.65\parsep}}}{\end{list}}
+
+\newcommand{\curchap}{dummy}
+
+\renewcommand{\curchap}{dummy}
+
+\newcommand{\chap}[3]{\cleardoublepage\thispagestyle{empty}\pagestyle{myheadings}\markboth{\pagehead #2 #3{\hspace{-110mm}\protect\rule[-3mm]{110mm}{0.8pt}}}{\protect\rule[-3mm]{110mm}{0.8pt}{\hspace{-110mm}}\pagehead #2 #3}
+\renewcommand {\curchap}{#2 #3}
+\setcounter{footnote}{0}
+\vspace*{-10mm}\par
+\noindent{\hspace*{\fill}{\chapfig #1}\hspace*{\fill}}
+\vspace{8mm}\\{\hspace*{\fill}{\chaphead #2}\hspace*{\fill}}
+\vspace{4mm}\\{\hspace*{\fill}{\chaphead #3}\hspace*{\fill}}
+\vspace{8mm}\\}
+
+\newcommand{\misc}[1]{\cleardoublepage\thispagestyle{empty}\pagestyle{myheadings}\markboth{\pagehead #1{\hspace{-110mm}\protect\rule[-3mm]{110mm}{0.8pt}}}{\protect\rule[-3mm]{110mm}{0.8pt}{\hspace{-110mm}}\pagehead #1}
+\renewcommand {\curchap}{#1}
+\setcounter{footnote}{0}
+\vspace*{5mm}\par
+\noindent{\hspace*{\fill}{\mischead #1}\hspace*{\fill}}
+\vspace{18mm}\\}
+
+\newcommand{\sect}[1]{\vspace{18pt}\vspace*{18pt}\par\pagebreak[3]
+\noindent{\raggedright\Large\secthead #1}\vspace{12pt}\par\nobreak
+\markboth{\pagehead\curchap{\hspace{-110mm}\protect\rule[-3mm]{110mm}{0.8pt}}}{\protect\rule[-3mm]{110mm}{0.8pt}{\hspace{-110mm}}\pagehead #1}}
+
+\newcommand{\subj}[1]{\vspace{8pt}\vspace*{8pt}\par\pagebreak[1]
+\noindent{\raggedright\large\subjhead #1}\vspace{6pt}\par\nobreak}
+
+\newcommand{\unit}[1]{\vspace{6pt}\vspace*{6pt}\par\pagebreak[1]
+\noindent{\raggedright\unithead #1}\vspace{3pt}\par\nobreak}
+
+\newcommand{\subjgap}{\vspace{8mm}\par}
+
+\newcounter{capctr}
+
+\newcommand{\capbeg}{\refstepcounter{capctr}\begin{center}\begin{minipage}{100mm}\vspace{3mm}\par Figure~\arabic{capctr}.}
+
+\newcommand{\capend}{\end{minipage}\end{center}}
+
+\newcommand{\svlis}{\mbox{svLis}}
+
+\newcommand{\fsvlis}{\mbox{svLis}}
+
+\newcommand{\Svlis}{\mbox{SvLis}}
+
+\newcommand{\DIY}{{\small DIY}}
+
+\newcommand{\CSG}{{\small CSG}}
+
+\newcommand{\Cpp}{C{\footnotesize ++}}
+
+\newcommand{\nullbrace}{[\hspace{0.5mm}]}
+
+\newcommand{\phrdots}{\mbox{.\hspace{1mm}.\hspace{1mm}.}}
+
+\newcommand{\sntdots}{\mbox{.\hspace{0.3mm}.\hspace{0.3mm}.\hspace{0.3mm}}.}
+
+\renewcommand{\thepage}{\arabic{page}}
+
+\newcommand{\mypage}{\arabic{page}}
+
+\newcommand{\bibgap}{\vspace{1.5mm}\\}
+
+\newcommand{\bibend}{\vspace{4.5mm}\pagebreak[3]}
+
+\makeatother
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newenvironment{tex2html_wrap}{}{}
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\topskip=0pt
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize\parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}\normalsize}
+\def\lthtmltypeout#1{{\let\protect\string\immediate\write\lthtmlwrite{#1}}}%
+\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup}%
+\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup%
+ \let\ifinner=\iffalse }%
+\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
+ \expandafter\box\next\egroup}%
+\newcommand\lthtmlmathtype[1]{\def\lthtmlmathenv{#1}}%
+\newcommand\lthtmllogmath{\lthtmltypeout{l2hSize %
+:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
+\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
+       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
+       \global\let\@freelist\@savefreelist}%
+\newcommand\lthtmldisplayA[1]{\lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
+  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
+\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
+\newcommand\lthtmlinlinemathA[1]{\lthtmlmathtype{#1}\lthtmlhboxmathA  \vrule height1.5ex width0pt }%
+\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
+\def\lthtmlsetmath{\hbox{\vrule width.5pt\vtop{\vbox{%
+  \kern.5pt\kern0.8 pt\hbox{\hglue.5pt\copy\sizebox\hglue0.8 pt}\kern.5pt%
+  \ifdim\dp\sizebox>0pt\kern0.8 pt\fi}%
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\centerinlinemath{\dimen1=\ht\sizebox
+  \ifdim\dimen1<\dp\sizebox \ht\sizebox=\dp\sizebox
+  \else \dp\sizebox=\ht\sizebox \fi}
+
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize\expandafter\vfill
+  \else\expandafter\vss\fi}%
+\makeatletter
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\makeatother
+\setcounter{capctr}{0}
+\stepcounter{chapter}
+\stepcounter{chapter}
+\setcounter{page}{1}
+\stepcounter{subsection}
+\stepcounter{chapter}
+\stepcounter{chapter}
+
+\addtolength {\topsep}{-0.65\topsep}
+%
+
+
+\setlength {\partopsep}{0.0mm}
+%
+
+
+\addtolength {\itemsep}{-0.65\itemsep}
+%
+
+
+\addtolength {\parsep}{-0.65\parsep}
+%
+
+\stepcounter{chapter}
+
+\addtolength {\topsep}{-0.65\topsep}
+%
+
+
+\setlength {\partopsep}{0.0mm}
+%
+
+
+\addtolength {\itemsep}{-0.65\itemsep}
+%
+
+
+\addtolength {\parsep}{-0.65\parsep}
+%
+
+\stepcounter{chapter}
+
+\addtolength {\topsep}{-0.65\topsep}
+%
+
+
+\setlength {\partopsep}{0.0mm}
+%
+
+
+\addtolength {\itemsep}{-0.65\itemsep}
+%
+
+
+\addtolength {\parsep}{-0.65\parsep}
+%
+
+
+\addtolength {\topsep}{-0.65\topsep}
+%
+
+
+\setlength {\partopsep}{0.0mm}
+%
+
+
+\addtolength {\itemsep}{-0.65\itemsep}
+%
+
+
+\addtolength {\parsep}{-0.65\parsep}
+%
+
+\stepcounter{chapter}
+\stepcounter{chapter}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline7089}%
+$\hbox{difference: {<TT>{<tex2html_image_mark>#tex2html_wrap_inline5521#}</TT>}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{chapter}
+
+\end{document}

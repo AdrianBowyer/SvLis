@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.07 [en] (X11; I; Linux 2.0.36 i686) [Netscape]">
+   <TITLE>SvLis example code</TITLE>
+</HEAD>
+<BODY BACKGROUND="svlis_new.gif">
+
+<HR>
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<CENTER>
+<P><A HREF="svlis.html"><IMG SRC="svlis.gif" ALT="SvLis Home Page" BORDER=0 ></A>
+<P><A HREF="mailto:svlis@bath.ac.uk">svlis@bath.ac.uk</A></CENTER>
+
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<CENTER>
+<H2>
+Short C++ program showing how easy svLis is to use</H2></CENTER>
+&nbsp;
+<P>&nbsp;
+<CENTER>
+<P>Copyright &copy; 1994, 1996, 1999 <A HREF="http://www.inge.com">Information
+Geometers Ltd </A>and <A HREF="http://www.bath.ac.uk">The University of
+Bath</A></CENTER>
+
+<CENTER>
+<H3>
+</H3></CENTER>
+
+<HR>
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<BR>
+<BR>
+<CENTER>
+<P>This program creates a block with a spherical chunk missing that looks
+like this:
+<P><IMG SRC="b_hole.gif" ALT="" >
+<P>Block with sphere subtracted modelled and polygonalized by svLis, then
+rendered in real time using a Z-buffer.</CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<P>
+<HR>
+<BR>&nbsp;
+<BR>&nbsp;
+<PRE>// Program to make a block with a bite.
+
+// Definitions for svLis
+
+#include "svlis.h"
+
+// Definitions for standard colours
+
+#include "sv_cols.h"
+
+int main()
+{
+// Start svLis.
+
+&nbsp; svlis_init();
+
+// Define the block's corners.
+
+&nbsp; sv_point corner_a = sv_point(0,0,0);
+&nbsp; sv_point corner_b = sv_point(1,1,1);
+
+// Make the cube; it will be a set
+
+&nbsp; sv_set block = cuboid(corner_a, corner_b);
+
+// Colour it green - note British spelling...
+// Note also that member functions have no side effects,
+// so we assign the coloured block to the sv_set block.
+
+&nbsp; block = block.colour(SV_GREEN);
+
+// Define a sphere centred on one corner, radius 0.8
+
+&nbsp; sv_set sph = sphere(corner_b, 0.8).colour(SV_RED);
+
+// Subtract the sphere from the cube.
+
+&nbsp; block = block - sph;
+
+// Define a box in space which contains the things&nbsp;
+// we're interested in.
+
+&nbsp; corner_a = sv_point(-1, -1, -1);
+&nbsp; corner_b = sv_point(2, 2, 2);
+&nbsp; sv_box interesting = sv_box(corner_a, corner_b);
+
+// Make a svLis model by combining the shape
+// and the region of interest.
+
+&nbsp; sv_model m = sv_model(block, interesting);
+
+// Facet the model m - this makes polygons for&nbsp;
+// plotting - then plot the picture of them.
+
+&nbsp; m = m.facet();
+&nbsp; plot_m_p_gons(m);
+
+// That's all, folks.
+
+&nbsp; return(svlis_end(0));
+
+}
+
+
+</PRE>
+
+<HR>
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<CENTER>
+<P><IMG SRC="motto.gif" ALT="PERFICTA  PERFRACTA  QVAERENDO  PERFECTA" ></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<P>
+<HR>
+</BODY>
+</HTML>

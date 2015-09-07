@@ -1,0 +1,38 @@
+
+ 
+
+ 
+<TITLE> Function Representation (F-rep) in Geometric Modeling</TITLE>
+
+ <P>Function Representation (F-rep) in Geometric Modeling
+
+ <P>Research team:
+ 
+<P> Pasko A.A., Savchenko V.V and Miura K.T.
+    Shape Modeling Laboratory, The University of Aizu, Japan
+ 
+ <P>Sourin A.I.
+    School of Applied Science, Nanyang Technological University,
+    Singapore
+ 
+ <P>Adzhiev V.D. 
+    Flight Research Institute, Russia
+    
+ 
+ <P>This team is doing research on the representation of a geometric
+ object by a single real continuous function of several variables
+ as F(X) >= 0. We call it the "function representation" or F-rep.
+ We try to combine many different models like traditional
+ "implicits", skeleton based "implicits", sweeps, set-theoretic 
+ models, volumetric and parametric objects. The main goal is to develop
+ a rich system of geometric operations and relations. Our approach
+ is based on the R-functions - Ck continuous definitions
+ of set-theoretic operations. We apply the theoretic results
+ in different areas: reconstruction from medical data,
+ physically based simulation, artificial life, aesthetic design 
+ and others.   
+ 
+ <P>More information including papers and images can be found
+ in the 
+ <A HREF="http://www.u-aizu.ac.jp/public/www/labs/sw-sm/FrepWWW/F-rep.html">
+ F-rep home page</A>.

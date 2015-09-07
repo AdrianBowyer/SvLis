@@ -1,0 +1,435 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="description" CONTENT="Advanced programming and future developments">
+   <META NAME="keywords" CONTENT="svi2">
+   <META NAME="resource-type" CONTENT="document">
+   <META NAME="distribution" CONTENT="global">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.07 [en] (X11; I; Linux 2.0.36 i686) [Netscape]">
+   <TITLE>Advanced programming and future developments</TITLE>
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<LINK REL="STYLESHEET" HREF="svi2.css">
+<LINK REL="next" HREF="node8.html">
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="up" HREF="svi2.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+<BODY BACKGROUND="svlis_new.gif">
+<!--Navigation Panel--><A NAME="tex2html204" HREF="node8.html"></A><A NAME="tex2html204" HREF="node8.html"></A><A NAME="tex2html204" HREF="node8.html"></A><A NAME="tex2html204" HREF="node8.html"></A><A HREF="node8.html" NAME="tex2html204"><IMG SRC="next_motif.gif" ALT="next" BORDER=0 HEIGHT=24 WIDTH=37 ALIGN=BOTTOM></A><A NAME="tex2html200" HREF="svi2.html"></A><A NAME="tex2html200" HREF="svi2.html"></A><A NAME="tex2html200" HREF="svi2.html"></A><A NAME="tex2html200" HREF="svi2.html"></A><A HREF="svi2.html" NAME="tex2html200"><IMG SRC="up_motif.gif" ALT="up" BORDER=0 HEIGHT=24 WIDTH=26 ALIGN=BOTTOM></A><A NAME="tex2html194" HREF="node6.html"></A><A NAME="tex2html194" HREF="node6.html"></A><A NAME="tex2html194" HREF="node6.html"></A><A NAME="tex2html194" HREF="node6.html"></A><A HREF="node6.html" NAME="tex2html194"><IMG SRC="previous_motif.gif" ALT="previous" BORDER=0 HEIGHT=24 WIDTH=63 ALIGN=BOTTOM></A><A NAME="tex2html202" HREF="node1.html"></A><A NAME="tex2html202" HREF="node1.html"></A><A NAME="tex2html202" HREF="node1.html"></A><A NAME="tex2html202" HREF="node1.html"></A><A HREF="node1.html" NAME="tex2html202"><IMG SRC="contents_motif.gif" ALT="contents" BORDER=0 HEIGHT=24 WIDTH=65 ALIGN=BOTTOM></A><A NAME="tex2html203" HREF="node11.html"></A><A NAME="tex2html203" HREF="node11.html"></A><A NAME="tex2html203" HREF="node11.html"></A><A NAME="tex2html203" HREF="node11.html"></A><A HREF="node11.html" NAME="tex2html203"><IMG SRC="index_motif.gif" ALT="index" BORDER=0 HEIGHT=24 WIDTH=43 ALIGN=BOTTOM></A>
+<BR><B>Next:<A NAME="tex2html205" HREF="node8.html"></A><A NAME="tex2html205" HREF="node8.html"></A><A NAME="tex2html205" HREF="node8.html"></A><A NAME="tex2html205" HREF="node8.html"></A></B><A HREF="node8.html" NAME="tex2html205">Afterword</A>
+<B>Up:<A NAME="tex2html201" HREF="svi2.html"></A><A NAME="tex2html201" HREF="svi2.html"></A><A NAME="tex2html201" HREF="svi2.html"></A><A NAME="tex2html201" HREF="svi2.html"></A></B><A HREF="svi2.html" NAME="tex2html201">SvLis
+Introduction</A>
+<B>Previous:<A NAME="tex2html195" HREF="node6.html"></A><A NAME="tex2html195" HREF="node6.html"></A><A NAME="tex2html195" HREF="node6.html"></A><A NAME="tex2html195" HREF="node6.html"></A></B><A HREF="node6.html" NAME="tex2html195">Sets,
+models, and DIY</A>
+<P><!--End of Navigation Panel--><!--Table of Child-Links--><A NAME="CHILD_LINKS"></A><B>Subsections</B>
+<UL>
+<LI>
+<A NAME="tex2html206" HREF="node7.html#SECTION00710000000000000000"></A><A NAME="tex2html206" HREF="node7.html#SECTION00710000000000000000"></A><A NAME="tex2html206" HREF="node7.html#SECTION00710000000000000000"></A><A NAME="tex2html206" HREF="node7.html#SECTION00710000000000000000"></A><A HREF="node7.html#SECTION00710000000000000000" NAME="tex2html206">Trees
+and recursion</A></LI>
+
+<UL>
+<LI>
+<A NAME="tex2html207" HREF="node7.html#SECTION00711000000000000000"></A><A NAME="tex2html207" HREF="node7.html#SECTION00711000000000000000"></A><A NAME="tex2html207" HREF="node7.html#SECTION00711000000000000000"></A><A NAME="tex2html207" HREF="node7.html#SECTION00711000000000000000"></A><A HREF="node7.html#SECTION00711000000000000000" NAME="tex2html207">Membership
+test for a point</A></LI>
+
+<LI>
+<A NAME="tex2html208" HREF="node7.html#SECTION00712000000000000000"></A><A NAME="tex2html208" HREF="node7.html#SECTION00712000000000000000"></A><A NAME="tex2html208" HREF="node7.html#SECTION00712000000000000000"></A><A NAME="tex2html208" HREF="node7.html#SECTION00712000000000000000"></A><A HREF="node7.html#SECTION00712000000000000000" NAME="tex2html208">The
+potential range of a box in a set</A></LI>
+</UL>
+
+<LI>
+<A NAME="tex2html209" HREF="node7.html#SECTION00720000000000000000"></A><A NAME="tex2html209" HREF="node7.html#SECTION00720000000000000000"></A><A NAME="tex2html209" HREF="node7.html#SECTION00720000000000000000"></A><A NAME="tex2html209" HREF="node7.html#SECTION00720000000000000000"></A><A HREF="node7.html#SECTION00720000000000000000" NAME="tex2html209">Future
+enhancements</A></LI>
+</UL>
+<!--End of Table of Child-Links-->
+<CENTER>Copyright &copy; 1994, 1996, 1999 <A HREF="http://www.inge.com">Information
+Geometers Ltd </A>and <A HREF="http://www.bath.ac.uk">The University of
+Bath</A></CENTER>
+
+<P>
+<HR>
+<H1>
+<A NAME="SECTION00700000000000000000"></A><B><FONT SIZE=+4>Advanced programming
+and future developments</FONT></B></H1>
+
+<H1>
+<A NAME="SECTION00710000000000000000"></A><A NAME="2412"></A><A NAME="CH5"></A><FONT SIZE=+2>Trees
+and recursion</FONT></H1>
+SvLis is highly recursive. Its three major data structures--primitives,
+sets, and models--are all organized as trees, and the usual way of programming
+with them is to use recursive functions to walk those trees. As examples,
+I'll describe two of svLis' internal functions: one that performs a membership
+test to classify a point against a model (in fact in svLis this is a member
+function of the class <TT>sv_model</TT>, but it's shown below as a simple
+function for clarity), and another that computes the range of potential
+values generated by a set within a particular box, using maxima and minima
+instead of intersection and union (this function is actually a member of
+the <TT>sv_set</TT> class, and was discussed on Page&nbsp;<A HREF="node6.html#MXMN"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>).
+<P>The purpose of these examples is to show you how to go about programming
+your own functions<A NAME="2416"></A><A NAME="2417"></A> using svLis. Note
+in particular that the first example need not be a friend of any of the
+classes it uses--the accessing functions built into the classes to return
+such things as the two child operands of a set-theoretic operator are sufficiently
+rich to allow any possible function to be programmed. The only private
+data in the classes are for housekeeping--things such as reference counts
+for items pointed to and so on--and are, in a sense, not part of the svLis
+geometric modeller at all, but merely necessary adjuncts to allow efficient
+storage management, reliable and compact input and output, and so on.
+<BR>&nbsp;
+<H2>
+<A NAME="SECTION00711000000000000000"></A>Membership test for a point</H2>
+<A NAME="2419"></A><A NAME="2420"></A>
+<P><A NAME="MEMTP"></A>It is of course possible to perform a membership
+test to classify a point against a model without dividing it. First a check
+would be done that the point was in the model's box. If not, then a conventional
+code for air would be returned as the result. If the point were in the
+box, it would be tested against each set in the model's list of sets. If
+the point was found to be in any set, a code indicating solid would be
+returned (the list is regarded as being unioned for the purpose of membership
+testing). Failing that, if the point was found to be on the surface of
+a set, a code for surface would be returned; otherwise the result would
+be a code for air.
+<P>However, for complicated sets this would be a very inefficient process,
+especially if a large number of points were to be tested<A NAME="tex2html23" HREF="footnode.html#2422"></A><A NAME="tex2html23" HREF="footnode.html#2422"></A><A NAME="tex2html23" HREF="footnode.html#2422"></A><A NAME="tex2html23" HREF="footnode.html#2422"></A><A HREF="footnode.html#2422" NAME="tex2html23"><IMG SRC="foot_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>.
+It is much better to divide the model first (for example using the na&iuml;ve
+decision procedure <TT>dumb_decision(...)<A NAME="2499"></A><A NAME="2500"></A></TT>;
+see Page&nbsp;<A HREF="node6.html#DUMB"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>).
+Then, svLis performs a recursive traversal of the tree of model boxes until
+the leaf box containing the point to be tested is found; and that point
+is tested against the simple pruned list of sets in that leaf model. This
+is how the membership test function works:
+<BLOCKQUOTE>
+<PRE>// Membership test a point against a model.
+
+mem_test member(const sv_model&amp; m, const sv_point&amp; p,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_primitive known_surface[])
+{
+&nbsp; mem_test result = SV_AIR;
+&nbsp; mem_test temp = SV_AIR;
+&nbsp; sv_set_list sl;
+
+// Is the point in the model's box?
+
+&nbsp; if(m.box().member(p) == SV_AIR) return(SV_AIR);
+
+// If m is a leaf, check against each set in the leaf's
+// list.&nbsp; Otherwise walk down the model tree.
+
+&nbsp; switch (m.kind())
+&nbsp; {
+&nbsp; case LEAF_M:
+&nbsp;&nbsp;&nbsp; sl = m.set_list();
+&nbsp;&nbsp;&nbsp; while(sl.exists())
+&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; temp = sl.set().member(p, known_surface));
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (temp == SV_SOLID) return(SV_SOLID);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (temp == SV_SURFACE) result = SV_SURFACE;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sl = sl.next();
+&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp; return(result);</PRE>
+
+<PRE>&nbsp; case X_DIV:
+&nbsp;&nbsp;&nbsp; if (p.x &lt; m.coord())
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return(m.child_1().member(p,known_surface));
+&nbsp;&nbsp;&nbsp; else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return(m.child_2().member(p,known_surface));</PRE>
+
+<PRE>&nbsp; case Y_DIV:
+&nbsp;&nbsp;&nbsp; if (p.y &lt; m.coord())
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return(m.child_1().member(p,known_surface));
+&nbsp;&nbsp;&nbsp; else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return(m.child_2().member(p,known_surface));</PRE>
+
+<PRE>&nbsp; case Z_DIV:
+&nbsp;&nbsp;&nbsp; if (p.z &lt; m.coord())
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return(m.child_1().member(p,known_surface));
+&nbsp;&nbsp;&nbsp; else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return(m.child_2().member(p,known_surface));</PRE>
+
+<PRE>&nbsp; default:
+&nbsp;&nbsp;&nbsp; svlis_error("member(sv_model, ...)",
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "dud model kind", SV_CORRUPT);
+&nbsp; }
+
+// Should never get here.
+
+&nbsp; svlis_error("member(sv_model, ...)",
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "error in model; returning SV_AIR",SV_CORRUPT);
+&nbsp; return(SV_AIR);
+}</PRE>
+</BLOCKQUOTE>
+This traverses the model's tree of boxes, comparing the coordinates of
+the point with the coordinates of the planes that divide any box into its
+two smaller children and selecting the appropriate child. When a leaf is
+reached, the membership test is done for all the sets in the list of sets
+at that leaf. The array of primitives <TT>known_surface[ ]<A NAME="2501"></A></TT>&nbsp;
+allows the user to provide the function with a list of primitives for which
+the point is known to be on the surface (which would happen, for instance,
+if the point was at the intersection of the surfaces of three primitives
+coming together in a corner). This known-surface array makes the membership
+test more efficient, as it removes the need for the system to categorize
+the point against the primitives which (in the example) generated it. If
+known-surface information is not available, just send the function a pointer
+to an undefined primitive as its third argument, and this will be ignored.
+<P>There are a couple of errors at the end of the function which should
+only be printed if the data structures have been corrupted somehow.
+<BR>&nbsp;
+<BR>&nbsp;
+<H2>
+<A NAME="SECTION00712000000000000000"></A><A NAME="2431"></A><A NAME="2432"></A><A NAME="2433"></A><A NAME="BOXPRIM"></A>The
+potential range of a box in a set</H2>
+As was described on Page&nbsp;<A HREF="node6.html#PRIMRANGE"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>,
+svLis uses interval arithmetic<A NAME="2436"></A>&nbsp; to make a (conservative)
+estimate of the range of potential values that a primitive may take in
+a box. The maximum and minimum of a pair of intervals are themselves well-defined
+intervals<A NAME="tex2html24" HREF="footnode.html#2437"></A><A NAME="tex2html24" HREF="footnode.html#2437"></A><A NAME="tex2html24" HREF="footnode.html#2437"></A><A NAME="tex2html24" HREF="footnode.html#2437"></A><A HREF="footnode.html#2437" NAME="tex2html24"><IMG SRC="foot_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>.
+The equivalences between maximum and intersection and minimum and union
+can be exploited to give the range of potentials that a set can exhibit
+in a box. To compute this, the function recursively traverses the tree
+of unions and intersections that represents a set, finds the ranges for
+the leaf primitives, and combines them. As it does so, it keeps track of
+the primitives corresponding to the sets which gave rise to the bottom
+and top of the range interval (the `winning' primitives<A NAME="2438"></A>;
+these may of course be the same). Here is that function:
+<BLOCKQUOTE>
+<PRE>// Range for a box (and winning leaf sets).
+
+sv_interval sv_set::range
+&nbsp; (const sv_box&amp; b, sv_set* w_lo, sv_set* w_hi)
+{
+&nbsp; sv_interval result_2;
+&nbsp; sv_interval result;
+&nbsp; sv_set w_2_lo, w_2_hi;
+
+&nbsp; switch (contents())
+&nbsp; {
+&nbsp; case SV_EVERYTHING:
+&nbsp;&nbsp;&nbsp; w_lo = this;
+&nbsp;&nbsp;&nbsp; w_hi = this;
+&nbsp;&nbsp;&nbsp; return(sv_interval(-2.0,-1.0));&nbsp; // By convention
+
+&nbsp; case SV_NOTHING:
+&nbsp;&nbsp;&nbsp; w_lo = this;
+&nbsp;&nbsp;&nbsp; w_hi = this;
+&nbsp;&nbsp;&nbsp; return(sv_interval(1.0,2.0));&nbsp;&nbsp;&nbsp; // By convention
+
+// Leaf set - return corresponding primitive's range
+// for box b.
+
+&nbsp; case 1:
+&nbsp;&nbsp;&nbsp; w_lo = this;
+&nbsp;&nbsp;&nbsp; w_hi = this;
+&nbsp;&nbsp;&nbsp; return(primitive().range(b));
+
+// Compound set - recursively call range for the
+// children.
+
+&nbsp; default:&nbsp;
+&nbsp;&nbsp;&nbsp; result = child_1().range(b, w_lo, w_hi);
+&nbsp;&nbsp;&nbsp; result_2 = child_2().range(b ,&amp;w_2_lo, &amp;w_2_hi);
+
+&nbsp;&nbsp;&nbsp; if (operator() == SV_UNION)&nbsp; // U == minimum
+&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (result_2.lo &lt; result.lo)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *w_lo = w_2_lo;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result.lo = result_2.lo;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (result_2.hi &lt; result.hi)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *w_hi = w_2_hi;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result.hi = result_2.hi;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp; } else
+&nbsp;&nbsp;&nbsp; { // SV_INTERSECTION == maximum
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (result_2.lo > result.lo)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *w_lo = w_2_lo;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result.lo = result_2.lo;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (result_2.hi > result.hi)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *w_hi = w_2_hi;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result.hi = result_2.hi;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp; }
+
+// Keep track of the attributes.
+
+&nbsp;&nbsp;&nbsp; if ( this->has_attribute() &amp;&amp; ( !(w_lo->has_attribute()) ) )
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *w_lo = w_lo->attribute(this->attribute());
+&nbsp;&nbsp;&nbsp; if ( this->has_attribute() &amp;&amp; ( !(w_hi->has_attribute()) ) )
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *w_hi = w_hi->attribute(this->attribute());</PRE>
+
+<PRE>&nbsp;&nbsp;&nbsp; return(result);
+&nbsp; }
+}</PRE>
+</BLOCKQUOTE>
+The function first checks to see if it has been given the universal or
+the empty set, in which case the answer--following an appropriate convention--is
+immediately returned. If the set is a leaf containing a single primitive
+the range for that is calculated and returned. If the set is a union or
+an intersection, the function calls itself recursively for the two child
+operands, then combines the results appropriately. Finally, it makes sure
+that any attributes are inherited properly by the two sets that are returned
+by means of the pointer arguments.
+<BR>&nbsp;
+<BR>&nbsp;
+<H1>
+<A NAME="SECTION00720000000000000000"></A>Future enhancements</H1>
+<A NAME="2440"></A>
+<P><A NAME="FUTURE"></A>As mentioned in the Foreword, svLis was written
+both as a research and as a commercial geometric modeller. A number of
+current research projects are using it, and the results of those projects
+will be incorporated into svLis in the future. Additional facilities, not
+linked to a particular project, are being developed as well. This section
+gives a list of some of the current plans; I should say that directions--particularly
+on the research side--may change, so some objectives may be reduced in
+priority and some new aims may be introduced.
+<UL>
+<LI>
+<I>Distances<A NAME="2444"></A></I>. SvLis will shortly have nearest-leaf-set-to-a-point
+queries, and possibly also maximum and minimum distances between sets queries.</LI>
+
+<LI>
+<I>Interference<A NAME="2446"></A></I>. SvLis will have code in to detect
+when a pair of sets overlap, touch, or are distinct.</LI>
+
+<LI>
+<I>Feature recognition<A NAME="2450"></A></I>. This will allow you to make
+a svLis model of a feature, and then search for instances of that feature
+in a larger model under translation, rotation, and scale-change. It will
+also allow parameterized features to be defined, and then for searches
+to be done for instances which will return the matching parameter values.</LI>
+
+<LI>
+<I>Minkowski or vector sums<A NAME="2452"></A><A NAME="2453"></A></I>.
+These will allow offset surfaces and much more to be computed from svLis
+models.</LI>
+
+<LI>
+<I>Motion<A NAME="2455"></A></I>. This will allow mechanisms to be modelled.</LI>
+
+<LI>
+<I>Connected components<A NAME="2457"></A></I>. This will allow analysis
+of whether or not a set represents one, or two or more, separate lumps
+in space.</LI>
+
+<LI>
+<I>Mixed algebraic and set-operators<A NAME="2459"></A></I>. At the moment,
+primitives are made by arithmetic and transcendental functions, then set-theory
+is done on the resulting potential-function inequalities. This will remove
+the demarcation, and allow arithmetic to be done on sets, which permits
+the convenient definition of a number of shapes.</LI>
+
+<LI>
+<I>Unidirectional scaling<A NAME="2461"></A></I>. This will allow shapes
+to be stretched in one direction only.</LI>
+
+<LI>
+<I>Regularization<A NAME="2463"></A></I>. This will deal with the situation
+when, for example, you intersect two primitives with a common face--this
+should not leave a zero-thickness solid. If you want one of them you should
+be using the sheet facilities provided by the <TT>abs</TT> function anyway.</LI>
+
+<LI>
+<I>Conversion of solids to shells<A NAME="2466"></A></I>. Take away the
+inside of a solid, leaving a zero-thickness shell made of sheets.</LI>
+
+<LI>
+<I>Digital Voronoi diagrams<A NAME="2468"></A></I>. This is not the place
+to describe what Voronoi diagrams are<A NAME="tex2html25" HREF="footnode.html#2502"></A><A NAME="tex2html25" HREF="footnode.html#2502"></A><A NAME="tex2html25" HREF="footnode.html#2502"></A><A NAME="tex2html25" HREF="footnode.html#2502"></A><A HREF="footnode.html#2502" NAME="tex2html25"><IMG SRC="foot_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>,
+but they form the basis of many finite-element schemes, and are also useful
+in skeletonization. I intend to introduce code into svLis to compute digital
+Voronoi diagrams of geometric models.</LI>
+
+<LI>
+<I>Parametric curves and surfaces<A NAME="2488"></A><A NAME="2489"></A><A NAME="2490"></A></I>.
+SvLis will remain based mainly on implicit geometry, but I have a research
+student working on the incorporation of parametric surfaces in svLis.</LI>
+</UL>
+A number of items have also been identified that are for applications writers
+to implement outside svLis. Here is a (necessarily incomplete) list:
+<UL>
+<LI>
+<I>Further divider decision procedures<A NAME="2473"></A></I>. SvLis will
+have a number which implement its own requirements. It is up to you to
+add to these if you want.</LI>
+
+<LI>
+<I>Constraints<A NAME="2475"></A></I>. It should be easy to use a constraint
+resolver with svLis.</LI>
+
+<LI>
+<I>Tolerances<A NAME="2477"></A></I>. Nothing will be provided beyond the
+information already offered by user-defined attributes.</LI>
+
+<LI>
+<I>Two-dimensional operations<A NAME="2479"></A></I>. No procedures will
+be provided to work within sheets.</LI>
+
+<LI>
+<I>Sweeps and envelopes<A NAME="2481"></A></I>. These are for applications
+writers, apart from the Minkowski sums already mentioned.</LI>
+
+<LI>
+<I>Fancy renderers<A NAME="2483"></A></I>. Facets are available, and there
+is a ray tracer. Nothing else will be provided.</LI>
+
+<LI>
+<I>Non-linear transforms<A NAME="2485"></A><A NAME="2486"></A></I>. `Bends',
+and other operations that distort primitives.</LI>
+
+<LI>
+<I>Cellular models<A NAME="2492"></A><A NAME="2493"></A></I>. Beyond the
+sheet and wire functions already supplied, svLis will support no structures
+within sets. More than one set can be in the same physical place, of course,
+but it's up to the dividers you write to sort out what's going on.</LI>
+
+<LI>
+<I>Explicit boundary representation<A NAME="2495"></A></I>. SvLis will
+not have functions for doing Euler operations on faces and edges and dealing
+with other surface topology.</LI>
+
+<LI>
+<I>Vector fields<A NAME="2497"></A></I>. You can program your own, but
+they will not form part of the svLis kernel.</LI>
+</UL>
+
+<HR><!--Navigation Panel--><A NAME="tex2html204" HREF="node8.html"></A><A NAME="tex2html204" HREF="node8.html"></A><A NAME="tex2html204" HREF="node8.html"></A><A NAME="tex2html204" HREF="node8.html"></A><A HREF="node8.html" NAME="tex2html204"><IMG SRC="next_motif.gif" ALT="next" BORDER=0 HEIGHT=24 WIDTH=37 ALIGN=BOTTOM></A><A NAME="tex2html200" HREF="svi2.html"></A><A NAME="tex2html200" HREF="svi2.html"></A><A NAME="tex2html200" HREF="svi2.html"></A><A NAME="tex2html200" HREF="svi2.html"></A><A HREF="svi2.html" NAME="tex2html200"><IMG SRC="up_motif.gif" ALT="up" BORDER=0 HEIGHT=24 WIDTH=26 ALIGN=BOTTOM></A><A NAME="tex2html194" HREF="node6.html"></A><A NAME="tex2html194" HREF="node6.html"></A><A NAME="tex2html194" HREF="node6.html"></A><A NAME="tex2html194" HREF="node6.html"></A><A HREF="node6.html" NAME="tex2html194"><IMG SRC="previous_motif.gif" ALT="previous" BORDER=0 HEIGHT=24 WIDTH=63 ALIGN=BOTTOM></A><A NAME="tex2html202" HREF="node1.html"></A><A NAME="tex2html202" HREF="node1.html"></A><A NAME="tex2html202" HREF="node1.html"></A><A NAME="tex2html202" HREF="node1.html"></A><A HREF="node1.html" NAME="tex2html202"><IMG SRC="contents_motif.gif" ALT="contents" BORDER=0 HEIGHT=24 WIDTH=65 ALIGN=BOTTOM></A><A NAME="tex2html203" HREF="node11.html"></A><A NAME="tex2html203" HREF="node11.html"></A><A NAME="tex2html203" HREF="node11.html"></A><A NAME="tex2html203" HREF="node11.html"></A><A HREF="node11.html" NAME="tex2html203"><IMG SRC="index_motif.gif" ALT="index" BORDER=0 HEIGHT=24 WIDTH=43 ALIGN=BOTTOM></A>
+<BR><B>Next:<A NAME="tex2html205" HREF="node8.html"></A><A NAME="tex2html205" HREF="node8.html"></A><A NAME="tex2html205" HREF="node8.html"></A><A NAME="tex2html205" HREF="node8.html"></A></B><A HREF="node8.html" NAME="tex2html205">Afterword</A>
+<B>Up:<A NAME="tex2html201" HREF="svi2.html"></A><A NAME="tex2html201" HREF="svi2.html"></A><A NAME="tex2html201" HREF="svi2.html"></A><A NAME="tex2html201" HREF="svi2.html"></A></B><A HREF="svi2.html" NAME="tex2html201">SvLis
+Introduction</A>
+<B>Previous:<A NAME="tex2html195" HREF="node6.html"></A><A NAME="tex2html195" HREF="node6.html"></A><A NAME="tex2html195" HREF="node6.html"></A><A NAME="tex2html195" HREF="node6.html"></A></B><A HREF="node6.html" NAME="tex2html195">Sets,
+models, and DIY</A><!--End of Navigation Panel-->
+<ADDRESS>
+<I>Adrian Bowyer</I></ADDRESS>
+
+<P><BR>
+<HR>
+<BR>&nbsp;
+<P><BR>
+<CENTER>
+<P><IMG SRC="motto.gif" ALT="PERFICTA  PERFRACTA  QVAERENDO  PERFECTA" HEIGHT=25 WIDTH=720></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<ADDRESS>
+
+<HR></ADDRESS>
+
+<BR>&nbsp;
+<P>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+</BODY>
+</HTML>

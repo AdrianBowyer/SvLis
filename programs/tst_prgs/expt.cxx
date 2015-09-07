@@ -1,0 +1,135 @@
+#include "svlis.h"
+#include <time.h>
+
+sv_real vol_ratio = 0.001;
+
+void af_tst_decision(const sv_model& m, sv_integer level, void* vp, mod_kind* k, sv_real* c,
+                sv_model* c_1, sv_model* c_2)
+{
+
+        sv_box mb = m.box();
+        sv_set_list sl = m.set_list();
+        sv_integer dont_divide = 1;
+        sv_integer contents;
+
+// Check each set in the list to see if it has enough contents to make
+// further division needed.
+
+        while(sl.exists() && dont_divide)
+        {
+                contents = sl.set().contents();
+                if (contents >= 1) dont_divide = 0; //!!!!!!!!!!**********
+                sl = sl.next();
+        }
+
+// If all the sets were simple enough, don't divide further.
+
+        if(dont_divide)
+        {
+                *k = LEAF_M;
+                return;
+        }
+
+// We may need to divide further.
+// How big is the box?
+
+// If the box is too small, don't divide it further
+
+        if (mb.vol() < vol_ratio*root_model().box().vol())
+        {
+                *k = LEAF_M;
+                return;
+        }
+
+// Divide the box in half along its longest edge.
+
+        sv_real x = mb.xi.hi() - mb.xi.lo();
+        sv_real y = mb.yi.hi() - mb.yi.lo();
+        sv_real z = mb.zi.hi() - mb.zi.lo();
+
+        if (x > y)
+        {
+                if (z > x)
+                {
+                        *k = Z_DIV;
+                        *c = mb.zi.lo() + z/2;
+                } else
+                {
+                        *k = X_DIV;
+                        *c = mb.xi.lo() + x/2;
+                }
+        } else
+        {
+                if (z > y)
+                {
+                        *k = Z_DIV;
+                        *c = mb.zi.lo() + z/2;
+                } else
+                {
+                        *k = Y_DIV;
+                        *c = mb.yi.lo() + y/2;
+                }
+        }
+        return;
+}
+
+sv_set dud_sphere()
+{
+  sv_primitive xp =sv_primitive(SV_XP);
+  sv_primitive yp =sv_primitive(SV_YP);
+  sv_primitive zp =sv_primitive(SV_ZP);
+
+  sv_primitive sp = xp + yp + zp + xp*xp + xp + yp + zp - 0.2*xp + 0.01  + yp*yp - 0.4*yp + 0.04 + zp*zp - 0.6*zp + 0.09 - 
+    36 - xp - yp - zp - xp - yp - zp;
+  return(sv_set(sp));
+}
+
+void set_background(const sv_point& b);
+
+int main() 
+{ 
+    char dummy; 
+ 
+// Initialize svLis and declare a model 
+ 
+    svlis_init(); 
+    sv_model m;
+
+    char fn[1000];
+    cout << "Model file: ";
+    cin >> fn;
+
+    cout << "Division volume ratio: ";
+    cin >> vol_ratio;
+ 
+// Read the model 
+ 
+    /*   ifstream ipf(fn); 
+	if(!ipf) 
+	{ 
+	  cerr << "Can't open " << fn << endl;
+	  exit(1);
+	} else 
+		ipf >> m; 
+    */
+
+    m = sv_model(dud_sphere(), sv_box(-10*SV_DIAG, 10*SV_DIAG));
+
+// divide it and report the results 
+
+	set_swell_fac(0);
+
+    clock_t t = clock();
+    m = m.divide(0, af_tst_decision);
+    t = clock() - t; 
+
+    cout << "Division time: " << (sv_real)t/(sv_real)CLOCKS_PER_SEC << endl;
+    m.div_stat_report(cout); 
+
+    set_swell_fac(0.05);
+    set_background(sv_point(1,1,1));
+    plot_m_boxes(m, SV_M_NE, "affine test");
+
+    return(svlis_end(0)); 
+} 
+

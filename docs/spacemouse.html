@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.07 [en] (X11; I; Linux 2.0.36 i686) [Netscape]">
+   <TITLE>Mesa and the LogiCAD Spacemouse</TITLE>
+</HEAD>
+<BODY BACKGROUND="svlis_new.gif" onLoad="document.hiddenform.subbutton" onLoad="document.hiddenform.subbutton">
+
+<HR>
+<BR>&nbsp;
+<CENTER>
+<P><B><FONT SIZE=+4><A HREF="http://www.bath.ac.uk/~ensab/G_mod/Svlis">The
+svLis Geometric Modeller</A></FONT></B>
+<P><A HREF="svlis.html"><IMG SRC="svlis.gif" ALT="SvLis Home Page" BORDER=0 HEIGHT=68 WIDTH=129></A></CENTER>
+
+<CENTER>
+<H2>
+Getting the <A HREF="http://www.spacemouse.com">LogiCAD Spacemouse </A>working
+with <A HREF="http://www.mesa3d.org">Mesa OpenGL and GLUT</A></H2></CENTER>
+
+<CENTER><A HREF="mailto:svlis@bath.ac.uk">svlis@bath.ac.uk</A>
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<P>Copyright &copy; 1994, 1996, 1999 <A HREF="http://www.inge.com">Information
+Geometers Ltd </A>and <A HREF="http://www.bath.ac.uk">The University of
+Bath</A></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<P>OpenGL supports the Spaceball, but the window event tags that the Spacemouse
+produces are different.&nbsp; Hence the problem.
+<P>LogiCAD supply an X-Windows driver for the spacemouse; the first thing
+to do is to download that from their website and get it working.
+<P>If (like me) you're running Linux on a PC this may be the first time
+you've used the 9-pin serial port on your machine, so things such as conflicting
+IRQs from odd PCI cards and the like may suddenly become apparent when you
+plug in the Spacemouse.&nbsp; Read the Linux Serial-HOWTO to sort this
+sort of thing out.&nbsp; I found it useful to connect a dumb terminal (actually
+a Psion 3a with an RS232 cable) to listen to the communication between
+the PC and the Spacemouse, so I could convince myself that the right characters
+were going to and fro.&nbsp; The LogiCAD website has an online manual giving
+all the codes the Spacemouse uses, incidentally.
+<P>It would be kinda nice if OpenGL GLUT had one extra callback registration
+- one that allowed one to register a procedure to which all events in OpenGL's
+window(s) that OpenGL itself didn't deal with would be passed.&nbsp;  However,
+it doesn't.&nbsp; Fortunately Mesa is available as source code under the
+GNU public licence, so you can hack your own.&nbsp; The files you have
+to replace (keep a backup of the originals...) are <TT>glut.h</TT> and
+<TT>glut_event.c</TT> in the directories <TT>include/GL</TT> and <TT>src-glut</TT>
+in the Mesa directory tree.
+<P>You can download my amended copies of <TT><A HREF="ftp://ftp.bath.ac.uk/pub/ensab/svlis/glut.h">glut.h</A>
+</TT>and<TT>
+<A HREF="ftp://ftp.bath.ac.uk/pub/ensab/svlis/glut_event.c">glut_event.c</A></TT>&nbsp;
+from those highlights.
+<P>The changes that I made are these (use diff with the original files
+to see the details):
+<P>I've added an extra callback registration:
+<P>&nbsp;&nbsp;&nbsp; void&nbsp; glutUserEventFunc( int (*your_event_function)(Display*
+display, Window window, XEvent* event) );
+<P>this allows you to register your event handler to be called back.
+<P>I've written a skeleton event handler which you can use to develop your
+own.&nbsp; It's called <TT><A HREF="ftp://ftp.bath.ac.uk/pub/ensab/svlis/sm_event.c">sm_event.c</A></TT>,
+and is downloadable from that highlight.
+<BR>&nbsp;
+<P><A HREF="http://www.bath.ac.uk/~ensab">Adrian Bowyer</A>
+<BR>12 July 1999
+<BR>&nbsp;
+<P>
+<HR>
+<BR>&nbsp;
+<P><BR>
+<CENTER>
+<P><IMG SRC="motto.gif" ALT="PERFICTA  PERFRACTA  QVAERENDO  PERFECTA" HEIGHT=25 WIDTH=720></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<P>
+<HR>
+</BODY>
+</HTML>

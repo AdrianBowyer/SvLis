@@ -1,0 +1,37 @@
+Affine Intervals in a CSG Geometric Modeller
+============================================
+ 
+by
+ 
+Adrian Bowyer*, Irina Voiculescu+, and Ralph Martin%
+
+* Bath University
++ Oxford University
+% Cardiff University
+
+ 
+Abstract
+--------
+ 
+Interval arithmetic has been used for a number of purposes in
+geometric modelling, from tracking errors to placing conservative
+bounds on the values of functions over ranges.  Our own CSG modeller,
+SvLis, has used interval arithmetic since its inception to categorize
+implicit functions representing primitive shapes against boxes; this
+allows an efficient implementation of recursive spatial division to
+localize the primitives for a variety of purposes, such as rendering or
+the computation of integral properties.
+ 
+Stolfi's affine arithmetic allows a form of interval
+calculations that (at the expense of a little extra storage and
+computation) allows a track to be kept on the contributing terms to an
+interval in such a way as often to reduce the conservativeness of
+interval arithmetic.  In particular, by tracking the asymmetric
+contributions of even and odd powers of intervals that contain zero
+(which are often the ones of greatest interest and concern), tighter
+bounds can be kept on resulting interval values.
+ 
+This paper will show how such techniques can be implemented in the
+SvLis modeller, and will offer a statistical comparison of doing so
+with the same modelling problems being dealt with using conventional
+interval arithmetic.

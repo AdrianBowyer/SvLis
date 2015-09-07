@@ -1,0 +1,45 @@
+m
+results\r_pic.com
+t
+f
+r
+a
+m
+results\refinery.mod
+|
+(0.5, 0.5, 0.5)
+r
+c
+x
+4
+l
+0.0005
+r
+t
+l
+L_0
+-1000 -1500 2000
+(0.57735, 0.57735, 0.57735)
+1.73205
+100 150 -300
+1
+point source or `pa' for parallel
+p
+results\refinery.bmp
+h
+.9 .9 1
+g
+ 0.95 0.93 0.8
+o
+.1 .1 1
+v
+75 -150 50
+ 125 150 3
+(0, 0, 34.641)
+40
+t
+r
+q
+y
+n
+

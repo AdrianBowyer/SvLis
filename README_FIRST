@@ -1,0 +1,10 @@
+SvLis is a set-theoretic (CSG) geometric modeller written in C++.  It is extremely legacy software.  I wrote it about 15 years ago, and have not done any work on it at all since around 2008.
+
+All the clever ideas in it were from my old friend John Woodwark (http://johnwoodwark.com/).  On the other hand, I did all of the work...
+
+I am putting it on Github in case anyone finds it useful.  I am afraid that I will not answer any technical or other queries about it.  That's one of the reasons why I retired.
+
+Adrian Bowyer
+http://adrianbowyer.com
+
+September 2015

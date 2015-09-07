@@ -1,0 +1,29 @@
+
+          SvLis Data Directory
+          --------------------
+
+For information and documentation on svLis see:
+
+   http://www.bath.ac.uk/~ensab/G_mod/Svlis
+
+
+The files in this directory are:
+
+   README        This file
+   check.ppm     Image of a check pattern - used for texturing
+   r_pic_ux.log  Unix logfile from a raytrace of the refinery model
+   r_pic_ms.log  Microsoft logfile from a raytrace of the refinery model
+   r_pic_mac.log Apple Mac logfile from a raytrace of the refinery model
+   sand.ppm      Image - sand texture
+   svlis.bmp     SvLis logo as a Microsoft BMP file
+   svlis.ico     Svlis large and small icons for Microsoft systems
+   svlis.ppm     SvLis logo as a raw ppm file
+   svlis.xbm     SvLis logo as an X-Windows bitmap
+
+
+Adrian Bowyer
+University of Bath
+22 December 1998
+
+svlis@bath.ac.uk
+

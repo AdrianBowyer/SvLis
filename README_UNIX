@@ -1,0 +1,107 @@
+                    The SvLis Geometric Modelling Kernel
+                    ------------------------------------
+   
+
+
+                      Unix Notes
+
+SvLis is copyright.  See any svLis file in the src or include directories 
+for the copyright notice.  SvLis is distributed under the GNU licence; see
+the file LICENCE in this directory for details.
+
+This directory contains the svLis CSG kernel geometric modeller.  For
+up-to-date information see:
+
+   http://www.bath.ac.uk/~ensab/G_mod/Svlis
+
+To get friendly-format documentation, point your favourite
+web-browser at the file
+
+	docs/svlis.html
+
+The contents of this directory are:
+
+   LICENCE	    The GNU public licence
+   Makefile         Unix makefile for all of svLis
+   README_UNIX      This file
+   README_MAC       For Apple Mac users
+   README_MICROSOFT For Windows 98 or NT users
+   bin *            Directory containing executables
+   data             Directory containing test program data
+   docs             Directory containing HTML svLis documentation
+   include          Directory containing C++ include files
+   lib *            Directory containing libraries
+   obj *            Directory containing object files
+   programs         Directory containing test programs
+   projects	    Directory used by Microsoft Visual C++
+   results *        Directory containing test program results
+   src		    Directry containing the source code
+
+Directories and files marked * above are created by make, and will therefore 
+not exist immediately after svLis has been downloaded and before make has
+been run.  
+
+Svlis needs the OpenGL library to do graphics.  On a Silicon Graphics
+computer you should have this; for Linux and for Suns see:
+
+    http://www.mesa3d.org/   and
+    http://www.opengl.org/
+
+All systems also need the GL User Toolkit (GLUT), obtainable from the
+same websites.  Install OpenGL and GLUT and get them working before
+making svLis.
+
+To make svLis, edit the Makefile and do what it says at the top:
+
+  #
+  #                    The SvLis Geometric Modelling Kernel
+  #                    ------------------------------------
+  #   
+  # 
+  # This Makefile is intended for GNU make (usually gmake on most systems)
+  # If you haven't got it, see http://www.gnu.org/
+  #
+  # 
+  # ===========================================================================
+  #
+  # Uncomment (remove the # from the beginning of) the line for the type of 
+  # machine you're on:
+  #
+
+  MACHINE = LINUX
+  #MACHINE = SGI
+  #MACHINE = SUN
+
+  # then type gmake.
+  #
+  # ============================================================================
+  #
+  .
+  .
+  .
+  .
+
+That one would be for Linux.
+
+To test svLis after gmaking it, run
+
+   bin/sv_tst_1
+
+from this directory.  Then run
+
+   bin/sv_tst_2
+
+and then
+
+   bin/sv_tst_g
+
+
+
+Adrian Bowyer
+University of Bath & Information Geometers Ltd
+8 March 2000
+ 
+svlis@bath.ac.uk
+
+
+

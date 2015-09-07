@@ -1,0 +1,177 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.61 [en] (X11; I; Linux 2.2.12-20 i586) [Netscape]">
+   <title>SvLis Unix Installation</title>
+</head>
+<body background="svlis_new.gif">
+
+<hr>
+<br>&nbsp;
+<p><br>
+<center>
+<p><a href="http://www.bath.ac.uk/~ensab/G_mod/Svlis/"><img SRC="svlis.gif" ALT="SvLis Home Page" BORDER=0 ></a></center>
+
+<center>
+<h2>
+Unix Installation</h2></center>
+
+<center><a href="mailto:svlis@bath.ac.uk">svlis@bath.ac.uk</a>
+<br>&nbsp;
+<br>&nbsp;
+<p>Copyright &copy; 1994, 1996, 1999 <a href="http://www.inge.com">Information
+Geometers Ltd </a>and <a href="http://www.bath.ac.uk">The University of
+Bath</a></center>
+
+<p><br>
+<p>
+<hr>
+<p>The first stage in the installation of svLis is to obtain
+<a href="http://www.opengl.org/">OpenGL</a>
+(if you're on an SG you should already have this) and <a href="http://trant.sgi.com/opengl/toolkits/glut-3.5/lib/glut/">GLUT</a>
+(and maybe also some of the <a href="http://trant.sgi.com/opengl/toolkits/glut-3.5/progs/progs.html">GLUT
+demonstration programs</a> for testing). Get them all working, then start
+on svLis.
+<p>The compressed svLis distribution file for all Unix systems is a gzipped
+tar set. In the following <tt>svlis.tar.gz</tt> stands for one of <tt><a href="ftp://ftp.bath.ac.uk/pub/ensab/svlis/linux_svlis.tar.gz">linux_svlis.tar.gz</a></tt>,
+<tt><a href="ftp://ftp.bath.ac.uk/pub/ensab/svlis/sun_svlis.tar.gz">sun_svlis.tar.gz</a></tt>,
+or <tt><a href="ftp://ftp.bath.ac.uk/pub/ensab/svlis/sg_svlis.tar.gz">sg_svlis.tar.gz</a></tt>
+obtained by clicking on one of those highlights. The stages of the installation
+of svLis under Unix are:
+<ol>
+<li>
+Log in as the super-user;</li>
+
+<li>
+Make the directory where you want svLis to be; usually <tt>/usr/local/Svlis</tt>;</li>
+
+<li>
+<tt>cd</tt> to that directory;</li>
+
+<li>
+<tt>mv svlis.tar.gz</tt> into that directory;</li>
+
+<li>
+<tt>gunzip svlis.tar.gz</tt></li>
+
+<li>
+<tt>tar -xvf svlis.tar</tt></li>
+
+<li>
+type <tt>make</tt></li>
+</ol>
+Typing <tt>make</tt> will generate the whole of svLis.&nbsp; Note that
+if the OpenGL include and library files on your system are not in the paths
+ordinarily searched by the compiler and linker, then you will have to edit
+the Makefile to incorporate these paths.&nbsp; It is commented to help
+you to do this.
+<p>Under Linux you can conflate the unzip and tar (steps 5 and 6) to
+<blockquote><tt>tar -xvzf svlis.tar.gz</tt></blockquote>
+SvLis expects to find the <tt>xv</tt> utility in the search path; if it's
+not there you won't be able to see the results of interactive raytracing.
+<p>The files and directories that you will end up with in the svlis directory
+will be:
+<ol>
+<li>
+<tt>Makefile</tt></li>
+
+<li>
+<tt>bin</tt> - directory, contains executables</li>
+
+<li>
+<tt>data</tt> - directory, contains test data</li>
+
+<li>
+<tt>docs </tt>- directory containing HTML documentation</li>
+
+<li>
+<tt>include</tt> - directory, contains the svLis <tt>.h</tt> files</li>
+
+<li>
+<tt>lib</tt> - directory, contains the libraries</li>
+
+<li>
+<tt>obj</tt> - directory, contains compiled object modules</li>
+
+<li>
+<tt>programs</tt> - directory, contains test programs and other utilities</li>
+
+<li>
+<tt>results</tt> - directory, where the test programs store output</li>
+
+<li>
+<tt>svlis.tar</tt> - the <tt>.tar</tt> file created by <tt>gunzip</tt></li>
+
+<li>
+<tt>sv_user</tt> - directory, contains the source code for the parts of
+svLis that are user-modifiable.</li>
+</ol>
+After you've done those 7 steps check if all is working by runing the program
+<tt>bin/sv_tst_1
+</tt>from
+the main svLis directory. This will create a single file in the directory
+<tt>results</tt>
+called
+<tt>sv_tst.mod</tt> (cat it out if you like; it will start something
+like:
+<pre>SvLis(3)
+
+# SvLis created this file on Sun Feb 21 15:59:16 1999
+
+model
+{
+&nbsp;268482224 L 0
+&nbsp;box\interval\0, 10/, interval\0, 10/, interval\0, 10//
+&nbsp;set_list
+&nbsp;[
+&nbsp; 268482032 0
+&nbsp; set
+&nbsp; (
+&nbsp;&nbsp; 268481656 7 0 &amp;
+&nbsp;&nbsp; set
+&nbsp;&nbsp; (
+&nbsp;&nbsp;&nbsp; 268481600 1 0
+&nbsp;&nbsp;&nbsp; primitive
+&nbsp;&nbsp;&nbsp; &lt;
+&nbsp;&nbsp;&nbsp;&nbsp; 268481528 3 0 -
+&nbsp;&nbsp;&nbsp;&nbsp; primitive
+&nbsp;&nbsp;&nbsp;&nbsp; &lt;
+.
+.
+.
+.</pre>
+though the numbers will be different). The file created is a svLis model
+of a cube intersected with a sphere. If you run <tt>bin/sv_tst_2</tt>,
+this will read the model, then divide and facet it, then print some statistics.
+Finally running <tt>bin/sv_tst_g</tt> should produce a picture of the model
+(the process forks, so you will probably get a `program finished' message
+before the graphics window appears). The faceting of this picture is deliberately
+crude; you can refine it by picking the `Facet quality' menu item with
+the right mouse button in the graphics window. Typing `?' in the graphics
+window gives a list of options. Also, if you turn texturing on from the
+menu, you should get the svLis logo tiled across the flat faces.
+<p>There are a number of other programs provided with svLis; for details
+of them see the <a href="book/node9.html#ab900">svLis manual here.</a>
+<p>
+<hr>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<br>
+<center>
+<p><img SRC="motto.gif" ALT="PERFICTA  PERFRACTA  QVAERENDO  PERFECTA" ></center>
+
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p>
+<hr>
+</body>
+</html>

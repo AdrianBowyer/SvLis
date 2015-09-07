@@ -1,0 +1,259 @@
+/*
+ * SvLis - Simple set attribute class of a linked list of tags and
+ *      values.
+ *
+ * Adrian Bowyer
+ *
+ * See the svLis web site for the manual and other details:
+ *
+ *    http://www.bath.ac.uk/~ensab/G_mod/Svlis/
+ *
+ * First version: 5 March 1993
+ * This version: 20 October 1997
+ * 
+ */
+
+#ifndef SVLIS_ATTRIBUTE
+#define SVLIS_ATTRIBUTE
+
+
+// These allow the user to do sensible memory management
+
+extern void free_user(sv_user_attribute*, sv_integer);
+extern void copy_user(sv_user_attribute*, sv_integer);
+
+class sv_user_attribute;
+
+class sv_attribute
+{
+private:
+
+// struct containing the actual data derived
+// from the reference-counting base class
+
+   struct attribute_data : public sv_refct 
+   {
+        friend class sv_smart_ptr<attribute_data>;
+
+	sv_integer tag;			// The set
+        sv_user_attribute* ua;          // The user's data
+	sv_attribute* next;		// The next one along
+
+        ~attribute_data() 
+        {
+	        free_user(ua, tag);
+		delete next;
+	}
+
+// Constructor for when it's a single attribute.
+
+	attribute_data(sv_integer t, sv_user_attribute* u)
+	{
+	        tag = t;
+		ua = u;
+		copy_user(u, t);
+		next = new sv_attribute();
+	}
+
+// Constructor that adds one attribute to the head of the chain.
+
+	attribute_data(sv_integer t, sv_user_attribute* u, const sv_attribute& a)
+	{
+	        tag = t;
+		ua = u;
+		copy_user(u, t);
+		next = new sv_attribute(a);
+	}
+
+   }; // attribute_data
+
+   sv_smart_ptr<attribute_data> attribute_info;
+
+
+// Priveleged (Re)Set flag bit(s)
+
+        void set_flags_priv(sv_integer a) { attribute_info->set_flags(a); }
+	void reset_flags_priv(sv_integer a) { attribute_info->reset_flags(a); }
+
+public:
+
+// Null attribute
+
+	sv_attribute() { }
+
+// Single attribute consisting of a tag and user_attribute pointer
+
+	sv_attribute(sv_integer t, sv_user_attribute* u) { attribute_info = new attribute_data(t, u); }
+
+// Add an attribute to the head of a chain.
+
+	sv_attribute(sv_integer t, sv_user_attribute* u, const sv_attribute& a) { attribute_info = new attribute_data(t, u, a); }
+
+// Initialization of an attribute
+
+	sv_attribute(const sv_attribute& a) { *this = a; }
+
+// functions to return the contents
+
+	sv_integer tag_val() const { return(attribute_info->tag); }
+	sv_user_attribute* user_attribute() const { return(attribute_info->ua); }
+	sv_integer flags() const  { return(attribute_info->flags()); }
+	sv_attribute next() const { return(*(attribute_info->next)); }
+	int exists() const { return(attribute_info.exists()); }
+	sv_integer count() const;
+
+// Deep copy
+
+	sv_attribute deep() const;
+
+// Unique value (effectively the pointer to this set)
+// This is explicitly long not sv_integer
+
+	long unique() const { return(attribute_info.unique()); }
+
+// Operations on collections of attributes
+
+	friend sv_attribute merge(const sv_attribute&, const sv_attribute&);    // = Union
+	friend sv_attribute overlap(const sv_attribute&, const sv_attribute&);  // = Intersection
+	friend sv_attribute remove(const sv_attribute&, const sv_attribute&);   // = Subtract
+	friend sv_attribute ex_or(const sv_attribute&, const sv_attribute&);    // = Symmetric difference
+
+// Pick out and remove all with a given tag value
+
+	friend sv_attribute overlap(const sv_attribute&, sv_integer);
+	friend sv_attribute remove(const sv_attribute&, sv_integer);
+
+// Append for backwards compatibility
+
+        sv_attribute append(const sv_attribute&) const;
+
+// Attributes equal?
+
+	friend sv_integer operator==(const sv_attribute&, const sv_attribute&);
+
+// Unique tag
+
+	sv_integer tag() const;
+
+// Replace an attribute in the chain
+
+	sv_attribute replace(const sv_attribute&) const;
+	
+// Find the attribute in the chain with a given tag value
+
+	sv_attribute tag_find(sv_integer tg) const;
+
+// Set flag bit(s)
+
+	void set_flags(sv_integer);
+	void reset_flags(sv_integer);
+
+// I/O
+
+	friend void unwrite(sv_attribute&);
+
+// Write and read are public so that the other classes can get at them
+// without everything having to be a friend of everything else.  The
+// user shouldn't normally call these.
+
+	friend void write(ostream&, const sv_attribute&,  sv_integer);
+	friend void read(istream&, sv_attribute&);
+	friend sv_attribute read_at_r(istream&);
+	friend void read1(istream&, sv_attribute&);
+	friend sv_attribute read_at_r1(istream&);
+
+};
+
+// ******** Externs
+
+// Functions that get called to track attributes when operations are
+// done on sets
+
+extern sv_set att_union(const sv_set&, const sv_set&, const sv_set&);
+extern sv_set att_intersection(const sv_set&, const sv_set&, const sv_set&);
+extern sv_set att_slide(const sv_set&, const sv_set&, const sv_point&);
+extern sv_set att_spin(const sv_set&, const sv_set&, const sv_line&, sv_real);
+extern sv_set att_mirror(const sv_set&, const sv_set&, const sv_plane&);
+extern sv_set att_scale(const sv_set&, const sv_set&, const sv_point&, sv_real);
+extern sv_set att_prune(const sv_set&, const sv_set&, const sv_box&);
+extern sv_set att_complement(const sv_set&, const sv_set&);
+
+// The look-up table for reading
+
+extern look_up<sv_attribute> a_write_list;
+
+// Attribute equality
+
+extern int equals2(const sv_attribute&, const sv_attribute&);
+
+// I/O for the user
+
+extern ostream& operator<<(ostream&, sv_attribute&);
+extern istream& operator>>(istream&, sv_attribute&);
+
+// Externals for i/o that the user can change (in sv_user/u_attrib.cxx)
+
+extern void read(istream&, sv_user_attribute**);
+extern void read1(istream&, sv_user_attribute**);
+extern void write(ostream&, const sv_user_attribute*, 
+    sv_integer,  sv_integer);
+
+// ******** Inlines
+
+// Append for old time's sake
+
+inline sv_attribute sv_attribute::append(const sv_attribute& aa) const { return(merge(*this, aa)); }
+
+// One element equals (really just for internal use)
+
+inline sv_integer a_eq(const sv_attribute& a, const sv_attribute& b)
+{
+      return( (a.user_attribute() == b.user_attribute()) && 
+		(a.tag_val() == b.tag_val()));
+}
+
+// Two attributes are equal if the user attribute is the same
+// and so are the tags (simple case inline; complicated in library)
+
+inline sv_integer operator==(const sv_attribute& a, const sv_attribute& b)
+{
+    if((!a.unique()) || (!b.unique())) return(a.unique() == b.unique()); // Undefined?
+    
+    if( (!a.next().exists()) && (!b.next().exists()) )
+      return( a_eq(a,  b) );
+    else
+      return(equals2(a, b));    
+}
+
+inline sv_integer operator!=(const sv_attribute& a, const sv_attribute&b)
+{
+    return(!(a==b));    
+}
+
+// Find the attribute in the chain with a given tag value
+
+inline sv_attribute sv_attribute::tag_find(sv_integer tg) const
+{
+	sv_attribute result = *this;
+	while(result.exists())
+	{
+		if (result.tag_val() == tg) return(result);
+		result = result.next();
+	}
+	return(result); // result is null if we get to here
+}
+
+inline sv_attribute sv_attribute::replace(const sv_attribute& a) const
+{
+	if(!a.exists())
+	{
+		svlis_error("sv_attribute::replace(a)","a does not exist",
+			SV_WARNING);
+		return(*this);
+	}
+	sv_attribute result = remove(*this, a.tag_val());
+	result = merge(result, a);
+	return(result);
+}
+
+#endif

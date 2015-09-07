@@ -1,0 +1,358 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="description" CONTENT="Fundamental geometric structures">
+   <META NAME="keywords" CONTENT="svi2">
+   <META NAME="resource-type" CONTENT="document">
+   <META NAME="distribution" CONTENT="global">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.07 [en] (X11; I; Linux 2.0.36 i686) [Netscape]">
+   <TITLE>Fundamental geometric structures</TITLE>
+</HEAD>
+<BODY BACKGROUND="svlis_new.gif">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others --><LINK REL="STYLESHEET" HREF="svi2.css"><LINK REL="next" HREF="node5.html"><LINK REL="previous" HREF="node3.html"><LINK REL="up" HREF="svi2.html"><LINK REL="next" HREF="node5.html"><!--Navigation Panel--><A NAME="tex2html150"></A><A NAME="tex2html150"></A><A NAME="tex2html150" HREF="node5.html"></A><A NAME="tex2html150" HREF="node5.html"></A><A HREF="node5.html" NAME="tex2html150"><IMG SRC="next_motif.gif" ALT="next" BORDER=0 HEIGHT=24 WIDTH=37 ALIGN=BOTTOM></A><A NAME="tex2html146"></A><A NAME="tex2html146"></A><A NAME="tex2html146" HREF="svi2.html"></A><A NAME="tex2html146" HREF="svi2.html"></A><A HREF="svi2.html" NAME="tex2html146"><IMG SRC="up_motif.gif" ALT="up" BORDER=0 HEIGHT=24 WIDTH=26 ALIGN=BOTTOM></A><A NAME="tex2html140"></A><A NAME="tex2html140"></A><A NAME="tex2html140" HREF="node3.html"></A><A NAME="tex2html140" HREF="node3.html"></A><A HREF="node3.html" NAME="tex2html140"><IMG SRC="previous_motif.gif" ALT="previous" BORDER=0 HEIGHT=24 WIDTH=63 ALIGN=BOTTOM></A><A NAME="tex2html148"></A><A NAME="tex2html148"></A><A NAME="tex2html148" HREF="node1.html"></A><A NAME="tex2html148" HREF="node1.html"></A><A HREF="node1.html" NAME="tex2html148"><IMG SRC="contents_motif.gif" ALT="contents" BORDER=0 HEIGHT=24 WIDTH=65 ALIGN=BOTTOM></A><A NAME="tex2html149"></A><A NAME="tex2html149"></A><A NAME="tex2html149" HREF="node11.html"></A><A NAME="tex2html149" HREF="node11.html"></A><A HREF="node11.html" NAME="tex2html149"><IMG SRC="index_motif.gif" ALT="index" BORDER=0 HEIGHT=24 WIDTH=43 ALIGN=BOTTOM></A>
+<BR><B>Next:<A NAME="tex2html151"></A><A NAME="tex2html151"></A><A NAME="tex2html151" HREF="node5.html"></A><A NAME="tex2html151" HREF="node5.html"></A></B><A HREF="node5.html" NAME="tex2html151">Curved
+solids, surfaces and</A> <B>Up:<A NAME="tex2html147"></A><A NAME="tex2html147"></A><A NAME="tex2html147" HREF="svi2.html"></A><A NAME="tex2html147" HREF="svi2.html"></A></B><A HREF="svi2.html" NAME="tex2html147">SvLis
+Introduction</A> <B>Previous:<A NAME="tex2html141"></A><A NAME="tex2html141"></A><A NAME="tex2html141" HREF="node3.html"></A><A NAME="tex2html141" HREF="node3.html"></A></B><A HREF="node3.html" NAME="tex2html141">Introduction</A>
+<P><!--End of Navigation Panel--><!--Table of Child-Links--><A NAME="CHILD_LINKS"></A><B>Subsections</B>
+<UL>
+<LI>
+<A NAME="tex2html152"></A><A NAME="tex2html152"></A><A NAME="tex2html152" HREF="node4.html#SECTION00410000000000000000"></A><A NAME="tex2html152" HREF="node4.html#SECTION00410000000000000000"></A><A HREF="node4.html#SECTION00410000000000000000" NAME="tex2html152">Numbers</A></LI>
+
+<LI>
+<A NAME="tex2html153"></A><A NAME="tex2html153"></A><A NAME="tex2html153" HREF="node4.html#SECTION00420000000000000000"></A><A NAME="tex2html153" HREF="node4.html#SECTION00420000000000000000"></A><A HREF="node4.html#SECTION00420000000000000000" NAME="tex2html153">Points
+and lines in space</A></LI>
+
+<LI>
+<A NAME="tex2html154"></A><A NAME="tex2html154"></A><A NAME="tex2html154" HREF="node4.html#SECTION00430000000000000000"></A><A NAME="tex2html154" HREF="node4.html#SECTION00430000000000000000"></A><A HREF="node4.html#SECTION00430000000000000000" NAME="tex2html154">Solids
+with flat faces, and inequalities</A></LI>
+</UL>
+<!--End of Table of Child-Links-->
+<CENTER>
+<P>Copyright &copy; 1994, 1996, 1999 <A HREF="http://www.inge.com">Information
+Geometers Ltd </A>and <A HREF="http://www.bath.ac.uk">The University of
+Bath</A></CENTER>
+
+<P><BR>
+<P>
+<HR>
+<H1>
+<A NAME="SECTION00400000000000000000"></A><B><FONT SIZE=+4>Fundamental
+geometric structures</FONT></B></H1>
+
+<H1>
+<A NAME="SECTION00410000000000000000"></A><FONT SIZE=+2>Numbers</FONT></H1>
+<A NAME="CH2"></A>Space, as has been pointed out by Mr Douglas Adams and
+others, is very big. However, the Universe (which is what they meant by
+space) is not (as far as anyone knows) as big as what mathematicians like
+to call <I>R<SUP>3</SUP></I>, or three-dimensional Euclidean space,<A NAME="851"></A><A NAME="852"></A>&nbsp;
+which rushes off to&nbsp;<IMG SRC="img13.gif" ALT="$\infty$" HEIGHT=8 WIDTH=16 ALIGN=BOTTOM>
+in all directions. The Universe--as anyone who has tried to get a tax rebate
+also knows--is bent, whereas Euclidean space is as straight as a die.
+<P>Euclidean space is also smaller than the Universe, in the sense that
+you can have things in it that approach 0 in size; whereas quantum mechanics
+stops you from doing that in the real Universe.
+<P>SvLis, which is also as straight as a die (and noble, chivalrous, brave,
+and kind to animals), works in the nearest a computer can get to Euclidean
+space; but, like all computer programs, it is constrained by the finite
+nature of computers. The floating-point numbers<A NAME="853"></A>&nbsp;
+it uses are a compromise imposed by the need for speed, and the need not
+to use up large amounts of memory storing numbers to arbitrary precision
+as algebra systems such as Mathematica and Reduce do<A NAME="tex2html9"></A><A NAME="tex2html9"></A><A NAME="tex2html9" HREF="footnode.html#854"></A><A NAME="tex2html9" HREF="footnode.html#854"></A><A HREF="footnode.html#854" NAME="tex2html9"><IMG SRC="foot_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>.
+<P>Different computers--and different C<FONT SIZE=-1>++</FONT> compilers--have
+differing representations for <TT>int</TT> and <TT>long</TT>, and for <TT>float</TT>
+and <TT>double</TT>. This can cause some problems when software is being
+ported from one computer--or compiler--to another. To ameliorate these
+problems as much as possible, svLis <TT>#define</TT>s two types in the
+file <TT>enum_def.h</TT>. These are <TT>sv_real<A NAME="862"></A></TT>&nbsp;
+and <TT>sv_integer<A NAME="1044"></A></TT> , and are usually set to be
+<TT>float</TT>
+and <TT>long</TT> respectively. All of svLis's internal definitions are
+done in terms of <TT>sv_real</TT> and <TT>sv_integer<A NAME="tex2html10"></A><A NAME="tex2html10"></A><A NAME="tex2html10" HREF="footnode.html#1045"></A><A NAME="tex2html10" HREF="footnode.html#1045"></A><A HREF="footnode.html#1045" NAME="tex2html10"><IMG SRC="foot_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A></TT>.
+A list of the functions and operators that svLis uses to operate on <TT>sv_real</TT>s
+and <TT>sv_integer</TT>s appears within the User Manual, on Page&nbsp;<A HREF="node9.html#IR"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>.
+<BR>&nbsp;
+<BR>&nbsp;
+<H1>
+<A NAME="SECTION00420000000000000000"></A><FONT SIZE=+2>Points and lines
+in space</FONT></H1>
+<A NAME="PLSPACE"></A>Given the bigness of the computer's finite approximation
+to Euclidean space, it's important not to get lost. As you'd expect, svLis
+uses conventional Cartesian coordinates<A NAME="875"></A><A NAME="876"></A>&nbsp;
+to specify locations in Euclidean space. (I'm going to drop the bit about
+the computer only approximating Euclidean space from here on; take it as
+read.) Points in space, and offsets from them in a given direction to other
+points, can all be dealt with using conventional vector algebra. One of
+the fundamental structures in svLis is the <TT>sv_point struct<A NAME="1046"></A><A NAME="1047"></A></TT>&nbsp;
+(Figure <A HREF="node4.html#fig:PT">7</A>), which we first encountered
+on Page&nbsp;<A HREF="node3.html#FIRSTPT"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>.
+This is defined in the file <TT>geometry.h<A NAME="1048"></A><A NAME="1049"></A></TT>:
+<P><A NAME="PTDEF"></A>
+<UL>
+<PRE><TT>struct sv_point
+{
+&nbsp; sv_real x, y, z;
+
+// Constructor defaults to the origin....
+
+&nbsp; sv_point(sv_real a=0, sv_real b=0, sv_real c=0)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {x=a; y=b; z=c;}
+
+// Modulus and normalization member functions.
+
+&nbsp; sv_real mod() const;
+&nbsp; sv_point norm() const;
+};</TT></PRE>
+</UL>
+
+<P><BR>Why not use the word <I>vector<A NAME="888"></A></I>? Unfortunately,
+lots of software uses the word <I>vector</I> to refer to a linear array
+of entities, and so there would be a possibility of confusion if svLis
+were to use it for a <I>real</I> vector. Besides, <I>point</I> sounds less
+ostentatious.
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<CENTER>
+<P><A NAME="fig:PT"></A><IMG SRC="img14.gif" ALT="\begin{figure}% latex2html id marker 892\epsfysize=80mm\centerline{\epsffile{... ...e Cartesian coordinate system and a point.\end{minipage}\end{center}\end{figure}" HEIGHT=361 WIDTH=430></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<P>All the operations of vector arithmetic<A NAME="896"></A><A NAME="897"></A>&nbsp;
+are defined for <TT>sv_point</TT>s; if <TT>p</TT> and <TT>q</TT> are two
+points, then <TT>p + q<A NAME="1051"></A><A NAME="1052"></A></TT>&nbsp;
+gives their vector sum<A NAME="904"></A><A NAME="905"></A> , and <TT>p
+- q<A NAME="1053"></A><A NAME="1054"></A></TT>&nbsp; their vector difference<A NAME="909"></A><A NAME="910"></A>.
+<TT>p*q</TT>
+gives an <TT>sv_real</TT> that is their scalar product<A NAME="913"></A><A NAME="914"></A>
+, and <TT>p<IMG SRC="img5.gif" ALT="$ \wedge $" HEIGHT=12 WIDTH=10 ALIGN=BOTTOM>q</TT>
+gives another <TT>sv_point</TT> that is their vector product<A NAME="917"></A><A NAME="918"></A>
+. You can also multiply or divide an <TT>sv_point</TT> by an <TT>sv_real</TT>,
+which scales<A NAME="921"></A><A NAME="922"></A>&nbsp; it, and negate<A NAME="923"></A><A NAME="924"></A>&nbsp;
+its coordinates by using the monadic minus operator. A couple of functions
+are defined for <TT>sv_point</TT>s, too. The function <TT>p.mod()<A NAME="1055"></A><A NAME="1056"></A></TT>&nbsp;
+returns a <TT>sv_real</TT> which is the modulus<A NAME="930"></A><A NAME="931"></A>&nbsp;
+(that is the length<A NAME="932"></A><A NAME="933"></A>) of <TT>p</TT>,
+and <TT>p.norm()<A NAME="1057"></A><A NAME="1058"></A></TT>&nbsp; returns
+<TT>p</TT>
+divided by its modulus, which <I>normalizes<A NAME="940"></A><A NAME="941"></A></I>&nbsp;
+it; that is, it returns a <TT>sv_point</TT> of unit length in the same
+direction as <TT>p</TT>.
+<P><A NAME="XROVL"></A>Note that svLis <I>overloads<A NAME="946"></A><A NAME="947"></A></I>&nbsp;
+the&nbsp;<IMG SRC="img5.gif" ALT="$ \wedge $" HEIGHT=12 WIDTH=10 ALIGN=BOTTOM>
+operator<A NAME="1059"></A><A NAME="1060"></A>; it means both vector product
+for points, and exponentiation<A NAME="950"></A>&nbsp; for primitives (see
+Page&nbsp;<A HREF="node5.html#PREXP"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>).
+As we saw on Page&nbsp;<A HREF="node3.html#SYMDIFEX"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>,
+it means symmetric difference for sets, too. A slightly tedious aspect
+of C<FONT SIZE=-1>++</FONT> intrudes here: you can't change the precedence
+of the operators<A NAME="953"></A><A NAME="954"></A>&nbsp; in the language<A NAME="tex2html11"></A><A NAME="tex2html11"></A><A NAME="tex2html11" HREF="footnode.html#1061"></A><A NAME="tex2html11" HREF="footnode.html#1061"></A><A HREF="footnode.html#1061" NAME="tex2html11"><IMG SRC="foot_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>.
+The operator&nbsp;<IMG SRC="img5.gif" ALT="$ \wedge $" HEIGHT=12 WIDTH=10 ALIGN=BOTTOM>,
+which means <FONT SIZE=-1>XOR</FONT> in native C<FONT SIZE=-1>++</FONT>,
+has a very low precedence; hence you must use brackets.
+<P>The second simple geometric structure that svLis uses is a straight
+line in space (Figure <A HREF="node4.html#fig:LN">8</A>), which we met
+briefly on Page&nbsp;<A HREF="node3.html#CYLFN"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>
+as the axis of a cylinder. Here is the main part of the <TT>sv_line</TT>
+structure<A NAME="1062"></A><A NAME="1063"></A><A NAME="1064"></A><A NAME="1065"></A>:
+<P><A NAME="LINDEF"></A>
+<UL>
+<PRE><TT>struct sv_line
+{
+&nbsp; sv_point direction, origin;
+
+&nbsp; sv_line() { }
+
+&nbsp; sv_line(const sv_point&amp; a, const sv_point&amp; b)
+&nbsp; {
+&nbsp;&nbsp;&nbsp; direction = a.norm();
+&nbsp;&nbsp;&nbsp; origin = b;
+&nbsp; }
+
+// Plus various member functions....
+};</TT></PRE>
+</UL>
+The line is represented by two points. The first, <TT>direction<A NAME="973"></A><A NAME="974"></A></TT>,
+is a unit-length <TT>sv_point</TT> which orientates the line; the second,
+<TT>origin<A NAME="977"></A><A NAME="978"></A></TT>
+, locates it. The line runs through <TT>origin</TT>, and distance, <TT>t</TT>
+(say), along it is measured in <TT>direction</TT>. The line is thus <I>parametric<A NAME="983"></A></I>.
+<BR>&nbsp;
+<P><BR>
+<CENTER>
+<P><A NAME="fig:LN"></A><IMG SRC="img15.gif" ALT="\begin{figure}% latex2html id marker 984\epsfysize=80mm\centerline{\epsffile{... ...he Cartesian coordinate system and a line.\end{minipage}\end{center}\end{figure}" HEIGHT=364 WIDTH=438></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<P>To find the point on the line <TT>l</TT> at a given parameter value,
+<TT>t</TT>,
+a member function called <TT>point<A NAME="1067"></A><A NAME="1068"></A></TT>&nbsp;
+is provided:
+<UL>
+<PRE>sv_point p_on_line = l.point(t);</PRE>
+</UL>
+This just multiplies <TT>direction</TT> by <TT>t</TT> and adds the resulting
+<TT>sv_point</TT>
+to <TT>origin</TT>.
+<P>You can also translate<A NAME="997"></A><A NAME="998"></A> a line in
+space by adding or subtracting a point to or from it. A new line is generated
+with the point added to the <TT>origin</TT> of the old line.
+<P>Finally, note that the null constructor<A NAME="1000"></A><A NAME="1001"></A>&nbsp;
+gives the Z axis as the line. There are more functions that act on points,
+lines and other simple geometric structures. For a complete list see Page&nbsp;<A HREF="node9.html#SIMPG"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>.
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<H1>
+<A NAME="SECTION00430000000000000000"></A>Solids with flat faces, and inequalities</H1>
+<A NAME="SFFACE"></A>Towards the end of the last chapter, I made a section
+through a solid by intersecting it with a planar half-space<A NAME="1005"></A>.
+The plane was defined by specifying its normal vector and a point lying
+in it. The normal vector<A NAME="1006"></A>&nbsp; served to orientate the
+planar half-space (Figure <A HREF="node4.html#fig:PLN">9</A>), as it pointed
+from solid to air and was at right-angles to the plane I wanted. The point
+located the plane in space, distinguishing it from the infinite number
+of other possible planes parallel to it. SvLis uses the normal vector and
+point supplied to construct the inequality for the half-plane, which is
+stored in <I>normalized implicit<A NAME="1009"></A><A NAME="1010"></A><A NAME="1011"></A></I>&nbsp;
+form:
+<CENTER>
+<P><IMG SRC="img16.gif" ALT="\begin{displaymath}A x + B y + C z + D \leq 0\end{displaymath}" HEIGHT=17 WIDTH=178></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<P>We'll come to what the jargon means in a moment, but let's start by
+looking at what this inequality <I>does</I>. Suppose you take a point (<I>x<SUB>p</SUB></I>,
+<I>y<SUB>p</SUB></I>,
+<I>z<SUB>p</SUB></I>)
+in space and substitute it into the left-hand side of the inequality. Clearly
+the result will be a number, and--as is the way with numbers--that number
+will either be positive, zero, or negative. If it's zero or negative, then
+the inequality is satisfied, or, to put it another way, the inequality
+is <I>true</I> for (<I>x<SUB>p</SUB></I>,
+<I>y<SUB>p</SUB></I>,
+<I>z<SUB>p</SUB></I>).
+If the number is positive, then the inequality is false for the point (<I>x<SUB>p</SUB></I>,
+<I>y<SUB>p</SUB></I>,
+<I>z<SUB>p</SUB></I>).
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<CENTER>
+<P><A NAME="fig:PLN"></A><IMG SRC="img17.gif" ALT="\begin{figure}% latex2html id marker 1014\epsfysize=80mm\centerline{\epsffile... ...e Cartesian coordinate system and a plane.\end{minipage}\end{center}\end{figure}" HEIGHT=370 WIDTH=420></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<P>The inequality will do this for any point, and so serves to divide all
+of space (that is, all points) into two parts: a semi-infinite region where
+the inequality is true, and another semi-infinite region where the inequality
+is false. We encountered this idea when half-planes were first mentioned
+on Page&nbsp;<A HREF="node3.html#HPLANE"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>.
+SvLis considers the region of space where the inequality is true (that
+is wherever points give a negative or zero result when substituted into
+it) to be solid. In fact a nitpicking distinction is made between the negative
+region (which really is solid) and the sheet of zero thickness where the
+result is exactly zero (which is surface). That sheet is flat. It is the
+plane that generates the half-space: the flat interface between solid and
+air.
+<P>Back to the jargon. The inequality is called <I>implicit</I> because
+the actual surface--the interface between the two regions solid and air--is
+implied by the inequality, not <I>generated</I> by it<A NAME="tex2html12"></A><A NAME="tex2html12"></A><A NAME="tex2html12" HREF="footnode.html#1070"></A><A NAME="tex2html12" HREF="footnode.html#1070"></A><A HREF="footnode.html#1070" NAME="tex2html12"><IMG SRC="foot_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>.
+The inequality is said to be <I>normalized</I> when <I>A<SUP>2</SUP></I>
++ <I>B<SUP>2</SUP></I> + <I>C<SUP>2</SUP></I> = 1. In fact, the vector
+(<I>A</I>,<I>B</I>,<I>C</I>) is the normal vector of the half-plane, so
+what this is saying is that the normal vector has a length of 1. (You end
+up having to refer to a <I>normalized normal</I> vector--the jargon has
+tripped over its own silly flat feet.)
+<P>But what about the value of the number we get when we substitute (<I>x<SUB>p</SUB></I>,
+<I>y<SUB>p</SUB></I>,
+<I>z<SUB>p</SUB></I>)
+into the left-hand side of the inequality? This, it turns out, measures
+distance to the plane<A NAME="1024"></A><A NAME="1025"></A>&nbsp; (distances
+on the solid side being negative, of course). This value is called a potential
+value (and the left-hand side of the inequality is called a potential function).
+As we shall see, more or less anything which can generate potential values
+for points in space can be used by svLis as a primitive shape. The plane
+potential function, <I>A x</I> + <I>B y</I> + <I>C z</I> + <I>D</I>, is
+just about the simplest of these<A NAME="PTOPRIM"></A><A NAME="tex2html13"></A><A NAME="tex2html13"></A><A NAME="tex2html13" HREF="footnode.html#1071"></A><A NAME="tex2html13" HREF="footnode.html#1071"></A><A HREF="footnode.html#1071" NAME="tex2html13"><IMG SRC="foot_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>.
+<P>The svLis <TT>sv_plane</TT> structure<A NAME="1072"></A><A NAME="1073"></A>&nbsp;
+is defined in <TT>geometry.h<A NAME="1074"></A><A NAME="1075"></A></TT>;
+here is a slightly simplified version:
+<UL>
+<PRE><TT>struct sv_plane
+{
+&nbsp; sv_point normal;
+&nbsp; sv_real d;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; sv_plane() { }&nbsp; // Null constructor.
+
+&nbsp; // Constructor takes a normal vector (a) and
+&nbsp; // a point through which the plane is to pass (b).
+
+&nbsp; sv_plane(const sv_point&amp; a, const sv_point&amp; b)
+&nbsp; {
+&nbsp;&nbsp;&nbsp; normal = a.norm();
+&nbsp;&nbsp;&nbsp; d = -b*normal;
+&nbsp; }
+
+&nbsp; // Constructor for when we know the normal and d.
+
+&nbsp; sv_plane(const sv_point&amp; n, sv_real dee)
+&nbsp; {
+&nbsp;&nbsp;&nbsp; d = dee;
+&nbsp;&nbsp;&nbsp; sv_real div = n.mod();
+&nbsp;&nbsp;&nbsp; normal = n;
+&nbsp;&nbsp;&nbsp; if (div == 0.0)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; svlis_error("plane constructor",
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "0-length normal", SV_WARNING);
+&nbsp;&nbsp;&nbsp;&nbsp; else
+&nbsp;&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; div = 1.0/div;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; normal = normal*div;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d = d*div;
+&nbsp;&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp; }
+
+
+&nbsp; // Constructor for when we know the coefficients.
+
+&nbsp; sv_plane(sv_real a, sv_real b, sv_real c,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_real dee)
+&nbsp; {
+&nbsp;&nbsp;&nbsp; sv_point n = sv_point(a,b,c);
+&nbsp;&nbsp;&nbsp; *this = sv_plane(n,dee);
+&nbsp; }
+};</TT></PRE>
+</UL>
+It is convenient for the <I>A</I>, <I>B</I>, and <I>C</I> coefficients
+to be stored as the <TT>sv_point</TT> called <TT>normal</TT>, as they form
+the normal vector<A NAME="1038"></A>&nbsp; to the plane. This normal vector
+has unit length. The value of <I>D</I> (<TT>d</TT> in the <TT>struct</TT>)
+in the equation gives minus the distance between the plane and the origin.
+<P>Note the call to the procedure <TT>svlis_error</TT> (see Page<A HREF="node9.html#SVERR"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>);
+this procedure is called at all places in svLis when an error is detected.
+<P>The functions and operators that apply to planes are listed within the
+User Manual, on Page&nbsp;<A HREF="node9.html#MANPLANE"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>.
+<P>
+<HR><!--Navigation Panel--><A NAME="tex2html150"></A><A NAME="tex2html150"></A><A NAME="tex2html150" HREF="node5.html"></A><A NAME="tex2html150" HREF="node5.html"></A><A HREF="node5.html" NAME="tex2html150"><IMG SRC="next_motif.gif" ALT="next" BORDER=0 HEIGHT=24 WIDTH=37 ALIGN=BOTTOM></A><A NAME="tex2html146"></A><A NAME="tex2html146"></A><A NAME="tex2html146" HREF="svi2.html"></A><A NAME="tex2html146" HREF="svi2.html"></A><A HREF="svi2.html" NAME="tex2html146"><IMG SRC="up_motif.gif" ALT="up" BORDER=0 HEIGHT=24 WIDTH=26 ALIGN=BOTTOM></A><A NAME="tex2html140"></A><A NAME="tex2html140"></A><A NAME="tex2html140" HREF="node3.html"></A><A NAME="tex2html140" HREF="node3.html"></A><A HREF="node3.html" NAME="tex2html140"><IMG SRC="previous_motif.gif" ALT="previous" BORDER=0 HEIGHT=24 WIDTH=63 ALIGN=BOTTOM></A><A NAME="tex2html148"></A><A NAME="tex2html148"></A><A NAME="tex2html148" HREF="node1.html"></A><A NAME="tex2html148" HREF="node1.html"></A><A HREF="node1.html" NAME="tex2html148"><IMG SRC="contents_motif.gif" ALT="contents" BORDER=0 HEIGHT=24 WIDTH=65 ALIGN=BOTTOM></A><A NAME="tex2html149"></A><A NAME="tex2html149"></A><A NAME="tex2html149" HREF="node11.html"></A><A NAME="tex2html149" HREF="node11.html"></A><A HREF="node11.html" NAME="tex2html149"><IMG SRC="index_motif.gif" ALT="index" BORDER=0 HEIGHT=24 WIDTH=43 ALIGN=BOTTOM></A>
+<BR><B>Next:<A NAME="tex2html151"></A><A NAME="tex2html151"></A><A NAME="tex2html151" HREF="node5.html"></A><A NAME="tex2html151" HREF="node5.html"></A></B><A HREF="node5.html" NAME="tex2html151">Curved
+solids, surfaces and</A> <B>Up:<A NAME="tex2html147"></A><A NAME="tex2html147"></A><A NAME="tex2html147" HREF="svi2.html"></A><A NAME="tex2html147" HREF="svi2.html"></A></B><A HREF="svi2.html" NAME="tex2html147">SvLis
+Introduction</A> <B>Previous:<A NAME="tex2html141"></A><A NAME="tex2html141"></A><A NAME="tex2html141" HREF="node3.html"></A><A NAME="tex2html141" HREF="node3.html"></A></B><A HREF="node3.html" NAME="tex2html141">Introduction</A><!--End of Navigation Panel-->
+<P><I>Adrian Bowyer</I>
+<BR>
+<HR>
+<CENTER>
+<P><IMG SRC="motto.gif" ALT="PERFICTA  PERFRACTA  QVAERENDO  PERFECTA" HEIGHT=25 WIDTH=720></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<ADDRESS>
+
+<HR></ADDRESS>
+
+</BODY>
+</HTML>

@@ -1,0 +1,64 @@
+
+                  SvLis include Directory
+                  -----------------------
+
+SvLis is copyright.  See any svLis source or include file for the
+copyright notice.
+
+For information and documentation on svLis see:
+
+   ../docs/svlis.html, or
+   http://www.bath.ac.uk/~ensab/G_mod/Svlis
+
+This directory contains the include files for svLis.  If you edit
+any of these files, type `make' in the directory above this one
+to make everything.
+
+The files in this directory are:
+
+	README		 This file
+	arf.h		 Root-finder for the raytracer
+	arpors.h	 Polynomial root-finder for the raytracer
+	attrib.h	 SvLis attributes
+	decision.h	 Specimen decision procedures
+	edittool.h	 Interactive model editor
+	enum_def.h	 (Almost) all the enums and #defines
+	environs.h	 Specification of surrounding scene for the raytracer
+	flag.h		 Error and other flags
+	geometry.h	 Simple geometrical structures
+	interval.h	 Interval and box arithmetic
+	ivallist.h	 Lists of intervals for the raytracer
+	light.h		 Light sources for the raytracer
+	model.h		 SvLis models (i.e. box + set list)
+	picture.h	 Bitmap images
+	polygon.h	 Polygons for faceting
+	polynml.h	 Univariate polynomials for the raytracer
+	prim.h		 SvLis primitives
+	qv.h		 Raytracer quickviews
+	raytrace.h	 Raytracer
+	rotations.h	 Convertion between different rotation transforms
+	shade.h		 Raytracer shading calculations
+	solids.h	 Common solids as sets
+	sums.h		 Simple arithmetic and some i/o procedures
+	surface.h	 Surface definitions
+	sv_b_cls.h	 Reference counting, input lists, and parallel locks
+	sv_cols.h	 X colours #defined as sv_points
+	sv_edit.h	 Interactive model editor
+	sv_graph.h	 OpenGL graphics
+	sv_render.h	 Raytracer
+	sv_set.h	 SvLis sets
+	sv_std.h	 System #includes
+	sv_util.h	 Utilities (mass properties etc)
+	svlis.h		 Pulls in all the .h files; the only one you need
+	svlis.pch++	 Needed for the Mac svLis
+	u_attrib.h	 User attributes
+	view.h		 View definition for the raytracer
+	voronoi.h	 Voronoi diagrams
+	xdrvlib.h	 Spacemouse driver
+
+
+Adrian Bowyer
+University of Bath & Information Geometers Ltd
+8 March 2000
+
+svlis@bath.ac.uk

@@ -1,0 +1,1031 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="description" CONTENT="Curved solids, surfaces and lines">
+   <META NAME="keywords" CONTENT="svi2">
+   <META NAME="resource-type" CONTENT="document">
+   <META NAME="distribution" CONTENT="global">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.07 [en] (X11; I; Linux 2.0.36 i686) [Netscape]">
+   <TITLE>Curved solids, surfaces and lines</TITLE>
+</HEAD>
+<BODY BACKGROUND="svlis_new.gif">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others --><LINK REL="STYLESHEET" HREF="svi2.css"><LINK REL="next" HREF="node6.html"><LINK REL="previous" HREF="node4.html"><LINK REL="up" HREF="svi2.html"><LINK REL="next" HREF="node6.html"><!--Navigation Panel--><A NAME="tex2html165"></A><A NAME="tex2html165"></A><A NAME="tex2html165"></A><A NAME="tex2html165"></A><A NAME="tex2html165"></A><A NAME="tex2html165" HREF="node6.html"></A><A NAME="tex2html165" HREF="node6.html"></A><A NAME="tex2html165" HREF="node6.html"></A><A NAME="tex2html165" HREF="node6.html"></A><A NAME="tex2html165" HREF="node6.html"></A><A NAME="tex2html165" HREF="node6.html"></A><A HREF="node6.html" NAME="tex2html165"><IMG SRC="next_motif.gif" ALT="next" BORDER=0 HEIGHT=24 WIDTH=37 ALIGN=BOTTOM></A><A NAME="tex2html161"></A><A NAME="tex2html161"></A><A NAME="tex2html161"></A><A NAME="tex2html161"></A><A NAME="tex2html161"></A><A NAME="tex2html161" HREF="svi2.html"></A><A NAME="tex2html161" HREF="svi2.html"></A><A NAME="tex2html161" HREF="svi2.html"></A><A NAME="tex2html161" HREF="svi2.html"></A><A NAME="tex2html161" HREF="svi2.html"></A><A NAME="tex2html161" HREF="svi2.html"></A><A HREF="svi2.html" NAME="tex2html161"><IMG SRC="up_motif.gif" ALT="up" BORDER=0 HEIGHT=24 WIDTH=26 ALIGN=BOTTOM></A><A NAME="tex2html155"></A><A NAME="tex2html155"></A><A NAME="tex2html155"></A><A NAME="tex2html155"></A><A NAME="tex2html155"></A><A NAME="tex2html155" HREF="node4.html"></A><A NAME="tex2html155" HREF="node4.html"></A><A NAME="tex2html155" HREF="node4.html"></A><A NAME="tex2html155" HREF="node4.html"></A><A NAME="tex2html155" HREF="node4.html"></A><A NAME="tex2html155" HREF="node4.html"></A><A HREF="node4.html" NAME="tex2html155"><IMG SRC="previous_motif.gif" ALT="previous" BORDER=0 HEIGHT=24 WIDTH=63 ALIGN=BOTTOM></A><A NAME="tex2html163"></A><A NAME="tex2html163"></A><A NAME="tex2html163"></A><A NAME="tex2html163"></A><A NAME="tex2html163"></A><A NAME="tex2html163" HREF="node1.html"></A><A NAME="tex2html163" HREF="node1.html"></A><A NAME="tex2html163" HREF="node1.html"></A><A NAME="tex2html163" HREF="node1.html"></A><A NAME="tex2html163" HREF="node1.html"></A><A NAME="tex2html163" HREF="node1.html"></A><A HREF="node1.html" NAME="tex2html163"><IMG SRC="contents_motif.gif" ALT="contents" BORDER=0 HEIGHT=24 WIDTH=65 ALIGN=BOTTOM></A><A NAME="tex2html164"></A><A NAME="tex2html164"></A><A NAME="tex2html164"></A><A NAME="tex2html164"></A><A NAME="tex2html164"></A><A NAME="tex2html164" HREF="node11.html"></A><A NAME="tex2html164" HREF="node11.html"></A><A NAME="tex2html164" HREF="node11.html"></A><A NAME="tex2html164" HREF="node11.html"></A><A NAME="tex2html164" HREF="node11.html"></A><A NAME="tex2html164" HREF="node11.html"></A><A HREF="node11.html" NAME="tex2html164"><IMG SRC="index_motif.gif" ALT="index" BORDER=0 HEIGHT=24 WIDTH=43 ALIGN=BOTTOM></A>
+<BR><B>Next:<A NAME="tex2html166"></A><A NAME="tex2html166"></A><A NAME="tex2html166"></A><A NAME="tex2html166"></A><A NAME="tex2html166"></A><A NAME="tex2html166" HREF="node6.html"></A><A NAME="tex2html166" HREF="node6.html"></A><A NAME="tex2html166" HREF="node6.html"></A><A NAME="tex2html166" HREF="node6.html"></A><A NAME="tex2html166" HREF="node6.html"></A><A NAME="tex2html166" HREF="node6.html"></A></B><A HREF="node6.html" NAME="tex2html166">Sets,
+models, and DIY</A> <B>Up:<A NAME="tex2html162"></A><A NAME="tex2html162"></A><A NAME="tex2html162"></A><A NAME="tex2html162"></A><A NAME="tex2html162"></A><A NAME="tex2html162" HREF="svi2.html"></A><A NAME="tex2html162" HREF="svi2.html"></A><A NAME="tex2html162" HREF="svi2.html"></A><A NAME="tex2html162" HREF="svi2.html"></A><A NAME="tex2html162" HREF="svi2.html"></A><A NAME="tex2html162" HREF="svi2.html"></A></B><A HREF="svi2.html" NAME="tex2html162">SvLis
+Introduction</A> <B>Previous:<A NAME="tex2html156"></A><A NAME="tex2html156"></A><A NAME="tex2html156"></A><A NAME="tex2html156"></A><A NAME="tex2html156"></A><A NAME="tex2html156" HREF="node4.html"></A><A NAME="tex2html156" HREF="node4.html"></A><A NAME="tex2html156" HREF="node4.html"></A><A NAME="tex2html156" HREF="node4.html"></A><A NAME="tex2html156" HREF="node4.html"></A><A NAME="tex2html156" HREF="node4.html"></A></B><A HREF="node4.html" NAME="tex2html156">Fundamental
+geometric structures</A>
+<P><!--End of Navigation Panel--><!--Table of Child-Links--><A NAME="CHILD_LINKS"></A><B>Subsections</B>
+<UL>
+<LI>
+<A NAME="tex2html167"></A><A NAME="tex2html167"></A><A NAME="tex2html167"></A><A NAME="tex2html167"></A><A NAME="tex2html167"></A><A NAME="tex2html167" HREF="node5.html#SECTION00510000000000000000"></A><A NAME="tex2html167" HREF="node5.html#SECTION00510000000000000000"></A><A NAME="tex2html167" HREF="node5.html#SECTION00510000000000000000"></A><A NAME="tex2html167" HREF="node5.html#SECTION00510000000000000000"></A><A NAME="tex2html167" HREF="node5.html#SECTION00510000000000000000"></A><A NAME="tex2html167" HREF="node5.html#SECTION00510000000000000000"></A><A HREF="node5.html#SECTION00510000000000000000" NAME="tex2html167">Solids
+with simple curved surfaces</A></LI>
+
+<LI>
+<A NAME="tex2html168"></A><A NAME="tex2html168"></A><A NAME="tex2html168"></A><A NAME="tex2html168"></A><A NAME="tex2html168"></A><A NAME="tex2html168" HREF="node5.html#SECTION00520000000000000000"></A><A NAME="tex2html168" HREF="node5.html#SECTION00520000000000000000"></A><A NAME="tex2html168" HREF="node5.html#SECTION00520000000000000000"></A><A NAME="tex2html168" HREF="node5.html#SECTION00520000000000000000"></A><A NAME="tex2html168" HREF="node5.html#SECTION00520000000000000000"></A><A NAME="tex2html168" HREF="node5.html#SECTION00520000000000000000"></A><A HREF="node5.html#SECTION00520000000000000000" NAME="tex2html168">Blends</A></LI>
+
+<LI>
+<A NAME="tex2html169"></A><A NAME="tex2html169"></A><A NAME="tex2html169"></A><A NAME="tex2html169"></A><A NAME="tex2html169"></A><A NAME="tex2html169" HREF="node5.html#SECTION00530000000000000000"></A><A NAME="tex2html169" HREF="node5.html#SECTION00530000000000000000"></A><A NAME="tex2html169" HREF="node5.html#SECTION00530000000000000000"></A><A NAME="tex2html169" HREF="node5.html#SECTION00530000000000000000"></A><A NAME="tex2html169" HREF="node5.html#SECTION00530000000000000000"></A><A NAME="tex2html169" HREF="node5.html#SECTION00530000000000000000"></A><A HREF="node5.html#SECTION00530000000000000000" NAME="tex2html169">Potentials
+and non-polynomials</A></LI>
+
+<LI>
+<A NAME="tex2html170"></A><A NAME="tex2html170"></A><A NAME="tex2html170"></A><A NAME="tex2html170"></A><A NAME="tex2html170"></A><A NAME="tex2html170" HREF="node5.html#SECTION00540000000000000000"></A><A NAME="tex2html170" HREF="node5.html#SECTION00540000000000000000"></A><A NAME="tex2html170" HREF="node5.html#SECTION00540000000000000000"></A><A NAME="tex2html170" HREF="node5.html#SECTION00540000000000000000"></A><A NAME="tex2html170" HREF="node5.html#SECTION00540000000000000000"></A><A NAME="tex2html170" HREF="node5.html#SECTION00540000000000000000"></A><A HREF="node5.html#SECTION00540000000000000000" NAME="tex2html170">Sheets
+and wires</A></LI>
+
+<LI>
+<A NAME="tex2html171"></A><A NAME="tex2html171"></A><A NAME="tex2html171"></A><A NAME="tex2html171"></A><A NAME="tex2html171"></A><A NAME="tex2html171" HREF="node5.html#SECTION00550000000000000000"></A><A NAME="tex2html171" HREF="node5.html#SECTION00550000000000000000"></A><A NAME="tex2html171" HREF="node5.html#SECTION00550000000000000000"></A><A NAME="tex2html171" HREF="node5.html#SECTION00550000000000000000"></A><A NAME="tex2html171" HREF="node5.html#SECTION00550000000000000000"></A><A NAME="tex2html171" HREF="node5.html#SECTION00550000000000000000"></A><A HREF="node5.html#SECTION00550000000000000000" NAME="tex2html171">The
+<TT>sv_primitive</TT>
+class</A></LI>
+</UL>
+<!--End of Table of Child-Links-->
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<BR>
+<CENTER>
+<P>Copyright &copy; 1994, 1996, 1999 <A HREF="http://www.inge.com">Information
+Geometers Ltd </A>and <A HREF="http://www.bath.ac.uk">The University of
+Bath</A></CENTER>
+
+<P><BR>
+<P>
+<HR>
+<H1>
+<A NAME="SECTION00500000000000000000"></A><B><FONT SIZE=+4>Curved solids,
+surfaces and lines</FONT></B></H1>
+
+<H1>
+<A NAME="SECTION00510000000000000000"></A><FONT SIZE=+2>Solids with simple
+curved surfaces</FONT></H1>
+<A NAME="1178"></A><A NAME="1179"></A><A NAME="1180"></A>
+<P><A NAME="CH3"></A>Already, in Chapter 1, we have seen that svLis can
+use cylinders as well as flat surfaces as primitives. In fact, svLis is
+able to handle a very wide range of primitives with curved surfaces, but
+let's start with cylinders<A NAME="1182"></A><A NAME="1183"></A>.
+<P>Having looked at the implicit planar half-space inequality at the end
+of the last chapter, you might imagine that svLis uses the same trick to
+define a solid cylinder. For example a cylinder of radius 2 parallel to
+the
+<I>z</I>-axis and with its axis through the point <I>x</I> = 3, <I>y</I>
+= 1 would, conventionally, be represented by the inequality:
+<CENTER>
+<P><IMG SRC="img18.gif" ALT="\begin{displaymath}(x - 3)^2 + (y - 1)^2 - 2^2 \leq 0.\end{displaymath}" HEIGHT=21 WIDTH=215></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<P>It is more difficult if the cylinder is not aligned with one of the
+axes<A NAME="1184"></A><A NAME="1185"></A>, of course. However, any cylinder
+could be represented by the general quadric inequality:&nbsp;<A NAME="GENQUAD"></A><A NAME="1187"></A><A NAME="1188"></A>
+<CENTER>
+<P><IMG SRC="img19.gif" ALT="\begin{displaymath}\begin{array}{ccccccccc}a_0 & + & a_1 x & + & a_2 y & + & ... ...\ & + & a_7 xy & + & a_8 xz & + & a_9 yz & \leq & 0.\end{array}\end{displaymath}" HEIGHT=70 WIDTH=318></CENTER>
+
+<P>If we could be bothered to figure out the right numbers for all the
+<I>a<SUB>i</SUB></I>
+values, this equation would also do for ellipsoids, spheres, hyperbolas
+of revolution, and so on.
+<P>However, svLis doesn't use this representation. It uses the <I>planar
+basis<A NAME="1193"></A><A NAME="1194"></A></I>&nbsp; instead. Consider
+the disc shown in Figure <A HREF="node5.html#fig:DISC">10</A>. This is
+a cross-section through the <I>z</I>-axis-aligned cylinder I just mentioned,
+and it can be represented by exactly the same inequality:
+<BR>&nbsp;
+<P><BR>
+<CENTER>
+<P><IMG SRC="img18.gif" ALT="\begin{displaymath}(x - 3)^2 + (y - 1)^2 - 2^2 \leq 0.\end{displaymath}" HEIGHT=21 WIDTH=215>
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<P><A NAME="fig:DISC"></A><IMG SRC="img20.gif" ALT="\begin{figure}% latex2html id marker 1196\epsfysize=80mm\centerline{\epsffile... ...is doesn't affect their shape, ofcourse. \end{minipage}\end{center}\end{figure}" HEIGHT=673 WIDTH=453></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<P>Suppose we have two normalized perpendicular implicit lines, <I>L<SUB>1</SUB></I>
+and <I>L<SUB>2</SUB></I>, that intersect at the disc's centre. Just as
+with a normalized (half-)plane, the distance of a point from a line is
+given simply by substituting the point into the expression for the line.
+Consider point&nbsp;<IMG SRC="img21.gif" ALT="${\bf p}$" HEIGHT=14 WIDTH=10 ALIGN=CENTER>
+on the disc's circumference. It is <I>d<SUB>1</SUB></I> away from <I>L<SUB>1</SUB></I>
+and <I>d<SUB>2</SUB></I> away from <I>L<SUB>2</SUB></I>. Pythagoras' theorem
+says that <I>d<SUB>1</SUB></I><SUP>2</SUP> + <I>d<SUB>2</SUB></I><SUP>2</SUP>
+- <I>r<SUP>2</SUP></I> = 0. As (in this case) <I>r</I> = 2, this means
+that
+<CENTER>
+<P><B><I>L</I></B><SUB>1</SUB><SUP>2 </SUP><B><I>+ L</I></B><SUB>2</SUB><SUP>2</SUP><B><I>
+- </I>2</B><SUP>2 </SUP><B><I>= 0</I></B></CENTER>
+
+<P>must be the equation of the disc's circumference, and that
+<BR>&nbsp;
+<P><BR>
+<CENTER>
+<P><IMG SRC="img22.gif" ALT="\begin{displaymath}{L_1}^2 + {L_2}^2 - 2^2 \leq 0\end{displaymath}" HEIGHT=20 WIDTH=144></CENTER>
+
+<P>must be the inequality that defines the whole disc, interior and all.
+In Figure <A HREF="node5.html#fig:DISC">10</A>, <I>L<SUB>1</SUB></I> and
+<I>L<SUB>2</SUB></I>
+are the following functions:
+<CENTER>
+<P><IMG SRC="img23.gif" ALT="\begin{displaymath}\begin{array}{ccccccc}L_1 & = & -x/\sqrt{2} & + & y/\sqrt{... ...2 & = & x/\sqrt{2} & + & y/\sqrt{2} & - & 2\sqrt{2}.\end{array}\end{displaymath}" HEIGHT=49 WIDTH=288></CENTER>
+
+<P>However, any two normalized and mutually perpendicular lines that crossed
+at the disc's centre would do.
+<P>This all works just as well in three (or any number of) dimensions as
+it does in two. To make any cylinder we take two perpendicular planes that
+intersect at right angles along the cylinder's axis, add their squares,
+and subtract the square of the radius. If the resulting expression is made
+less than or equal to zero, this means that:
+<UL>
+<LI>
+Any point in space that has a sum of squared distances to the two planes
+that is less than the square of the cylinder's radius lies inside the cylinder.</LI>
+
+<LI>
+Any point that gives a sum of squared distances to the two planes that
+is equal to the square of the cylinder's radius lies on the cylinder's
+surface.</LI>
+
+<LI>
+Any point that gives a sum of squared distances to the two planes that
+is greater than the square of the cylinder's radius lies outside it.</LI>
+</UL>
+Why go to all this bother to make polynomial primitive inequalities by
+doing arithmetic with planes? There are several reasons. The first is that
+it is often (when you're used to it) simpler to think in these terms than
+it is to try to work out coefficients in expressions like that for the
+general quadric on Page&nbsp;<A HREF="node5.html#GENQUAD"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>.
+Cooking up two planes that cut along the axis of a cylinder isn't very
+hard, whereas working with the coefficients usually is. The second reason
+is that it makes the primitives easy to move around in space--you just
+translate or rotate the planes, and the shape you've made moves too. The
+third is that it is more numerically stable<A NAME="1236"></A><A NAME="1237"></A>&nbsp;
+than the ordinary form for polynomials. The fourth and final reason is
+that it makes the testing of boxes against primitives (see Page&nbsp;<A HREF="node7.html#BOXPRIM"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>)
+both more efficient and more precise. The piece of svLis that follows constructs
+a sphere<A NAME="1239"></A><A NAME="1240"></A><A NAME="1510"></A><A NAME="1511"></A>.
+This operation needs three mutually perpendicular planes intersecting at
+its centre, but otherwise uses the ideas that we have just seen. Those
+three planes (<TT>xhs, yhs</TT>, and <TT>zhs</TT>) might as well be perpendicular
+to the coordinate directions as anything else.
+<UL>
+<PRE>sv_primitive p_sphere(sv_point centre, sv_real radius)
+{
+&nbsp; // Three planes through the centre.
+
+&nbsp; sv_primitive xhs = sv_plane(sv_point(1,0,0),centre);
+&nbsp; sv_primitive yhs = sv_plane(sv_point(0,1,0),centre);
+&nbsp; sv_primitive zhs = sv_plane(sv_point(0,0,1),centre);
+
+&nbsp; // Generate the sphere function.
+
+&nbsp; sv_primitive s = (xhs^2) + (yhs^2) + (zhs^2)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - sv_primitive(radius*radius);
+
+&nbsp; return(s);
+}</PRE>
+</UL>
+Next is the function for a cylinder<A NAME="1245"></A><A NAME="1246"></A><A NAME="1512"></A><A NAME="1513"></A><A NAME="1249"></A><A NAME="1250"></A>.
+Most of this is concerned with the vector algebra (using <TT>sv_point</TT>s)
+needed to construct the two perpendicular planes that intersect at the
+axis.&nbsp;<A NAME="PREXP"></A>
+<UL>
+<PRE>sv_primitive p_cylinder(sv_line axis, sv_real radius)
+{
+&nbsp; sv_point ax_vec = axis.direction;
+&nbsp; sv_point center = axis.origin;
+
+&nbsp; // Generate a vector perpendicular to
+&nbsp; // the cylinder's axis
+&nbsp;<TT> // The right function generates an arbitrary vector at right-angles</TT></PRE>
+
+<PRE><TT>&nbsp; // to another.
+
+</TT>&nbsp; sv_point ax_perp_0 = <TT>right(ax_vec)</TT>;
+
+&nbsp; // And another perpendicular to both.
+
+&nbsp; sv_point ax_perp_1 = ax_perp_0 ^ ax;
+
+&nbsp; // Generate two perpendicular planes intersecting
+&nbsp; // at the axis.
+
+&nbsp; sv_primitive hs0 = sv_plane(ax_perp_0, center);
+&nbsp; sv_primitive hs1 = sv_plane(ax_perp_1, center);
+
+&nbsp; // The product of their squares - radius^2
+&nbsp; // is the cylinder.
+
+&nbsp; sv_primitive c = (hs0^2) + (hs1^2)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - sv_primitive(radius*radius);
+&nbsp; return(c);
+}</PRE>
+</UL>
+Note the brackets needed round&nbsp;<IMG SRC="img5.gif" ALT="$ \wedge $" HEIGHT=12 WIDTH=10 ALIGN=BOTTOM>,
+as explained on Page&nbsp;<A HREF="node4.html#XROVL"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>.
+<P>The only differences between those two functions and the actual ones
+in the svLis library are that the library functions also set internal flags<A NAME="1254"></A><A NAME="1255"></A>&nbsp;
+to record the fact that the primitives <TT>s</TT> and <TT>c</TT> are special
+shapes, not just any old quadric<A NAME="1258"></A>, and that the arguments
+are transferred by reference. Finally in this section, here is a complete
+list of the simple solid primitives built into svLis:
+<DL>
+<DL>
+<DT>
+<A NAME="1514"></A><A NAME="1515"></A><A NAME="1262"></A><A NAME="1263"></A><B><TT>sv_primitive
+p_cylinder(sv_line l, sv_real r)</TT></B></DT>
+
+<DD>
+The line is the cylinder's axis, and the <TT>sv_real </TT>is its radius,
+as we have just seen.</DD>
+
+<DT>
+<A NAME="1516"></A><A NAME="1517"></A><A NAME="1267"></A><A NAME="1268"></A><B><TT>sv_primitive
+p_cone(sv_line l, sv_real a)</TT></B></DT>
+
+<DD>
+Once again the line is the axis. The <TT>sv_real </TT>is the cone's included
+angle in radians. The apex of the cone is at the line's origin. Note that
+this constructs the equation of a double cone meeting at the apex. If you
+only want half of it (and you probably do) then you have to turn it into
+a set (see Page&nbsp;<A HREF="node9.html#CONESET"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>)
+and intersect it with a plane through the apex. There's a function to do
+this.</DD>
+
+<DT>
+<A NAME="1518"></A><A NAME="1519"></A><A NAME="1273"></A><A NAME="1274"></A><B><TT>sv_primitive
+p_sphere(sv_point p, sv_real r)</TT></B></DT>
+
+<DD>
+The arguments are the centre and radius, again as we have just seen.</DD>
+
+<DT>
+<A NAME="1520"></A><A NAME="1521"></A><A NAME="1278"></A><A NAME="1279"></A><B><TT>sv_primitive
+p_torus(sv_line l, sv_real big_r, sv_real little_r)</TT></B></DT>
+
+<DL>
+<DT>
+The major circle of the torus (radius <TT>big_r</TT>) is perpendicular
+to the line and is centred at its origin. <TT>little_r</TT> is the minor
+radius of the torus.</DT>
+</DL>
+
+<DT>
+<A NAME="1522"></A><A NAME="1523"></A><A NAME="1285"></A><A NAME="1286"></A><B><TT>sv_primitive
+p_cyclide(sv_line l, sv_point sym, sv_real big_r, sv_real little_r, sv_real
+delta_r</TT></B></DT>
+
+<DL>
+<DT>
+The major circle of the cyclide (radius <TT>big_r</TT>) is perpendicular
+to the line and is centred at its origin. <TT>little_r - delta_r </TT>is
+the smallest radius of the cyclide; <TT>little_r + delta_r</TT> is the
+largest. The point <TT>sym</TT> defines the direction of symmetry of the
+cyclide, and thus must not be parallel to the direction of the line.</DT>
+</DL>
+</DL>
+</DL>
+In addition, as we saw on Page&nbsp;<A HREF="node4.html#PTOPRIM"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>,
+if <TT>f</TT> is a half-plane<A NAME="1294"></A><A NAME="1295"></A>&nbsp;
+you can turn it into a primitive:
+<UL>
+<PRE>sv_primitive p_f = sv_primitive(f);</PRE>
+
+<PRE></PRE>
+
+<PRE></PRE>
+</UL>
+
+<H1>
+<A NAME="SECTION00520000000000000000"></A>Blends</H1>
+<A NAME="1297"></A><A NAME="BLENDS"></A>If&nbsp;&nbsp; <TT>f1, f2, f3</TT>,
+and <TT>f4</TT> are planes (there could be more than four, or fewer; this
+is just an example) then svLis is quite happy for you to make any polynomial<A NAME="1301"></A><A NAME="1302"></A>&nbsp;
+you like out of them and use it as an inequality (wherever it's negative
+or zero is solid) to define a set:
+<UL>
+<PRE>sv_primitive p1 = sv_primitive(f1);
+sv_primitive p2 = sv_primitive(f2);
+sv_primitive p3 = sv_primitive(f3);
+sv_primitive p4 = sv_primitive(f4);
+sv_primitive laugh_p = 3.2*(p1^2) - 7.8*((p2^3)*p1)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + p3*p4 - p1 + 12;
+sv_set laugh_shape = sv_set(laugh_p);
+sv_set weird = laugh_shape &amp; funny_previous_set;</PRE>
+</UL>
+Heaven knows what sort of shape that would make--it doesn't matter; the
+point is that this is the basic mechanism in svLis for building curved
+solids<A NAME="1303"></A><A NAME="1304"></A>.
+<P>How can this be used to solve one of the fundamental requirements of
+geometric modelling: that of forming a smooth transition or <I>blend</I>
+between two other shapes? Figure <A HREF="node5.html#fig:PIPEBL">11</A>
+illustrates what I mean. In it, two pipes<A NAME="1307"></A><A NAME="1308"></A>&nbsp;
+join at an angle to make an angled T-piece, but the join does not have
+a sharp corner. An extra surface has been unioned with the cylinders to
+round off the join. Almost all real engineering components need such blends<A NAME="1309"></A>&nbsp;
+somewhere to avoid weak sharp corners in dies and moulds, to allow for
+machining by round cutters, for casting or moulding, to avoid problems
+with fluid flow, or simply to look nice.
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<BR>
+<CENTER>
+<P><A NAME="fig:PIPEBL"></A><IMG SRC="img25.gif" ALT="\begin{figure}% latex2html id marker 1310\epsfysize=80mm\centerline{\epsffile... ...ctr}.A Liming blend between two cylinders.\end{minipage}\end{center}\end{figure}" HEIGHT=360 WIDTH=375></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<P>The technique for solving this problem was developed in the early 1980s
+by John Woodwark, Andy Wallis and Alan Middleditch (see the <A HREF="node10.html#SECTION001000000000000000000">Bibliography</A>
+for details). It stems from a method for aircraft fuselage design invented
+by R.A. Liming<A NAME="1314"></A>&nbsp; in 1944.
+<P>Suppose we have four linear functions:
+<CENTER>
+<P><IMG SRC="img26.gif" ALT="\begin{displaymath}L_i = A_i x + B_i y + C_i, \hspace{5mm} i = 1 \ldots 4.\end{displaymath}" HEIGHT=17 WIDTH=264></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<P>When set to 0, these define four lines in the plane (Figure <A HREF="node5.html#fig:LIM1">12</A>).
+If we then form a quadratic&nbsp;<IMG SRC="img27.gif" ALT="$Q = \lambda L_1 L_2 - (1 - \lambda) L_3 L_4$" HEIGHT=21 WIDTH=159 ALIGN=CENTER>
+(where&nbsp;<IMG SRC="img28.gif" ALT="$\lambda$" HEIGHT=13 WIDTH=9 ALIGN=BOTTOM>
+is a constant between 0 and 1), the curve where the quadratic<A NAME="1317"></A><A NAME="1318"></A>&nbsp;
+is zero will pass through the four intersection points of the lines. As
+we change the value of&nbsp;<IMG SRC="img28.gif" ALT="$\lambda$" HEIGHT=13 WIDTH=9 ALIGN=BOTTOM>
+a whole family of quadratics will be generated (some ellipses, some hyperbolas)
+that all share this property.
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<BR>
+<CENTER>
+<P><A NAME="fig:LIM1"></A><IMG SRC="img29.gif" ALT="\begin{figure}% latex2html id marker 1319\epsfysize=80mm\centerline{\epsffile... ...tr}.A Liming quadratic between four lines.\end{minipage}\end{center}\end{figure}" HEIGHT=356 WIDTH=476></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<P>This will work in three dimensions just as well. SvLis can build a quadric<A NAME="1323"></A><A NAME="1324"></A>&nbsp;
+primitive that went through the four lines of intersection of those planes
+<TT>f1</TT>
+to <TT>f4</TT> like this:
+<UL>
+<PRE>sv_real lambda = 0.62;&nbsp; // or whatever
+sv_primitive q = lambda*p1*p2 - (1 - lambda)*p3*p4;</PRE>
+</UL>
+The shape that this produced would depend on the orientation of the planes
+and the value of&nbsp;<IMG SRC="img28.gif" ALT="$\lambda$" HEIGHT=13 WIDTH=9 ALIGN=BOTTOM>,
+but would probably be similar to an elliptical cone. Note, incidentally,
+that the signs are important, by which I mean that, even though <I>L<SUB>1</SUB></I>
+= 0 and -<I>L<SUB>1</SUB></I> = 0 define the same line, the resulting polynomials
+will be different.
+<P>Suppose now that we bring <I>L<SUB>3</SUB></I> and <I>L<SUB>4</SUB></I>
+together so that they coincide (that is, so that <I>L<SUB>3</SUB></I> =
+<I>L<SUB>4</SUB></I>).
+The quadratic <I>Q</I> will now have the property that it passes through
+the intersections of <I>L<SUB>1</SUB></I> and <I>L<SUB>3</SUB></I>, and
+of <I>L<SUB>2</SUB></I> and <I>L<SUB>3</SUB></I>, in such a way that it
+is tangential to <I>L<SUB>1</SUB></I> and <I>L<SUB>2</SUB></I> at those
+points (Figure <A HREF="node5.html#fig:LIM2">13</A>).
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<BR>
+<CENTER>
+<P><A NAME="fig:LIM2"></A><IMG SRC="img30.gif" ALT="\begin{figure}% latex2html id marker 1328\epsfysize=80mm\centerline{\epsffile... ...o two lines where they are cut by a third.\end{minipage}\end{center}\end{figure}" HEIGHT=393 WIDTH=537></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<P>Again this will work with planes as well, and the svLis code becomes:
+<UL>
+<PRE>sv_primitive q = lambda*p1*p2 - (1 - lambda)*(p3^2);</PRE>
+</UL>
+The quadric <TT>q</TT> would be tangential<A NAME="1333"></A><A NAME="1334"></A>&nbsp;
+to <TT>p1</TT> and <TT>p2</TT> along the lines where they cut <TT>p3</TT>.
+The value of&nbsp;<IMG SRC="img28.gif" ALT="$\lambda$" HEIGHT=13 WIDTH=9 ALIGN=BOTTOM><A NAME="1338"></A>&nbsp;
+controls the shape of the curve: values close to unity will cause it to
+go tight into the corner between <TT>p1</TT> and <TT>p2</TT>, values close
+to zero will cause it to stay close to <TT>p3</TT>.
+<P>How does all this help with the blending problem? The answer lies in
+the fact that the tangency property of the Liming formulation is retained
+for any polynomials <TT>p1</TT>, <TT>p2</TT>, and <TT>p3<A NAME="tex2html14"></A><A NAME="tex2html14"></A><A NAME="tex2html14"></A><A NAME="tex2html14"></A><A NAME="tex2html14"></A><A NAME="tex2html14" HREF="footnode.html#1527"></A><A NAME="tex2html14" HREF="footnode.html#1527"></A><A NAME="tex2html14" HREF="footnode.html#1527"></A><A NAME="tex2html14" HREF="footnode.html#1527"></A><A NAME="tex2html14" HREF="footnode.html#1527"></A><A NAME="tex2html14" HREF="footnode.html#1527"></A><A HREF="footnode.html#1527" NAME="tex2html14"><IMG SRC="foot_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A></TT>;
+they don't have to be planes.
+<P>Let's look at how the T-piece in Figure <A HREF="node5.html#fig:PIPEBL">11</A>
+was done. The stages are illustrated in Figure <A HREF="node5.html#fig:PIPEBLSTGE">14</A>.
+First the two cylinders<A NAME="1348"></A><A NAME="1349"></A>&nbsp; were
+created. Then a cone was created to define where on the cylinders' surfaces
+the tangency was to happen. Then a blend surface was made using these three
+primitives and the Liming formula. Only part of this blend surface is needed,
+of course: the part inside the cone. This is trivial to obtain as all that
+needs to be done is to intersect the blend with the cone. Finally the resulting
+bit of blend is unioned with the two cylinders to make the blended T-piece.
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<BR>
+<CENTER>
+<P><A NAME="fig:PIPEBLSTGE"></A><IMG SRC="img31.gif" ALT="\begin{figure}% latex2html id marker 1350\epsfxsize=55mm\centerline{\epsffile... ...e cone defining the tangency of the blend.\end{minipage}\end{center}\end{figure}" HEIGHT=230 WIDTH=454></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<P>Here's the code:
+<UL>
+<PRE>// Make the two cylinders.
+
+sv_real radius_1 = 1.0;
+sv_line line_1 = sv_line(sv_point(1,0,0),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_point(0,0,0));
+sv_primitive cyl_1 = p_cylinder(line_1, radius_1);
+
+sv_real radius_2 = 0.6;
+
+// Note the point for the cone's vertex:
+
+sv_line line_2 = sv_line(sv_point(1,0,1),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_point(4.5,0,4.5));
+
+sv_primitive cyl_2 = p_cylinder(line_2, radius_2);
+
+// Now the 17-degree cone that defines the tangency.
+
+sv_primitive tan_cone = p_cone(line_2, 17*M_PI/180);
+
+// ...what is a radian, anyway?
+
+// Now the blend fillet.
+
+cout &lt;&lt; "Type a lambda value in [0,1]: ";
+sv_real lambda;
+cin >> lambda;
+sv_primitive blend_p = lambda*cyl_1*cyl_2
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - (1 - lambda)*(tan_cone^2);
+
+// Finally, do the set-theory to chop off the unwanted
+// bits of blend and to union the lot together.
+
+sv_set blend = sv_set(blend_p) &amp; sv_set(tan_cone);
+sv_set raw_pipes = sv_set(cyl_1) | sv_set(cyl_2);
+sv_set t_piece = raw_pipes | blend;</PRE>
+</UL>
+This is a bit of a cheat, as the `pipes' don't have holes down them. To
+get more useful sorts of pipe you'd have to make a cavity inside as well,
+of course. Also, I haven't included the code that intersects the pipes
+with half-planes to give their flat ends, and to make <TT>cyl_2</TT> stop
+part-way through <TT>cyl_1</TT> so that it doesn't stick out on the other
+side.
+<P>As the axis of the smaller cylinder is the same line as the cone's axis,
+the point for the cone's vertex needs to be the origin of that line. Because
+the cylinders and the cone are quadrics (that is, they have polynomial
+degree 2), the blend polynomial <TT>blend_p</TT> has degree 4. This method
+of making fillets and smooth transitions is very versatile, because it
+starts with polynomials and produces polynomials. Thus it is possible to
+use it to make blends on blends. The only problem with this is that the
+degree of the blend polynomials rises rapidly<A NAME="1358"></A><A NAME="1359"></A>,
+and can make the results intractable. However, this will only happen with
+quite esoteric models. For most ordinary solid objects, the technique is
+neat, quick, and convenient.
+<P>The effect of varying the value of&nbsp;<IMG SRC="img28.gif" ALT="$\lambda$" HEIGHT=13 WIDTH=9 ALIGN=BOTTOM><A NAME="1360"></A>&nbsp;
+is shown in Figure <A HREF="node5.html#fig:LAMBDACHANGE">15</A>.
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<BR>
+<CENTER>
+<P><A NAME="fig:LAMBDACHANGE"></A><IMG SRC="img32.gif" ALT="\begin{figure}% latex2html id marker 1362\epsfysize=80mm\centerline{\epsffile... ...ue of $\lambda$\space in the Liming blend.\end{minipage}\end{center}\end{figure}" HEIGHT=380 WIDTH=454></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<P>The Liming blending scheme can be used to smooth out any corner. However,
+many objects that svLis is required to model need another sort of blend
+as well. Consider the transition<A NAME="1366"></A><A NAME="1367"></A>&nbsp;
+from the body to the neck of a bottle. This is tangentially smooth where
+it joins the base surfaces, and goes from a large diameter to a smaller
+one. This kind of blend, a sort of varying-section tube or duct for connecting
+two objects that are (roughly) in-line, is the other kind that's needed.
+SvLis' solution to this problem was devised by Dayong Zhang<A NAME="1368"></A>.
+<P>Figure <A HREF="node5.html#fig:ZHANG2D">16</A> is rather similar to
+Figure <A HREF="node5.html#fig:LIM2">13</A>, except that here we generate
+a cubic, <I>C</I>, that is tangential to <I>L<SUB>1</SUB></I> where <I>L<SUB>3</SUB></I>
+crosses it, and tangential to <I>L<SUB>2</SUB></I> where <I>L<SUB>4</SUB></I>
+crosses it.
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<BR>
+<CENTER>
+<P><A NAME="fig:ZHANG2D"></A><IMG SRC="img33.gif" ALT="\begin{figure}% latex2html id marker 1371\epsfysize=80mm\centerline{\epsffile... ...ooth transition from $L_1$\space to $L_2$.\end{minipage}\end{center}\end{figure}" HEIGHT=384 WIDTH=474></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<P><I>C</I> has the form&nbsp;<IMG SRC="img34.gif" ALT="$(1 - \lambda) L_1 {L_4}^2 + \lambda L_2 {L_3}^2$" HEIGHT=28 WIDTH=151 ALIGN=CENTER>.As
+you might expect, a cubic is needed because in general such blends need
+to have inflections in them. As with the Liming blend, the underlying shapes
+<I>L<SUB>i</SUB></I>
+don't need to be linear polynomials. They can be polynomials of higher
+degree, or indeed can contain sines, exponentials, and so on (see the next
+section). Again, as with the Liming blend, the primitives that define where
+the blend is tangential to the base surfaces (<I>L<SUB>3</SUB></I> and
+<I>L<SUB>4</SUB></I>)
+can also be used set-theoretically to chop the blend curve or surface to
+size to create the solid required.
+<P>Here is some code that takes two non-coaxial cylinders<A NAME="1377"></A><A NAME="1378"></A>&nbsp;
+and constructs a smooth transition from one to the other. The transition
+tangencies are deliberately set to be non-perpendicular to the cylinder
+axes in order to demonstrate the versatility of the technique.
+<UL>
+<PRE>sv_real lambda = 0.4;
+sv_line axis_1 = sv_line(sv_point(1,0,0),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_point(0,0,0));
+sv_line axis_2 = sv_line(sv_point(1,1,0),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_point(0,0,0.2));
+sv_primitive l_1 = p_cylinder(axis 1, 1.0);
+sv_primitive l_2 = p_cylinder(axis 2, 0.5);
+sv_primitive l_3 = sv_plane(sv_point(1,0.3,-0.2),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_point(-1,0,0));
+sv_primitive l_4 = sv_plane(sv_point(-1,-1,0.25),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_point(1,1,0.2));
+sv_primitive c = sv_primitive(1 - lambda)*l_1*(l_4^2)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + sv_primitive(lambda)*l_2*(l_3^2);
+sv_set s_3 = sv_set(l_3);
+sv_set s_4 = sv_set(l_4);
+
+// Intersection with s_3 and s_4 chops cylinders
+// in the right place.
+
+sv_set result = (sv_set(l_1) &amp; s_3)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | (sv_set(l_2) &amp; s_4);
+
+// Trim the blend and union it in.
+
+result = result | (sv_set(c) - s_3 - s_4);</PRE>
+</UL>
+Figure <A HREF="node5.html#fig:CYLBL">17</A> shows the resulting shape.
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<BR>
+<BR>
+<CENTER>
+<P><A NAME="fig:CYLBL"></A><IMG SRC="img35.gif" ALT="\begin{figure}% latex2html id marker 1380\epsfysize=80mm\centerline{\epsffile... ... transition between two offsetcylinders. \end{minipage}\end{center}\end{figure}" HEIGHT=360 WIDTH=453></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<H1>
+<A NAME="SECTION00530000000000000000"></A>Potentials and non-polynomials</H1>
+<A NAME="1385"></A><A NAME="1386"></A><A NAME="1387"></A><A NAME="POTNONP"></A>All
+primitives generate potential values. This is to say that, if you have
+any point (<I>x</I>,<I>y</I>,<I>z</I>) in space, and you find the value
+of a primitive at that point<A NAME="tex2html15"></A><A NAME="tex2html15"></A><A NAME="tex2html15"></A><A NAME="tex2html15"></A><A NAME="tex2html15"></A><A NAME="tex2html15" HREF="footnode.html#1532"></A><A NAME="tex2html15" HREF="footnode.html#1532"></A><A NAME="tex2html15" HREF="footnode.html#1532"></A><A NAME="tex2html15" HREF="footnode.html#1532"></A><A NAME="tex2html15" HREF="footnode.html#1532"></A><A NAME="tex2html15" HREF="footnode.html#1532"></A><A HREF="footnode.html#1532" NAME="tex2html15"><IMG SRC="foot_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>,
+that value will be the primitive's potential at that point. The convention
+is, as we have seen, that a negative potential means solid, zero means
+surface, and positive potentials correspond to air.
+<P>In addition to doing arithmetic on planes to make complicated shapes,
+svLis will also allow you to use other functions<A NAME="1394"></A><A NAME="1395"></A>.
+For example you can take the sine<A NAME="1396"></A><A NAME="1397"></A>&nbsp;
+of a primitive:
+<P><A NAME="sinprim"></A>
+<UL>
+<PRE>// Plane through the origin
+// perpendicular to the x axis:
+
+sv_primitive xp
+&nbsp; = sv_primitive( sv_plane(sv_point(1,0,0),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_point(0,0,0)) );
+
+// The potential function of xp is just x.
+// So, to get sin(x)....
+
+sv_primitive sx = sin(xp);
+
+// If we add sin(xp) to a plane perpendicular to z,
+// we'll get a wavy sheet:
+
+sv_primitive zp
+&nbsp; = sv_primitive( sv_plane(sv_point(0,0,1),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_point(0,0,0)) );
+sv_primitive wave = zp + sx;
+
+// ....</PRE>
+</UL>
+
+<P><BR>You could compress a lot of that code; I've written it out step
+by step for clarity. Figure <A HREF="node5.html#fig:sinsheet">18</A> shows
+the shape that results. The primitive <TT>zp</TT> has a potential that
+is the same as the value of <I>z</I> everywhere; <TT>sx</TT> is the same
+as&nbsp;<IMG SRC="img37.gif" ALT="$\sin(x)$" HEIGHT=24 WIDTH=40 ALIGN=CENTER>
+everywhere. The effect of adding them is to make the surface of <TT>zp</TT>
+(where <I>z</I> is 0) undulate, because now the zero locations are wherever&nbsp;<IMG SRC="img38.gif" ALT="$z + \sin(x) = 0$" HEIGHT=24 WIDTH=97 ALIGN=CENTER>.
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<CENTER>
+<P><A NAME="fig:sinsheet"></A><IMG SRC="img36.gif" ALT="\begin{figure}% latex2html id marker 1399\epsfysize=80mm\centerline{\epsffile... ...inusoidal solid intersected with a cuboid.\end{minipage}\end{center}\end{figure}" HEIGHT=354 WIDTH=414></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<BR>
+<P>You can play lots of tricks like this. Experiment! The functions you
+have available are <TT>sin, cos<A NAME="1408"></A></TT>&nbsp; and <TT>exp<A NAME="1410"></A><A NAME="1411"></A><A NAME="TRANCBLEND"></A></TT>.
+You'll note that there is no <TT>log<A NAME="1414"></A></TT> , nor
+<TT>tan<A NAME="1416"></A></TT>.
+Logarithms and tangents both behave very nastily for quite sensible arguments,
+like negative ones or ones close to&nbsp;<IMG SRC="img39.gif" ALT="$\pi/2$" HEIGHT=24 WIDTH=25 ALIGN=CENTER>.
+SvLis would have to be riddled with special-case code to deal with these
+functions.
+<P>There is a further function available: the signed square root<A NAME="1417"></A><A NAME="1418"></A>
+,
+<TT>s_sqrt<A NAME="1534"></A><A NAME="1535"></A></TT>. An ordinary square
+root would give imaginary answers (or errors) for the solid (negative)
+region of a primitive, of course, and so would not be a lot of use. The
+function <TT>s_sqrt</TT> applies the sign of a value to the square-root
+of the absolute value. This retains the idea of solid, surface, and air
+for primitives, but allows you to square-root their potential function.
+If you do this for spheres and cylinders, you will see that the potential
+function that you end up with will now return real tape-measure distance
+just as the potential function of a plane does. Also, given the ubiquitous
+nature of Pythagoras' theorem, you will find that--when you build your
+own primitives using arithmetic on planes and other primitives--their potential
+functions will often also be squared distance (or distance to the fourth
+power, or whatever); using <TT>s_sqrt</TT> can help you to linearize their
+potentials<A NAME="1424"></A><A NAME="1425"></A>. As we shall see in the
+next chapter, there are functions available which will tell you the nearest
+primitive to a point in a model, measuring distance in terms of potential
+value. If the potentials are all real distances, this makes it easier to
+find the nearest surface, which is often a useful thing to know.
+<P>Finally in this section, there is a<A NAME="9876"></A>&nbsp;<TT> sign</TT>
+function that returns +1 or -1 depending upon the sign of the primitive
+for which it is called. Note that this does not return 0 on the surface
+of a primitive, it returns -1.
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<H1>
+<A NAME="SECTION00540000000000000000"></A>Sheets and wires</H1>
+<A NAME="1427"></A><A NAME="SHEETW"></A>SvLis is a geometric modeller,
+not just a solid modeller. Back on Page&nbsp;<A HREF="node3.html#GSDIFF"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>,
+I said that I'd explain the difference. Solid modellers can only represent
+three-dimensional solid objects; but geometric modellers can represent
+all sorts of other geometric entities as well. In particular, svLis can
+represent zero-thickness <I>sheets</I>, curved lines (or <I>wires</I>)
+in space, and points in space--as well as solids.
+<P>We have just seen how primitives have potential functions which are
+positive for air, zero for surface, and negative for solid. Clearly a sheet
+has no solid--it's just surface and air, or zero and positive. SvLis achieves
+this by providing you with an absolute-value function<A NAME="1536"></A><A NAME="1537"></A>&nbsp;
+that you can apply to a primitive. The result is a primitive that has no
+solid side; it is just surface and air. For example, suppose we have an
+ordinary solid sphere <TT>s</TT>, and the sinusoidal solid primitive <TT>wave</TT>
+from Page&nbsp;<A HREF="node5.html#sinprim"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>.
+We could turn the wave into a sheet, make it into a set, and union it with
+the sphere:
+<UL>
+<PRE>wave = abs(wave);
+sv_set w_sph = sv_set(wave) | s;</PRE>
+</UL>
+
+<CENTER>
+<P><BR><A NAME="fig:SHEETS"></A><IMG SRC="img40.gif" ALT="\begin{figure}% latex2html id marker 1437\epsfxsize=55mm\centerline{\epsffile... ... and differenced from, a sinusoidal sheet.\end{minipage}\end{center}\end{figure}" HEIGHT=234 WIDTH=478></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<P>Figure <A HREF="node5.html#fig:SHEETS">19</A> shows the result, and
+also the result of doing a difference rather than a union. In this way
+you can cut holes in sheets, limit their boundaries with intersections,
+and treat them as sets just like a solid primitive.
+<P><A NAME="1443"></A>What about wires? Well, to get a curving line in
+space, you just intersect two sheets. The result may be more than one curve,
+of course (think of a small cylindrical sheet cutting a big one, for example),
+but you can chop them about by differencing and intersecting solids with
+them, just as with sheets. Figure <A HREF="node5.html#fig:WIRES">20</A>
+shows two such sheet cylinders that have had a solid cuboid subtracted
+from where they cross (so you can see what's going on) and have then had
+their intersection unioned in to show the curved wires where they cross
+each other. Here is the code<A NAME="tex2html16"></A><A NAME="tex2html16"></A><A NAME="tex2html16"></A><A NAME="tex2html16"></A><A NAME="tex2html16"></A><A NAME="tex2html16" HREF="footnode.html#1539"></A><A NAME="tex2html16" HREF="footnode.html#1539"></A><A NAME="tex2html16" HREF="footnode.html#1539"></A><A NAME="tex2html16" HREF="footnode.html#1539"></A><A NAME="tex2html16" HREF="footnode.html#1539"></A><A NAME="tex2html16" HREF="footnode.html#1539"></A><A HREF="footnode.html#1539" NAME="tex2html16"><IMG SRC="foot_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>:
+<UL>
+<PRE>sv_line axis_1 = sv_line(sv_point(1,0,0),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_point(0,0,0));
+sv_line axis_2 = sv_line(sv_point(0,1,0),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_point(0,0,0));
+sv_point corner = sv_point(1.1, 1.1, 1.1);
+
+sv_set cyl_1 = thin_cylinder(axis_1, 1.0);
+sv_set cyl_2 = thin_cylinder(axis_2, 0.8);
+sv_set middle = cuboid(-corner, corner);
+
+sv_set object = ((cyl_1 | cyl_2) - middle)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | (cyl_1 &amp; cyl_2);
+sv_model m = sv_model(object,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_box(-2*corner, 2*corner));
+m = m.facet();
+plot_m_p_gons(m);
+// ....</PRE>
+</UL>
+
+<CENTER>
+<P><BR><A NAME="fig:WIRES"></A><IMG SRC="img41.gif" ALT="\begin{figure}% latex2html id marker 1448\epsfxsize=80mm\centerline{\epsffile... ... sheets intersected to make curving wires.\end{minipage}\end{center}\end{figure}" HEIGHT=321 WIDTH=454></CENTER>
+
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<BR>
+<BR>
+<BR>
+<H1>
+<A NAME="SECTION00550000000000000000"></A>The <TT>sv_primitive</TT> class</H1>
+<A NAME="SVPRIM1"></A>The <TT>sv_primitive</TT> class<A NAME="1542"></A><A NAME="1543"></A>&nbsp;
+is actually the most complicated class (in terms of quantity of data per
+member) in svLis. In this section I will describe a simplified version
+of it because it is typical of the way in which all svLis classes are defined
+and used. If you think you can stomach the full version, look in the svLis
+header files <TT>sv_b_cls.h</TT> and <TT>prim.h</TT> for all the inconvenient
+things that I gloss over here to make the explanation tractable.
+<P>When you use svLis you hardly ever have to mess around with pointers<A NAME="1458"></A><A NAME="1459"></A>&nbsp;
+to complicated classes like primitives, nor do you have to worry about
+storage allocation and de-allocation<A NAME="1460"></A><A NAME="1461"></A><A NAME="1462"></A>.
+SvLis handles all this for you in a very efficient way.&nbsp;<A NAME="1465"></A><A NAME="1544"></A><A NAME="1545"></A><A NAME="1468"></A><A NAME="1546"></A><A NAME="1547"></A>
+<P>The trick is the standard one of <I>reference counting</I>. The svLis
+implementation is extremely elegant but unfortunately I can claim almost
+no credit for it as I nicked it from Scott Meyers' excellent book--see
+the <A HREF="node10.html#SECTION001000000000000000000">Bibliography</A>.
+First we have to define a&nbsp;<A NAME="ab1"></A>smart pointer--that is
+a pointer that knows when it gets copied. We'll need this to point to several
+different classes, so this is done as a template in the file&nbsp;<A NAME="ab3"></A><TT>sv_b_cls.h:</TT>
+<UL>
+<PRE>template &lt;class T>
+class sv_smart_ptr
+{
+&nbsp; private:
+
+&nbsp;&nbsp; T *Pointee;
+
+&nbsp;&nbsp; void init() { if (Pointee) Pointee->add_reference(); }
+
+&nbsp; public:
+
+&nbsp;&nbsp; sv_smart_ptr(T* realPtr = 0)&nbsp;
+&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pointee = realPtr;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; init();
+&nbsp;&nbsp; }
+
+&nbsp;&nbsp; sv_smart_ptr(const sv_smart_ptr&amp; rhs)
+&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pointee = rhs.Pointee;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; init();
+&nbsp;&nbsp; }
+
+&nbsp;&nbsp; ~sv_smart_ptr() { if (Pointee) Pointee->remove_reference(); }
+
+&nbsp;&nbsp; sv_smart_ptr&amp; operator=(const sv_smart_ptr&amp; rhs)
+&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp; if (Pointee != rhs.Pointee)
+&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (Pointee) Pointee->remove_reference();
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pointee = rhs.Pointee;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; init();
+&nbsp;&nbsp;&nbsp; }
+
+&nbsp;&nbsp;&nbsp; return *this;
+&nbsp;&nbsp; }
+
+&nbsp;&nbsp; int exists() const { return(Pointee != 0); }
+
+&nbsp;&nbsp; long unique() const { return((long) Pointee); }
+
+&nbsp;&nbsp; T* operator->() const { return(Pointee); }
+
+&nbsp;&nbsp; T&amp; operator*() const { return(*Pointee); }
+};
+
+</PRE>
+</UL>
+The class <TT>T </TT>has to provide two procedures: <TT>add_reference()
+</TT>and
+<TT>remove_reference()</TT>.
+In practice <TT>T</TT> will be a derived class for each svLis object (primitives
+in the example to follow); a class derived from the&nbsp;<A NAME="ab2"></A>base
+class that handles the reference counting. The base class is called <TT>sv_refct,
+</TT>also
+defined in <TT>sv_b_cls.h:</TT>
+<UL>
+<PRE>class sv_refct
+{
+&nbsp;protected:
+
+&nbsp;&nbsp; sv_integer ref_count;&nbsp; // The reference count
+
+&nbsp;&nbsp; sv_refct()
+&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ref_count = 0;
+&nbsp;&nbsp; }
+
+&nbsp;&nbsp; sv_refct(const sv_refct&amp; rhs)
+&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ref_count = 0;
+&nbsp;&nbsp; }
+
+&nbsp;&nbsp; sv_refct&amp; operator=(const sv_refct&amp; rhs) { return *this; }
+
+&nbsp;&nbsp; virtual ~sv_refct() {}
+
+&nbsp; public:
+
+&nbsp;&nbsp; void add_reference()&nbsp;
+&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp; ++ref_count;
+&nbsp;&nbsp; }
+
+&nbsp;&nbsp; virtual void remove_reference()&nbsp;
+&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp; if (--ref_count &lt;= 0) delete this;
+&nbsp;&nbsp; }
+};
+
+</PRE>
+</UL>
+<A NAME="1481"></A><A NAME="1548"></A><A NAME="1549"></A><A NAME="1485"></A><A NAME="1486"></A>As
+can be seen, <TT>add_reference()</TT> just increments the reference count.
+Whenever any complicated svLis class like primitives gets copied the data
+stays in one place, only a pointer is copied, and the number of pointers
+pointing to the data is recorded in r<TT>ef_count. </TT>When an item is
+deleted (for example when it goes out of scope) the reference count is
+decremented. Only when the reference count goes through 0 (and so nothing
+is pointing at the data) does the data actually get deleted.
+<P>Finally, here is the primitive class using the above two definitions.
+It has an internally defined <TT>struct </TT>called <TT>prim_data</TT>
+containing the actual data that is the thing pointed to, and a pointer
+to that <TT>struct </TT>that is all the information that individual primitives
+hold.
+<UL>
+<PRE>class sv_primitive
+{
+private:
+
+// struct containing the actual data derived
+// from the reference-counting base class
+
+&nbsp;&nbsp; struct prim_data : public sv_refct&nbsp;
+&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; friend class sv_smart_ptr&lt;prim_data>;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_integer kind;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Indicates if this is a plane, real or compound
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_plane flat;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Arithmetic is done on planes...
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_real r;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ...and reals
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; prim_op op;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // If compound, this says +, -, *, /, ^, or one of the monadics
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_integer degree;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Highest power (trancendentals add one)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_primitive *child_1;&nbsp; // Children if compound
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_primitive *child_2;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_primitive *grad_x;&nbsp;&nbsp; // The grad vector of the primitive
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_primitive *grad_y;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_primitive *grad_z;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~prim_data() { delete child_1; delete child_2; delete grad_x; delete grad_y; delete grad_z; }
+
+// Make a single-plane primitive
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; prim_data(const sv_plane&amp; a)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; kind = SV_PLANE;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; flat = a;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; degree = 1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; op = SV_ZERO;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; child_1 = new sv_primitive();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; child_2 = new sv_primitive();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; grad_x = new sv_primitive();&nbsp;&nbsp; // Grads are done by <A HREF="node9.html#4828">lazy evaluation
+</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; grad_y = new sv_primitive();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; grad_z = new sv_primitive();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+
+// Make a single-real primitive
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; prim_data(sv_real a)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ... see prim.h
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+
+// Build a compound primitive from two others and a diadic operator
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; prim_data(const sv_primitive&amp; a, const sv_primitive&amp; b, prim_op optr)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ... see prim.h</PRE>
+
+<PRE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+
+&nbsp;&nbsp; }; // prim_data</PRE>
+
+<PRE>// This is the pointer that gets ref counted - the only data stored in sv_primitive
+
+&nbsp;&nbsp; sv_smart_ptr&lt;prim_data> prim_info;</PRE>
+
+<PRE>public:
+
+// Null primitive
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_primitive() { }
+
+// Make one from a plane or a real
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_primitive(const sv_plane&amp; a) { prim_info = new prim_data(a); }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_primitive(sv_real a) { prim_info = new prim_data(a); }
+
+// Build one primitive from another; assignment automatically increments ref_count
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_primitive(const sv_primitive&amp; a) { *this = a; }</PRE>
+
+<PRE>// Test for an undefined primitive
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int exists() const { return(prim_info.exists()); }
+
+// Functions to return the hidden data
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_plane plane() const { return(prim_info->flat); }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_real real() const { return(prim_info->r); }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_integer kind() const { return(prim_info->kind); }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; prim_op op() const { return(prim_info->op); }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_integer degree() const&nbsp; { return(prim_info->degree); }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_primitive child_1() const { return(*(prim_info->child_1)); }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_primitive child_2() const { return(*(prim_info->child_2)); }</PRE>
+
+<PRE>// The following are in prim.cxx</PRE>
+</UL>
+
+<UL>
+<PRE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_primitive grad_x() const;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_primitive grad_y() const;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_primitive grad_z() const;
+
+// Unique tag
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sv_integer tag() const;
+
+// The 5 arithmetic operations
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; friend sv_primitive operator+(const sv_primitive&amp;, const sv_primitive&amp;);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; friend sv_primitive operator-(const sv_primitive&amp;, const sv_primitive&amp;);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; friend sv_primitive operator*(const sv_primitive&amp;, const sv_primitive&amp;);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; friend sv_primitive operator/(const sv_primitive&amp;, const sv_primitive&amp;);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; friend sv_primitive operator^(const sv_primitive&amp;, const sv_primitive&amp;);
+
+// ...and a whole load of other member functions for which you'll have to see</PRE>
+
+<PRE>// the real file in prim.h...</PRE>
+
+<PRE>};
+
+</PRE>
+</UL>
+<A NAME="1497"></A><A NAME="1498"></A><A NAME="1499"></A>This reference-counting
+trick is used throughout svLis: not only for primitives, but also for sets,
+models, attributes and all sorts of other things that I haven't introduced
+yet.
+<P>There are two principal advantages to it.
+<P>Firstly, you--the user--can just assign things, return them from functions,
+incorporate them in other things and so on by referring to variables of
+the appropriate class in a natural <TT>a = b + c</TT> sort of way even
+if <TT>b</TT> and <TT>c</TT> take up five megabytes each. SvLis will handle
+all this efficiently without copying loads of data.
+<P>The second advantage is that everything that you build in svLis exists
+in only one place; there are no multiple copies. This makes the efficient
+implementation of things like <TT>undo</TT> (or rollback) functions trivial;
+if, for example, you union two enormously complicated sets, then decide
+that you didn't want to do that, you can just extract the originals like
+this:
+<UL>
+<PRE>sv_set a = fancy_set(1.345);
+sv_set b = fancy_set(-3.812);
+a = a | b;
+
+// Oops!&nbsp; Let's undo that and get a back (b is OK):
+
+if(a.child_1() == b)
+&nbsp; a = a.child_2();
+else
+&nbsp; a = a.child_1();</PRE>
+</UL>
+This code<A NAME="tex2html18"></A><A NAME="tex2html18"></A><A NAME="tex2html18"></A><A NAME="tex2html18"></A><A NAME="tex2html18"></A><A NAME="tex2html18" HREF="footnode.html#1550"></A><A NAME="tex2html18" HREF="footnode.html#1550"></A><A NAME="tex2html18" HREF="footnode.html#1550"></A><A NAME="tex2html18" HREF="footnode.html#1550"></A><A NAME="tex2html18" HREF="footnode.html#1550"></A><A NAME="tex2html18" HREF="footnode.html#1550"></A><A HREF="footnode.html#1550" NAME="tex2html18"><IMG SRC="foot_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>
+just copies a few pointers and increments and decrements the reference
+counts (although this <TT>fancy_set(...)</TT> function of yours may take
+ages to execute for all I know).
+<P>
+<HR><!--Navigation Panel--><A NAME="tex2html165"></A><A NAME="tex2html165"></A><A NAME="tex2html165"></A><A NAME="tex2html165"></A><A NAME="tex2html165"></A><A NAME="tex2html165" HREF="node6.html"></A><A NAME="tex2html165" HREF="node6.html"></A><A NAME="tex2html165" HREF="node6.html"></A><A NAME="tex2html165" HREF="node6.html"></A><A NAME="tex2html165" HREF="node6.html"></A><A NAME="tex2html165" HREF="node6.html"></A><A HREF="node6.html" NAME="tex2html165"><IMG SRC="next_motif.gif" ALT="next" BORDER=0 HEIGHT=24 WIDTH=37 ALIGN=BOTTOM></A><A NAME="tex2html161"></A><A NAME="tex2html161"></A><A NAME="tex2html161"></A><A NAME="tex2html161"></A><A NAME="tex2html161"></A><A NAME="tex2html161" HREF="svi2.html"></A><A NAME="tex2html161" HREF="svi2.html"></A><A NAME="tex2html161" HREF="svi2.html"></A><A NAME="tex2html161" HREF="svi2.html"></A><A NAME="tex2html161" HREF="svi2.html"></A><A NAME="tex2html161" HREF="svi2.html"></A><A HREF="svi2.html" NAME="tex2html161"><IMG SRC="up_motif.gif" ALT="up" BORDER=0 HEIGHT=24 WIDTH=26 ALIGN=BOTTOM></A><A NAME="tex2html155"></A><A NAME="tex2html155"></A><A NAME="tex2html155"></A><A NAME="tex2html155"></A><A NAME="tex2html155"></A><A NAME="tex2html155" HREF="node4.html"></A><A NAME="tex2html155" HREF="node4.html"></A><A NAME="tex2html155" HREF="node4.html"></A><A NAME="tex2html155" HREF="node4.html"></A><A NAME="tex2html155" HREF="node4.html"></A><A NAME="tex2html155" HREF="node4.html"></A><A HREF="node4.html" NAME="tex2html155"><IMG SRC="previous_motif.gif" ALT="previous" BORDER=0 HEIGHT=24 WIDTH=63 ALIGN=BOTTOM></A><A NAME="tex2html163"></A><A NAME="tex2html163"></A><A NAME="tex2html163"></A><A NAME="tex2html163"></A><A NAME="tex2html163"></A><A NAME="tex2html163" HREF="node1.html"></A><A NAME="tex2html163" HREF="node1.html"></A><A NAME="tex2html163" HREF="node1.html"></A><A NAME="tex2html163" HREF="node1.html"></A><A NAME="tex2html163" HREF="node1.html"></A><A NAME="tex2html163" HREF="node1.html"></A><A HREF="node1.html" NAME="tex2html163"><IMG SRC="contents_motif.gif" ALT="contents" BORDER=0 HEIGHT=24 WIDTH=65 ALIGN=BOTTOM></A><A NAME="tex2html164"></A><A NAME="tex2html164"></A><A NAME="tex2html164"></A><A NAME="tex2html164"></A><A NAME="tex2html164"></A><A NAME="tex2html164" HREF="node11.html"></A><A NAME="tex2html164" HREF="node11.html"></A><A NAME="tex2html164" HREF="node11.html"></A><A NAME="tex2html164" HREF="node11.html"></A><A NAME="tex2html164" HREF="node11.html"></A><A NAME="tex2html164" HREF="node11.html"></A><A HREF="node11.html" NAME="tex2html164"><IMG SRC="index_motif.gif" ALT="index" BORDER=0 HEIGHT=24 WIDTH=43 ALIGN=BOTTOM></A>
+<BR><B>Next:<A NAME="tex2html166"></A><A NAME="tex2html166"></A><A NAME="tex2html166"></A><A NAME="tex2html166"></A><A NAME="tex2html166"></A><A NAME="tex2html166" HREF="node6.html"></A><A NAME="tex2html166" HREF="node6.html"></A><A NAME="tex2html166" HREF="node6.html"></A><A NAME="tex2html166" HREF="node6.html"></A><A NAME="tex2html166" HREF="node6.html"></A><A NAME="tex2html166" HREF="node6.html"></A></B><A HREF="node6.html" NAME="tex2html166">Sets,
+models, and DIY</A> <B>Up:<A NAME="tex2html162"></A><A NAME="tex2html162"></A><A NAME="tex2html162"></A><A NAME="tex2html162"></A><A NAME="tex2html162"></A><A NAME="tex2html162" HREF="svi2.html"></A><A NAME="tex2html162" HREF="svi2.html"></A><A NAME="tex2html162" HREF="svi2.html"></A><A NAME="tex2html162" HREF="svi2.html"></A><A NAME="tex2html162" HREF="svi2.html"></A><A NAME="tex2html162" HREF="svi2.html"></A></B><A HREF="svi2.html" NAME="tex2html162">SvLis
+Introduction</A> <B>Previous:<A NAME="tex2html156"></A><A NAME="tex2html156"></A><A NAME="tex2html156"></A><A NAME="tex2html156"></A><A NAME="tex2html156"></A><A NAME="tex2html156" HREF="node4.html"></A><A NAME="tex2html156" HREF="node4.html"></A><A NAME="tex2html156" HREF="node4.html"></A><A NAME="tex2html156" HREF="node4.html"></A><A NAME="tex2html156" HREF="node4.html"></A><A NAME="tex2html156" HREF="node4.html"></A></B><A HREF="node4.html" NAME="tex2html156">Fundamental
+geometric structures</A><!--End of Navigation Panel-->
+<P><I>Adrian Bowyer</I>
+<P>
+<HR>
+<CENTER>
+<P><IMG SRC="motto.gif" ALT="PERFICTA  PERFRACTA  QVAERENDO  PERFECTA" HEIGHT=25 WIDTH=720></CENTER>
+
+<ADDRESS>
+
+<HR></ADDRESS>
+
+</BODY>
+</HTML>

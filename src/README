@@ -1,0 +1,61 @@
+
+                  SvLis src Directory
+                  -------------------
+
+SvLis is copyright.  See any svLis source or include file for the
+copyright notice.
+
+For information and documentation on svLis see:
+
+   ../docs/svlis.html, or
+   http://www.bath.ac.uk/~ensab/G_mod/Svlis
+
+This directory contains the source code of svLis.  If you edit
+any of these files, type `make library' in the directory above this one
+to re-create the library, or `make' to make everything.
+
+The files in this directory are:
+
+	README		 This file
+	arf.cxx		 Root-finder for the raytracer
+	arpors.cxx	 Polynomial root-finder for the raytracer
+	attrib.cxx	 SvLis attributes
+	decision.cxx	 Specimen decision procedures
+	environs.cxx	 Specification of surrounding scene for the raytracer
+	flag.cxx	 Error and other flags
+	geometry.cxx	 Simple geometrical structures
+	interval.cxx	 Interval and box arithmetic
+	ivallist.cxx	 Lists of intervals for the raytracer
+	light.cxx	 Light sources for the raytracer
+	model.cxx	 SvLis models (i.e. box + set list)
+	niederreiter.cxx Low discrepancy random-number generator
+	picture.cxx	 Bitmap images
+	polygon.cxx	 Polygons for faceting
+	polynml.cxx	 Univariate polynomials for the raytracer
+	prim.cxx	 SvLis primitives
+	qv.cxx		 Raytracer quickviews
+	raytrace.cxx	 Raytracer
+	read.cxx	 Read all svLis structures - current version format
+	read1.cxx	 Read all svLis structures - previous version format
+	render.cxx	 Render pictures with the raytracer
+	rotations.cxx	 Convertion between different rotation transforms
+	set.cxx		 SvLis sets
+	shade.cxx	 Raytracer shading calculations
+	sums.cxx	 Simple arithmetic and some i/o procedures
+	surface.cxx	 Surface definitions
+	sv_graph.cxx	 OpenGL graphics
+	sv_util.cxx	 Utilities (mass properties etc)
+	sve.cxx		 Error handling
+	svlis.cxx	 SvLis initialization and termination
+	u_attrib.cxx	 User attributes
+	u_prim.cxx	 User primitives
+	view.cxx	 View definition for the raytracer
+	voronoi.cxx	 Voronoi diagrams
+	xdrvlib.c	 Spacemouse driver
+
+Adrian Bowyer
+University of Bath & Information Geometers Ltd
+8 March 2000
+
+svlis@bath.ac.uk
+

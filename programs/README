@@ -1,0 +1,24 @@
+
+          SvLis programs Directory
+          ------------------------
+
+For information and documentation on svLis see:
+
+   http://www.bath.ac.uk/~ensab/G_mod/Svlis
+
+
+The contents of this directory are:
+
+   README     This file
+   refinery   Directory containing the source code that creates the oil refinery model
+   sv_edit    Directory containing the source code for the svLis interactive editor
+   tst_prgs   Directory containing test programs, sv_display, sv_convert and expt.cxx
+
+
+
+Adrian Bowyer
+University of Bath
+22 December 1998
+
+svlis@bath.ac.uk
+

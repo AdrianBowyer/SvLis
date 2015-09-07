@@ -1,0 +1,47 @@
+                 Macintosh svLis Notes
+                 =====================
+
+This directory contains the svLis CSG kernel geometric modeller.  For
+up-to-date information and documentation see:
+
+   http://www.bath.ac.uk/~ensab/G_mod/Svlis
+
+This Build requires
+
+ CodeWarrior Pro 4 or later
+ Apple OpenGL Libraries 1.0b1 or later
+ Apple OpenGL SDK 1.0b1 or later
+
+To build and run svLis programs, you will need to install the Apple
+OpenGL libraries in your Extensions folder. These can be obtained from
+ftp://ftp.apple.com//developer/opengl/opengl_install.hqx
+
+You will also need to install the Apple OpenGL SDK,  available from
+ftp://ftp.apple.com//developer/opengl/opengl_sdk.hqx
+
+The Apple OpenGL SDK and svLis folders should both be in
+the same folder on your hard disk, so that the header files 
+and stub libraries required can be found.
+
+Read the file mac_install.html in the docs folder to see how to
+install svLis and get up and running with the example programs.
+
+When building the test programs, this can take a long time (and a lot of
+memory), especially for the "refinery" program. This can be reduced be
+lowering the level of compiler optimisation using the Preference Panel in
+Codewarrior, if you have a slow machine or memory is tight.
+
+Note that svLisLib and SvlisUserLib are shared libraries.  When your
+programs are compiled, these shared libraries are needed to run your
+programs so
+
+ (1) Put a copy of them in your Extensions folder, or
+ (2) Make sure they (or an alias to them) are in the same folder as your
+     built application.
+
+All of the svLis documentation is available in HTML.  Point your
+favourite browser at svlis.html in the docs folder to read it.
+
+
+svlis@bath.ac.uk
+

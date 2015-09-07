@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.07 [en] (X11; I; Linux 2.0.36 i686) [Netscape]">
+   <TITLE>SvLis Apple Mac Installation</TITLE>
+<!--This file created 12/4/99 11:52 am by Claris Home Page version 3.0-->
+<X-CLARIS-WINDOW TOP=42 BOTTOM=757 LEFT=4 RIGHT=534>
+<X-CLARIS-TAGVIEW MODE=minimal>
+<!--This file created 23/2/99 8:25 am by Claris Home Page version 3.0-->
+</HEAD>
+<BODY BACKGROUND="svlis_new.gif">
+
+<HR>
+<CENTER>
+<P><A HREF="svlis.html"><IMG SRC="svlis.gif" ALT="SvLis home page" BORDER=0 X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT HEIGHT=68 WIDTH=129 ALIGN=BOTTOM></A></CENTER>
+
+<CENTER>
+<H2>
+Apple Mac Installation</H2></CENTER>
+
+<CENTER><A HREF="mailto:svlis@bath.ac.uk">svlis@bath.ac.uk</A>
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<P>Copyright &copy; 1994, 1996, 1999 <A HREF="http://www.inge.com">Information
+Geometers Ltd </A>and <A HREF="http://www.bath.ac.uk">The University of
+Bath</A></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<P>
+<HR>
+<BR>&nbsp;
+<BR>&nbsp;
+<P>This version of svLis uses <A HREF="http://www.apple.com/opengl/">Apple
+OpenGL</A> (see the file README_MAC in the main svLis folder for details
+where to get it, and how to set it up), an implementation of <A HREF="http://www.opengl.org/">OpenGL</A>.
+Note that it is currently a pre-release, and as such there may be problems
+with it.
+<P>The svLis distribution file for Macintosh is a .sit file which should
+be unstuffed with Stuffit Expander. A folder called
+<TT>Svlis</TT> will
+be created. This folder and the <TT>OpenGL SDK</TT> folder should be put
+in the same location on your disk. (The latter contains the OpenGL distribution
+including headers and stub libraries needed for building programs which
+use OpenGL, although in simple cases you will probably just use the graphics
+procedures provided by svLis rather than writing OpenGL yourself.) Note
+that the Mesa system extensions and appropriate enabler should be placed
+in the System <TT>Extensions</TT> folder.
+<P>To build svLis, you will need <A HREF="http://www.metrowerks.com/">Metrowerks
+CodeWarrior Pro 4</A> or later. You must start by building the svLis precompiled
+headers, and then the svLis user library, before trying to build the example
+programs. See below.
+<P>Three project files are supplied. Follow the instructions below in the
+order given.
+<P>The first project file, <TT>SvlisHeader.mcp</TT>, builds the svLis precompiled
+headers which are needed for fast compilation of the other two projects.
+<P>Open this project, select <TT>svlis.pch++</TT>, and choose
+<TT>Precompile</TT>
+from the <TT>Project</TT> menu. This builds the precompiled header and
+puts it in the include folder. (You will only ever need to do this again
+if you change any of the header files.)
+<P>The second project file, <TT>SvlisUserLib.mcp</TT>, builds the svLis
+User Library (for making the parts of svLis that are user-modifiable);
+sources to build a default version of the library are provided.
+<P>Open this project, and choose <TT>Make</TT> from the
+<TT>Project</TT>
+menu. This builds the svLis User Library,
+<TT>SvlisUserLib</TT>, and puts
+it in the bin folder. (You only ever need to do this after changing any
+of the files in the
+<TT>sv_user</TT> folder.)
+<P>The third project file, <TT>SvlisExamples.mcp</TT>, builds the example
+programs. There are targets for each example, and an
+<TT>All</TT> target
+which makes all the example programs.
+<P>Open this project, select the <TT>All</TT> target (or the target for
+a particular program), and chose <TT>Make</TT>.
+<P>The files and directories that you will end up with in the
+<TT>Svlis</TT>
+folder will be:
+<OL>
+<LI>
+<TT>bin</TT> - directory, contains applications and svLis shared libraries
+(and debugger files if you make debugging versions).</LI>
+
+<LI>
+<TT>data</TT> - directory, contains test data</LI>
+
+<LI>
+<TT>docs</TT> - directory, contains the documentation</LI>
+
+<LI>
+<TT>include</TT> - directory, contains the svLis <TT>.h</TT> files and
+the precompiled header</LI>
+
+<LI>
+<TT>programs</TT> - directory, contains source code of test programs and
+other utilities</LI>
+
+<LI>
+<TT>results</TT> - directory, where the test programs store output</LI>
+
+<LI>
+<TT>SvlisExamples.mcp</TT> - the CodeWarrior project file for making the
+example programs</LI>
+
+<LI>
+<TT>SvlisExamples Data</TT> - the data file for the above</LI>
+
+<LI>
+<TT>SvlisHeader.mcp</TT> - the CodeWarrior project file for making the
+precompiled header</LI>
+
+<LI>
+<TT>SvlisHeader.Data Data</TT> - the data file for the above</LI>
+
+<LI>
+<TT>SvlisUserLib.mcp</TT> - the CodeWarrior project file for making the
+parts of svLis that are user-modifiable</LI>
+
+<LI>
+<TT>SvlisUserLib Data</TT> - the data file for the above</LI>
+
+<LI>
+<TT>sv_user</TT> - directory, contains the source code for <TT>SvlisUserLib</TT>.</LI>
+</OL>
+When building the examples or <TT>SvlisUserLib</TT>, you may get several
+linker and compiler warnings mainly due to duplicated definitions. These
+may generally be ignored.
+<P>SvLis uses SIOUX for console output. To avoid problems, you should not
+change any of the SIOUX settings.
+<P>After you've done those 3 steps check if all is working by runing the
+program <TT>sv_tst_1 </TT>in the<TT> bin </TT>folder. This will create
+a single file in the directory <TT>results</TT> called
+<TT>sv_tst.mod</TT>
+(examine it with CodeWarrior if you like; it will start something like:
+<PRE>SvLis(3)
+
+# SvLis created this file on Sun Feb 21 15:59:16 1999
+
+model
+{
+&nbsp;268482224 L 0
+&nbsp;box\interval\0, 10/, interval\0, 10/, interval\0, 10//
+&nbsp;set_list
+&nbsp;[
+&nbsp; 268482032 0
+&nbsp; set
+&nbsp; (
+&nbsp;&nbsp; 268481656 7 0 &amp;
+&nbsp;&nbsp; set
+&nbsp;&nbsp; (
+&nbsp;&nbsp;&nbsp; 268481600 1 0
+&nbsp;&nbsp;&nbsp; primitive
+&nbsp;&nbsp;&nbsp; &lt;
+&nbsp;&nbsp;&nbsp;&nbsp; 268481528 3 0 -
+&nbsp;&nbsp;&nbsp;&nbsp; primitive
+&nbsp;&nbsp;&nbsp;&nbsp; &lt;
+.
+.
+.
+.</PRE>
+though the numbers will be different). The file created is a svLis model
+of a cube intersected with a sphere. If you run
+<TT>sv_tst_2</TT> in the
+<TT>bin</TT>
+folder this will read the model, then divide and facet it, then print some
+statistics. Finally running <TT>sv_tst_g</TT> should produce a picture
+of the model. The faceting of this picture
+is deliberately crude; you can refine it by picking the `Facet quality'
+menu item with the RightButton menu. Typing `?'
+in the graphics window gives a list of options and an explanation of how
+OpenGL deals with a 3 button mouse on the Mac by using control, option and
+command. Also, if you turn texturing on from the menu, you should get the
+svLis logo tiled across the flat faces.
+
+<P>Note that the example programs are built with a reasonable amount of
+memory and stack space, but if you produce a larger model, or refine the
+example on a lot, you may run out of memory, and need to use larger values.
+This can be adjusted using the target settings panels for the project which
+builds the examples.
+<P>There are a number of other programs provided with svLis; for details
+of them see the <A HREF="book/node9.html#ab900">svLis manual here.</A>
+<P>
+<HR>
+<BR>&nbsp;
+<P><BR>
+<CENTER>
+<P><IMG SRC="motto.gif" ALT="PERFICTA  PERFRACTA  QVAERENDO  PERFECTA" X-CLARIS-USEIMAGEWIDTH X-CLARIS-USEIMAGEHEIGHT HEIGHT=25 WIDTH=720 ALIGN=BOTTOM></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<P>
+<HR>
+</BODY>
+</HTML>

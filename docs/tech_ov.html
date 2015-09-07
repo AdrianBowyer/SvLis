@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.07 [en] (X11; I; Linux 2.0.36 i686) [Netscape]">
+   <TITLE>Svlis - Technical Overview</TITLE>
+</HEAD>
+<BODY BACKGROUND="svlis_new.gif">
+
+<HR>
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<BR>
+<BR>
+<CENTER>
+<P><A HREF="svlis.html"><IMG SRC="svlis.gif" ALT="SvLis Home Page" BORDER=0 ></A></CENTER>
+
+<CENTER>
+<H2>
+Technical Overview</H2></CENTER>
+
+<CENTER><bf>by <A HREF="http://www.bath.ac.uk/~enpdp/" target="_top">Dan
+Pidcock</A></BF>
+<P><A HREF="mailto:svlis@bath.ac.uk">svlis@bath.ac.uk</A>
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<P>Copyright &copy; 1994, 1996, 1999 <A HREF="http://www.inge.com">Information
+Geometers Ltd </A>and <A HREF="http://www.bath.ac.uk">The University of
+Bath</A></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<P>
+<HR>
+<P>The basic component used in svLis is the primitive. There are currently
+six simple primitives in svLis: real numbers, half-planes, spheres, cylinders,
+cones, and tori. The modeller also allows any implicit function to be used
+as a primitive, thus giving access to an enormous range of shapes. Real
+numbers are required for arithmetic operations. The remaining five primitives
+are half-spaces and therefore divide space into regions. S<FONT SIZE=-1>V</FONT>L<FONT SIZE=-1>I</FONT><FONT SIZE=-2>S</FONT>
+denotes these regions as either <I>solid</I> or <I>air</I>. Using set-theoretic
+operators, primitives are combined to create a set-theoretic tree with
+primitives at the leaves and operators at the nodes. Such a tree is called
+a
+<I>set</I>.
+<P>A <I>box</I> is a three-dimensional region of interest which is an axially-aligned
+cuboid; it is stored in svLis as three intervals<SUP><A HREF="#fn-interval">1</A></SUP>,
+one for each dimension. A <I>model</I> is defined as a box together with
+one or more sets and defines a group of objects in the region of space
+that the box occupies.
+<P>The relationship between these elements of svLis are shown in the diagram
+below.
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<BR>
+<BR>
+<CENTER>
+<P><IMG SRC="svlis-elements.gif" ALT="The relationship between the elements used in svlis." HEIGHT=190 WIDTH=533></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<H2>
+Pruning</H2>
+If the surface of a primitive in the sets of a model does not pass through
+the model's box, then either the primitive must be completely solid within
+the box, or the box does not contain any part of the primitive (in which
+case the primitive is said to be <I>air</I> within the box). If the primitive
+is solid within the box, it can be replaced by the universal set <I>U</I>
+in the model's set. Conversely, if the primitive is air within the box,
+it can be replaced by the empty set&nbsp;<IMG SRC="img2.gif" ALT="emptyset" BORDER=0 HEIGHT=32 WIDTH=12 ALIGN=CENTER>.
+The set for that box can now be simplified by using the basic set-theory
+rules&nbsp;<IMG SRC="img3.gif" ALT="S union emptyset = S" BORDER=0 HEIGHT=32 WIDTH=84 ALIGN=CENTER>,&nbsp;<IMG SRC="img4.gif" ALT="S intersect emptyset = emptyset" BORDER=0 HEIGHT=32 WIDTH=81 ALIGN=CENTER>,&nbsp;<IMG SRC="img5.gif" ALT="S union U = U$" BORDER=0 HEIGHT=15 WIDTH=91 ALIGN=BOTTOM>
+and&nbsp;<IMG SRC="img6.gif" ALT="S intersect U = S" BORDER=0 HEIGHT=15 WIDTH=89 ALIGN=BOTTOM>.
+<P>This process reduces the complexity of the set-theoretic tree that represents
+the set and is known as <I>pruning a set to a box</I>.
+<H2>
+Recursive spatial division</H2>
+The box of a svLis model can be recursively divided <FONT SIZE=-1><A HREF="#ref-woodwark1980">[Woodwark1980]</A></FONT>
+into smaller boxes by
+<I>cutting</I> it along one of the axes, thus creating
+two smaller
+<I>sub-boxes</I>. The original model's set is pruned to each
+of the new sub-boxes to create two new sub-models. This division is continued
+in a recursive manner by dividing the sub-models. However, if it is not
+to continue indefinitely terminating conditions must be applied. A simple
+division process could use terminating conditions such as: the sub-models
+will not be divided if they contain three<SUP><A HREF="#fn-three">2</A></SUP>
+or fewer primitives, or if they are smaller than a minimum size (to stop
+the division process at places where more than three primitives come together).
+<P>At the end of the division, three types of sub-models will exist:
+<UL>
+<LI>
+<I>solid</I> models whose box only contains solid;</LI>
+
+<LI>
+<I>air</I> models whose box only contains air;</LI>
+
+<LI>
+<I>surface</I> models whose box contains one or more primitives which cannot
+be further pruned and whose box may contain surface (a mixture of solid
+and air) or just air or solid<SUP><A HREF="#fn-conservative">3</A></SUP>.</LI>
+
+<BR>&nbsp;
+<P>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;</UL>
+
+<HR width="50%"><A NAME="fn-interval"></A><FONT SIZE=-1><SUP>1</SUP>An
+interval is a continuous section of the real line between two values, and
+is written [<I>a</I>,<I>b</I>] where <I>a</I> and <I>b</I> are the bottom
+and top end of the interval.</FONT>
+<P><A NAME="fn-three"></A><SUP>2</SUP>Three primitives is chosen as the
+number of primitives, as that is the number of dimensions being used and
+corners of objects will never have fewer than three primitives.
+<P><A NAME="fn-conservative"></A><SUP>3</SUP>The way that svLis evaluates
+whether a box contains any surface is conservative and cannot confirm accurately
+that a box does contain some surface -- see the <A HREF="book/svi2.html">SvLis
+Book</A> on conservative model contents evaluation.
+<P>
+<HR width="50%">
+<DL>
+<DT>
+<A NAME="ref-woodwark1980"></A>[Woodwark1980]</DT>
+
+<DD>
+J.R. Woodwark and K.M. Quinlan, "The derivation of graphics from volume
+models by recursive division of the object space.", <I>Proc. Computer Graphics
+1980 Conference, London, (335-343), 1980.</I></DD>
+</DL>
+
+<HR>
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<BR>
+<BR>
+<CENTER>
+<P><IMG SRC="motto.gif" ALT="PERFICTA  PERFRACTA  QVAERENDO  PERFECTA" ></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<P>
+<HR>
+</BODY>
+</HTML>

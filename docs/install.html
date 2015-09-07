@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.07 [en] (X11; I; Linux 2.0.36 i686) [Netscape]">
+   <TITLE>Downloading svLis</TITLE>
+</HEAD>
+<BODY BACKGROUND="svlis_new.gif" onLoad="document.hiddenform.subbutton">
+
+<HR>
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<BR>
+<BR>
+<CENTER>
+<P><A HREF="svlis.html"><IMG SRC="svlis.gif" ALT="SvLis Home Page" BORDER=0 HEIGHT=68 WIDTH=129></A></CENTER>
+
+<CENTER>
+<H2>
+Downloading svLis</H2></CENTER>
+
+<CENTER><A HREF="mailto:svlis@bath.ac.uk">svlis@bath.ac.uk</A>
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<P>Copyright &copy; 1994, 1996, 1999 <A HREF="http://www.inge.com">Information
+Geometers Ltd </A>and <A HREF="http://www.bath.ac.uk">The University of
+Bath</A></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<P>
+<HR>
+<P><B>Coming soon:</B>
+<UL>
+<LI>
+SvLis goes copyleft open-source at the next release (Summer 1999)</LI>
+
+<LI>
+SvLis model animation</LI>
+
+<LI>
+A <A HREF="http://www.bath.ac.uk/~ensab/GMS/Djinn">Djinn</A> interface
+to svLis</LI>
+</UL>
+
+<HR>
+<BR>&nbsp;
+<CENTER>
+<H3>
+Introduction</H3></CENTER>
+SvLis is a kernel set-theoretic geometric modeller. Details of how to use
+it can be found in the <A HREF="book/svi2.html">SvLis Book</A> and the
+<A HREF="book/node9.html">SvLis
+User Manual</A>. This document describes svLis's distribution and installation.
+<P>SvLis is a library written in C++, and it is free, though it is copyrighted
+by <A HREF="http://www.bath.ac.uk/">The University of Bath</A> and <A HREF="http://www.inge.com/">Information
+Geometers Ltd</A>. You may not sell svLis, nor may you sell any code or
+programs incorporating svLis. If you need the source code for the core
+of svLis immediately, or if you wish to use svLis commercially, have a
+look at the
+<A HREF="licence.html">svLis commercial licence</A>. SvLis
+is not in the public domain.
+<P>The free svLis is distributed as a compiled library, a set of <TT>.h</TT>
+files, some user-modifiable procedures in source code (which form an ancilliary
+library), and the source code for test programs and utilities.
+<P>SvLis currently runs on PCs under <A HREF="http://www.linux.org/">Linux</A>
+using the Gnu g++ compiler and under <A HREF="http://www.microsoft.com/">Microsoft</A>
+<A HREF="http://www.microsoft.com/products/prodref/426_ov.htm">Windows
+95/8</A> and <A HREF="http://www.microsoft.com/products/prodref/428_ov.htm">Windows
+NT</A> using <A HREF="http://www.microsoft.com/products/prodref/197_ov.htm">Visual
+C++</A>, on <A HREF="http://www.sun.com/">Suns</A> also using the Gnu compiler,
+and on <A HREF="http://www.sgi.com/">Silicon Graphics</A> computers using
+SG's own C++ compiler, CC, and on Apple Macs using the <A HREF="http://www.metrowerks.com/">Metrowerks
+CodeWarrior Pro 4</A> compiler.
+<P>
+<HR>
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<CENTER>
+<H3>
+Obtaining SvLis</H3></CENTER>
+When you download svLis, we would appreciate it if you would send us your
+email address (though this is not a prerequisite of taking a copy).
+
+<center>
+<BODY onLoad ="document.hiddenform.subbutton">
+<FORM NAME="hiddenform" ACTION="mailto:svlis@bath.ac.uk" METHOD=post>
+<INPUT TYPE="hidden" VALUE="svLis user's email">
+<INPUT TYPE="submit" 
+VALUE="Click here to send your email address automatically">
+</FORM>
+</BODY>
+</center>
+
+<P>Your address will <I>not</I> be forwarded to anyone else; we will merely
+use it to keep you abreast of updates. If at any time you wish to remove
+yourself from the list email <A HREF="mailto:svlis@bath.ac.uk">svlis</A>
+with the word `remove' in the body of the message.
+<P>As distributed, svLis consists of a compressed archive containing the
+whole of the the system. SvLis can be obtained by clicking on:
+<UL>
+<LI>
+<A HREF="ftp://ftp.bath.ac.uk/pub/ensab/svlis/linux_svlis.tar.gz">Linux
+svLis</A> (2MB, compiled under Linux 2.0.36, RedHat 5.2),</LI>
+
+<LI>
+<A HREF="ftp://ftp.bath.ac.uk/pub/ensab/svlis/sun_svlis.tar.gz">Sun svLis</A>
+(1.5 MB, compiled under Unix System V Release 4.0), or</LI>
+
+<LI>
+<A HREF="ftp://ftp.bath.ac.uk/pub/ensab/svlis/sg_svlis.tar.gz">Silicon
+Graphics svLis</A> (2.3 MB, compiled under IRIX 6.5).</LI>
+
+<LI>
+<A HREF="ftp://ftp.bath.ac.uk/pub/ensab/svlis/pc_svlis.zip">Microsoft Windows
+svLis</A> (1.5MB, compiled under Visual C++ version 5.0).</LI>
+
+<LI>
+<A HREF="ftp://ftp.bath.ac.uk/pub/ensab/svlis/mac_svlis.sit">Apple Mac
+svLis </A>(1.3 MB, compiled under Metrowerks CodeWarrior Pro 4).</LI>
+</UL>
+These files were updated on 14 April 1999.&nbsp; SvLis version N (currently
+N=3) will always read svLis files from versions N and N-1. An update program
+is supplied with this release to update files to this version number.
+<P>You will also need a copy of the <A HREF="http://www.opengl.org/">OpenGL
+graphics library</A>. If you are using Microsoft Visual C++ or are on a
+Silicon Graphics, then you will already have this. For Suns, Macs and Linux you
+will have to obtain a copy. The free Mesa OpenGL-compatible library for
+Suns Linux and other platforms is <A HREF="http://www.mesa3d.org/">available
+from here</A>.  For details of how to obtain 
+<A HREF="ftp://ftp.apple.com//developer/opengl/opengl_install.hqx">OpenGL for the Mac</A> see that link and the
+file README_MAC in the svLis distribution.  For all platforms you will also need 
+the equally free <A HREF="http://www.opengl.org/Downloads/DevDownloads.html">OpenGL
+GLUT</A> (Graphics Library User Toolkit) library (this is included in the
+Mesa demonstration files, which you should also download if you're using Mesa).
+
+<P>If you take a copy of svLis, we would appreciate an acknowledgement
+in any publications or other materials that result from your using it.
+For example, you could cut-and-paste the following:
+<BR>&nbsp;
+<P><I>This work uses the svLis CSG geometric modelling kernel which is
+distributed free by the <A HREF="http://www.bath.ac.uk/">University of
+Bath</A> and by <A HREF="http://www.inge.com/">Information Geometers Ltd</A>.
+See <A HREF="http://www.bath.ac.uk/~ensab/G_mod/Svlis/">http://www.bath.ac.uk/~ensab/G_mod/Svlis/</A>
+for details.</I>
+<P>
+<HR>
+<BR>&nbsp;
+<BR>&nbsp;
+<CENTER>
+<H3>
+<A HREF="ux_install.html">Instructions for the Unix Installation of SvLis</A></H3></CENTER>
+
+<CENTER>
+<H3>
+<A HREF="pc_install.html">Instructions for the Microsoft Windows Installation
+of SvLis</A></H3></CENTER>
+
+<CENTER><B><FONT SIZE=+2><A HREF="mac_install.html">Instructions for the
+Apple Mac Installation of SvLis</A></FONT></B></CENTER>
+
+<P>
+<HR>
+
+<P align=center>
+<A HREF="http://www.LinuxMall.com/LinuxUsedHere.html">
+<IMG SRC="uselx_sm.gif"ALT="Linux Used Here"</A>
+
+<A HREF="http://www.freehound.com/"><IMG SRC="fhbuton1.gif" WIDTH=88 HEIGHT=31BORDER=0></A></TD> 
+
+<a target=_top href=http://extreme-dm.com/s/?tag=svlis>
+<img name=im src=http://extreme-dm.com/i/ height=38 width=41 border=0></a><script><!--
+an=navigator.appName;sr='http://extreme-dm.com/';c=24;srw="na";x=17;srb="na";d=document;r=41;function pr(n) {
+d.write("<img src=\""+sr+""+n+"\/?tag=svlis&j=y&srw="+srw+"&srb="+srb+"&l="+escape(d.referrer)+"&rs="+r+"\" height=1 width=1>");}//-->
+</script><script language="javascript1.2"><!--
+s=screen;srw=s.width;an!="Netscape"?srb=s.colorDepth:srb=s.pixelDepth//-->
+</script><script><!--
+d.images?r=d.im.width:z=0;pr("z")//-->
+</script><noscript><img src=http://extreme-dm.com/z/?tag=svlis&j=n height=1 width=1></noscript> 
+<P>
+<HR>
+
+<BR>
+<CENTER>
+<P><IMG SRC="motto.gif" ALT="PERFICTA  PERFRACTA  QVAERENDO  PERFECTA" HEIGHT=25 WIDTH=720></CENTER>
+
+<BR>
+<P>
+<P>
+<HR>
+</BODY>
+</HTML>

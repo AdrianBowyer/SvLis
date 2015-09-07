@@ -1,0 +1,65 @@
+                SvLis Geometric Modeller
+                ========================
+
+		 Microsoft Windows Notes
+
+
+This directory contains the svLis CSG kernel geometric modeller.  For
+up-to-date information see:
+
+   http://www.bath.ac.uk/~ensab/G_mod/Svlis
+
+The contents of this directory are:
+
+   README_UNIX      For Linux, SGI and Sun users
+   README_MAC       For Apple Mac users
+   README_MICROSOFT This file
+   bin              Directory for executables
+   data             Directory containing test program data
+   docs             Directory containing HTML documentation
+   include          Directory containing C++ include files
+   lib              Directory containing libraries
+   obj              Directory for object files
+   projects         Directory containing Visual C++ projects
+   programs         Directory containing test programs
+   results          Directory for test program results
+   sv_user          Directory containing user-modifiable source code
+
+For friendly-format documentation point your favourite browser at the file
+
+	docs\svlis.html
+
+Svlis needs the OpenGL library to do graphics.  If you have Windows 95/8/NT 
+you should have this; for further details see:
+
+    http://www.opengl.org/
+
+All svLis systems also need the GL User Toolkit (GLUT), obtainable from the 
+same website.
+
+To make svLis, build all the projects in the projects directory, starting 
+with user_lib.
+
+To test svLis after making it, run the console application
+
+   bin\sv_tst_1
+
+from this directory.  Then run
+
+   bin\sv_tst_2
+
+and then
+
+   bin\sv_tst_g
+
+
+
+
+
+Adrian Bowyer
+University of Bath
+9 April 1999
+
+svlis@bath.ac.uk
+
+

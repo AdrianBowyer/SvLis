@@ -1,0 +1,594 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="description" CONTENT="Sets, models, and DIY primitives and attributes">
+   <META NAME="keywords" CONTENT="svi2">
+   <META NAME="resource-type" CONTENT="document">
+   <META NAME="distribution" CONTENT="global">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.07 [en] (X11; I; Linux 2.0.36 i686) [Netscape]">
+   <TITLE>Sets, models, and DIY primitives and attributes</TITLE>
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<LINK REL="STYLESHEET" HREF="svi2.css">
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="svi2.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+<BODY BACKGROUND="svlis_new.gif">
+<!--Navigation Panel--><A NAME="tex2html182" HREF="node7.html"></A><A NAME="tex2html182" HREF="node7.html"></A><A NAME="tex2html182" HREF="node7.html"></A><A NAME="tex2html182" HREF="node7.html"></A><A NAME="tex2html182" HREF="node7.html"></A><A NAME="tex2html182" HREF="node7.html"></A><A HREF="node7.html" NAME="tex2html182"><IMG SRC="next_motif.gif" ALT="next" BORDER=0 HEIGHT=24 WIDTH=37 ALIGN=BOTTOM></A><A NAME="tex2html178" HREF="svi2.html"></A><A NAME="tex2html178" HREF="svi2.html"></A><A NAME="tex2html178" HREF="svi2.html"></A><A NAME="tex2html178" HREF="svi2.html"></A><A NAME="tex2html178" HREF="svi2.html"></A><A NAME="tex2html178" HREF="svi2.html"></A><A HREF="svi2.html" NAME="tex2html178"><IMG SRC="up_motif.gif" ALT="up" BORDER=0 HEIGHT=24 WIDTH=26 ALIGN=BOTTOM></A><A NAME="tex2html172" HREF="node5.html"></A><A NAME="tex2html172" HREF="node5.html"></A><A NAME="tex2html172" HREF="node5.html"></A><A NAME="tex2html172" HREF="node5.html"></A><A NAME="tex2html172" HREF="node5.html"></A><A NAME="tex2html172" HREF="node5.html"></A><A HREF="node5.html" NAME="tex2html172"><IMG SRC="previous_motif.gif" ALT="previous" BORDER=0 HEIGHT=24 WIDTH=63 ALIGN=BOTTOM></A><A NAME="tex2html180" HREF="node1.html"></A><A NAME="tex2html180" HREF="node1.html"></A><A NAME="tex2html180" HREF="node1.html"></A><A NAME="tex2html180" HREF="node1.html"></A><A NAME="tex2html180" HREF="node1.html"></A><A NAME="tex2html180" HREF="node1.html"></A><A HREF="node1.html" NAME="tex2html180"><IMG SRC="contents_motif.gif" ALT="contents" BORDER=0 HEIGHT=24 WIDTH=65 ALIGN=BOTTOM></A><A NAME="tex2html181" HREF="node11.html"></A><A NAME="tex2html181" HREF="node11.html"></A><A NAME="tex2html181" HREF="node11.html"></A><A NAME="tex2html181" HREF="node11.html"></A><A NAME="tex2html181" HREF="node11.html"></A><A NAME="tex2html181" HREF="node11.html"></A><A HREF="node11.html" NAME="tex2html181"><IMG SRC="index_motif.gif" ALT="index" BORDER=0 HEIGHT=24 WIDTH=43 ALIGN=BOTTOM></A>
+<BR><B>Next:<A NAME="tex2html183" HREF="node7.html"></A><A NAME="tex2html183" HREF="node7.html"></A><A NAME="tex2html183" HREF="node7.html"></A><A NAME="tex2html183" HREF="node7.html"></A><A NAME="tex2html183" HREF="node7.html"></A><A NAME="tex2html183" HREF="node7.html"></A></B><A HREF="node7.html" NAME="tex2html183">Advanced
+programming and future</A>
+<B>Up:<A NAME="tex2html179" HREF="svi2.html"></A><A NAME="tex2html179" HREF="svi2.html"></A><A NAME="tex2html179" HREF="svi2.html"></A><A NAME="tex2html179" HREF="svi2.html"></A><A NAME="tex2html179" HREF="svi2.html"></A><A NAME="tex2html179" HREF="svi2.html"></A></B><A HREF="svi2.html" NAME="tex2html179">SvLis
+Introduction</A>
+<B>Previous:<A NAME="tex2html173" HREF="node5.html"></A><A NAME="tex2html173" HREF="node5.html"></A><A NAME="tex2html173" HREF="node5.html"></A><A NAME="tex2html173" HREF="node5.html"></A><A NAME="tex2html173" HREF="node5.html"></A><A NAME="tex2html173" HREF="node5.html"></A></B><A HREF="node5.html" NAME="tex2html173">Curved
+solids, surfaces and</A>
+<P><!--End of Navigation Panel--><!--Table of Child-Links--><A NAME="CHILD_LINKS"></A><B>Subsections</B>
+<UL>
+<LI>
+<A NAME="tex2html184" HREF="node6.html#SECTION00610000000000000000"></A><A NAME="tex2html184" HREF="node6.html#SECTION00610000000000000000"></A><A NAME="tex2html184" HREF="node6.html#SECTION00610000000000000000"></A><A NAME="tex2html184" HREF="node6.html#SECTION00610000000000000000"></A><A NAME="tex2html184" HREF="node6.html#SECTION00610000000000000000"></A><A NAME="tex2html184" HREF="node6.html#SECTION00610000000000000000"></A><A HREF="node6.html#SECTION00610000000000000000" NAME="tex2html184">Sets</A></LI>
+
+<UL>
+<LI>
+<A NAME="tex2html185" HREF="node6.html#SECTION00611000000000000000"></A><A NAME="tex2html185" HREF="node6.html#SECTION00611000000000000000"></A><A NAME="tex2html185" HREF="node6.html#SECTION00611000000000000000"></A><A NAME="tex2html185" HREF="node6.html#SECTION00611000000000000000"></A><A NAME="tex2html185" HREF="node6.html#SECTION00611000000000000000"></A><A NAME="tex2html185" HREF="node6.html#SECTION00611000000000000000"></A><A HREF="node6.html#SECTION00611000000000000000" NAME="tex2html185">Lists
+of sets</A></LI>
+</UL>
+
+<LI>
+<A NAME="tex2html186" HREF="node6.html#SECTION00620000000000000000"></A><A NAME="tex2html186" HREF="node6.html#SECTION00620000000000000000"></A><A NAME="tex2html186" HREF="node6.html#SECTION00620000000000000000"></A><A NAME="tex2html186" HREF="node6.html#SECTION00620000000000000000"></A><A NAME="tex2html186" HREF="node6.html#SECTION00620000000000000000"></A><A NAME="tex2html186" HREF="node6.html#SECTION00620000000000000000"></A><A HREF="node6.html#SECTION00620000000000000000" NAME="tex2html186">Models</A></LI>
+
+<UL>
+<LI>
+<A NAME="tex2html187" HREF="node6.html#SECTION00621000000000000000"></A><A NAME="tex2html187" HREF="node6.html#SECTION00621000000000000000"></A><A NAME="tex2html187" HREF="node6.html#SECTION00621000000000000000"></A><A NAME="tex2html187" HREF="node6.html#SECTION00621000000000000000"></A><A NAME="tex2html187" HREF="node6.html#SECTION00621000000000000000"></A><A NAME="tex2html187" HREF="node6.html#SECTION00621000000000000000"></A><A HREF="node6.html#SECTION00621000000000000000" NAME="tex2html187">Interval
+arithmetic</A></LI>
+
+<LI>
+<A NAME="tex2html188" HREF="node6.html#SECTION00622000000000000000"></A><A NAME="tex2html188" HREF="node6.html#SECTION00622000000000000000"></A><A NAME="tex2html188" HREF="node6.html#SECTION00622000000000000000"></A><A NAME="tex2html188" HREF="node6.html#SECTION00622000000000000000"></A><A NAME="tex2html188" HREF="node6.html#SECTION00622000000000000000"></A><A NAME="tex2html188" HREF="node6.html#SECTION00622000000000000000"></A><A HREF="node6.html#SECTION00622000000000000000" NAME="tex2html188">Boxes
+and primitives</A></LI>
+
+<LI>
+<A NAME="tex2html189" HREF="node6.html#SECTION00623000000000000000"></A><A NAME="tex2html189" HREF="node6.html#SECTION00623000000000000000"></A><A NAME="tex2html189" HREF="node6.html#SECTION00623000000000000000"></A><A NAME="tex2html189" HREF="node6.html#SECTION00623000000000000000"></A><A NAME="tex2html189" HREF="node6.html#SECTION00623000000000000000"></A><A NAME="tex2html189" HREF="node6.html#SECTION00623000000000000000"></A><A HREF="node6.html#SECTION00623000000000000000" NAME="tex2html189">Pruning</A></LI>
+
+<LI>
+<A NAME="tex2html190" HREF="node6.html#SECTION00624000000000000000"></A><A NAME="tex2html190" HREF="node6.html#SECTION00624000000000000000"></A><A NAME="tex2html190" HREF="node6.html#SECTION00624000000000000000"></A><A NAME="tex2html190" HREF="node6.html#SECTION00624000000000000000"></A><A NAME="tex2html190" HREF="node6.html#SECTION00624000000000000000"></A><A NAME="tex2html190" HREF="node6.html#SECTION00624000000000000000"></A><A HREF="node6.html#SECTION00624000000000000000" NAME="tex2html190">Recursive
+division</A></LI>
+</UL>
+
+<LI>
+<A NAME="tex2html191" HREF="node6.html#SECTION00630000000000000000"></A><A NAME="tex2html191" HREF="node6.html#SECTION00630000000000000000"></A><A NAME="tex2html191" HREF="node6.html#SECTION00630000000000000000"></A><A NAME="tex2html191" HREF="node6.html#SECTION00630000000000000000"></A><A NAME="tex2html191" HREF="node6.html#SECTION00630000000000000000"></A><A NAME="tex2html191" HREF="node6.html#SECTION00630000000000000000"></A><A HREF="node6.html#SECTION00630000000000000000" NAME="tex2html191">Programming
+DIY primitives</A></LI>
+
+<LI>
+<A NAME="tex2html192" HREF="node6.html#SECTION00640000000000000000"></A><A NAME="tex2html192" HREF="node6.html#SECTION00640000000000000000"></A><A NAME="tex2html192" HREF="node6.html#SECTION00640000000000000000"></A><A NAME="tex2html192" HREF="node6.html#SECTION00640000000000000000"></A><A NAME="tex2html192" HREF="node6.html#SECTION00640000000000000000"></A><A NAME="tex2html192" HREF="node6.html#SECTION00640000000000000000"></A><A HREF="node6.html#SECTION00640000000000000000" NAME="tex2html192">Set-theory
+using maxima and minima</A></LI>
+
+<LI>
+<A NAME="tex2html193" HREF="node6.html#SECTION00650000000000000000"></A><A NAME="tex2html193" HREF="node6.html#SECTION00650000000000000000"></A><A NAME="tex2html193" HREF="node6.html#SECTION00650000000000000000"></A><A NAME="tex2html193" HREF="node6.html#SECTION00650000000000000000"></A><A NAME="tex2html193" HREF="node6.html#SECTION00650000000000000000"></A><A NAME="tex2html193" HREF="node6.html#SECTION00650000000000000000"></A><A HREF="node6.html#SECTION00650000000000000000" NAME="tex2html193">Attributes</A></LI>
+</UL>
+
+<CENTER>
+<P><BR>Copyright &copy; 1994, 1996, 1999 <A HREF="http://www.inge.com">Information
+Geometers Ltd </A>and <A HREF="http://www.bath.ac.uk">The University of
+Bath</A></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<P>
+<HR>
+<H1>
+<A NAME="SECTION00600000000000000000"></A><B><FONT SIZE=+4>Sets, models,
+DIY primitives, and attributes</FONT></B></H1>
+
+<H1>
+<A NAME="SECTION00610000000000000000"></A><FONT SIZE=+2>Sets</FONT></H1>
+<A NAME="CH4"></A>We have already seen, on Page&nbsp;<A HREF="node3.html#VENNST"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>,
+how svLis regards solid objects as three-dimensional Venn diagrams. The
+<TT>sv_set</TT>
+class has a similar (though simpler) structure to the primitive class that
+I <A HREF="node5.html#ab1">described in the last chapter</A>--it has a
+separate <TT>struct<A NAME="2128"></A><A NAME="2129"></A></TT>&nbsp; for
+the actual data, and uses the same pointer and reference-count scheme to
+ensure that items are only stored in one place and can be referenced many
+times, and that allocation and de-allocation of memory are done efficiently.
+If you need to know the details, have a look in the header file <TT>set.h<A NAME="2130"></A><A NAME="2131"></A></TT>.
+<H2>
+<A NAME="SECTION00611000000000000000"></A>Lists of sets</H2>
+<A NAME="SETL1"></A>You can, of course, take several objects defined as
+sets and union them together to make one `object' that actually consists
+of a collection of lumps (some or all of which may not touch or interpenetrate).
+However, it is often convenient to avoid this and to construct lists of
+independent objects, each represented by a set, that are not unioned in
+any way; examples might be lists of the component parts of an assembly
+or mechanism. SvLis has a class called <TT>sv_set_list<A NAME="2132"></A><A NAME="2133"></A></TT>&nbsp;
+which implements this. The lists are linked by pointers in a chain, and
+again use the reference-count<A NAME="1933"></A>&nbsp; and hidden-data<A NAME="1934"></A>&nbsp;
+system of storage management.
+<P>The simplest <TT>sv_set_list</TT> is a single set so, if <TT>s</TT>
+is a set,
+<BLOCKQUOTE><TT>sv_set_list sl = sv_set_list(s);</TT></BLOCKQUOTE>
+will create such a list (in fact, you can say
+<BLOCKQUOTE><TT>sv_set_list sl = s;</TT></BLOCKQUOTE>
+as C<FONT SIZE=-1>++</FONT> recognizes that there is a unique constructor
+for the operation). If <TT>r</TT> is another set, then the statement
+<BLOCKQUOTE><A NAME="2134"></A><A NAME="2135"></A><TT>sl = merge(sl,r);</TT></BLOCKQUOTE>
+&nbsp;will add it to the list. There are, of course, functions to extract
+the sets from a <TT>sv_set_list</TT>; see Page&nbsp;<A HREF="node9.html#SETL"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>
+for details.
+<BR>&nbsp;
+<BR>&nbsp;
+<H1>
+<A NAME="SECTION00620000000000000000"></A><A NAME="MODEL1"></A><A NAME="2136"></A><A NAME="2137"></A><A NAME="tex2html19" HREF="footnode.html#1951"></A><A NAME="tex2html19" HREF="footnode.html#1951"></A><A NAME="tex2html19" HREF="footnode.html#1951"></A><A NAME="tex2html19" HREF="footnode.html#1951"></A><A NAME="tex2html19" HREF="footnode.html#1951"></A>Models</H1>
+The <TT>sv_model</TT>&nbsp; class is the highest-level class in svLis<A NAME="tex2html19" HREF="footnode.html#1951"></A><A HREF="footnode.html#1951" NAME="tex2html19"><IMG SRC="foot_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>.
+An <TT>sv_model</TT> is an <TT>sv_set_list</TT> in a
+<TT>sv_box</TT>, so
+if <TT>sl</TT> is an <TT>sv_set_list</TT> and <TT>b</TT> is an <TT>sv_box</TT>,
+you can say
+<BLOCKQUOTE><TT>sv_model m = sv_model(sl, b);</TT></BLOCKQUOTE>
+Any parts of the shapes represented by the <TT>sv_set</TT>s in <TT>sl</TT>
+that lie outside the
+<TT>sv_box</TT> will be completely ignored by svLis.
+On the other hand, it doesn't matter if the <TT>sv_box</TT> fits rather
+loosely around the shapes, so it's usually not too hard to generate a suitable
+<TT>sv_box</TT>
+for a given <TT>sv_set_list</TT>.
+<P>Before going on to see how models work in detail, I need to indulge
+in a short diversion through interval arithmetic, the way it is used for
+boxes, and how primitives and boxes relate.
+<BR>&nbsp;
+<H2>
+<A NAME="SECTION00621000000000000000"></A><A NAME="1967"></A><A NAME="INTVAL1"></A><A NAME="tex2html20" HREF="footnode.html#2138"></A><A NAME="tex2html20" HREF="footnode.html#2138"></A><A NAME="tex2html20" HREF="footnode.html#2138"></A><A NAME="tex2html20" HREF="footnode.html#2138"></A><A NAME="tex2html20" HREF="footnode.html#2138"></A>Interval
+arithmetic</H2>
+SvLis uses interval arithmetic a great deal, and there is an <TT>sv_interval
+struct</TT> to allow this. An interval is a continuous section of the real
+line between two values, and it is written [<I>a</I>, <I>b</I>] where <I>a</I>
+and <I>b</I> are the bottom and top end of the interval<A NAME="tex2html20" HREF="footnode.html#2138"></A><A HREF="footnode.html#2138" NAME="tex2html20"><IMG SRC="foot_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>.
+<P>The principal use of intervals in svLis is to allow it to know the range
+of values that a function might take, given a range of inputs. For example,
+suppose we had the function <I>f</I>(<I>x</I>) = <I>x<SUP>2</SUP></I> -
+2<I>x</I> and we knew that <I>x</I> lay somewhere in the interval [1,2],
+but we didn't know its exact value. What values might <I>f</I> take?
+<P>Well, if <I>x</I> is somewhere in [1,2], then 2<I>x</I> must be in [2,4].
+Also <I>x<SUP>2</SUP></I> must be in [1,4]. We can therefore say that <I>f</I>([1,2])
+= [1,4] - [2,4], which simplifies to <I>f</I>([1,2]) = [-3,2]. By doing
+such interval arithmetic, we can find the range of values a function might
+take if it were given a range of inputs.
+<P>SvLis includes an implementation of arithmetic on intervals. It is not
+restricted to the simple arithmetic operators; for instance, you can take
+the sine of an interval. If you want details, the simplest thing is to
+look in the svLis interval header file, <TT>interval.h</TT>, or in the
+User Manual on Page&nbsp;<A HREF="node9.html#INTARITH"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>.
+<P>Remember the <TT>sv_box<A NAME="1975"></A><A NAME="1976"></A></TT>&nbsp;
+region of interest that I introduced in <A HREF="node3.html#372">Chapter
+1</A> to allow svLis to make a picture of a set inside the box? Boxes are
+kept as three intervals: one each for
+<I>x</I>, <I>y</I> and <I>z</I>.
+Any operation that you can do on intervals, you can also do on boxes; the
+operation just gets done on the three components.
+<BR>&nbsp;
+<H2>
+<A NAME="SECTION00622000000000000000"></A>Boxes and primitives</H2>
+<A NAME="BOXPRIM2"></A>We have seen that there is a <TT>value(...)<A NAME="2139"></A><A NAME="2140"></A></TT>&nbsp;
+member function that will tell you the potential of a primitive at a point.
+This, of course, tells you if the point is in the air part of that primitive,
+or in the solid part.
+<P>SvLis also needs to know, for any primitive, where its surface<A NAME="1982"></A><A NAME="1983"></A><A NAME="1984"></A>&nbsp;
+is, so that pictures of it can be drawn and other results calculated. As
+we shall see below, in order to do this svLis must be able to tell what
+range of potential values a primitive may generate anywhere within a box.
+This range will be an interval. If the range interval is all negative,
+then the box is all in the solid region of the primitive; if it is all
+positive, then the box is in the air region of the primitive; if it contains
+zero then we may deduce that the primitive's surface passes through the
+box.
+<P>Suppose we have a box consisting of the <I>x</I>, <I>y</I> and <I>z</I>
+intervals ([0,1], [-1,1], [2,3]), and we have a half-plane (not normalized,
+to make the sums easier):&nbsp;<IMG SRC="img42.gif" ALT="$2x - 3y + z + 4 \leq 0$" BORDER=0 HEIGHT=24 WIDTH=136 ALIGN=CENTER>.
+If we substitute the box intervals into the expression for the plane we
+get 2[0,1] - 3[-1,1] + [2,3] - 4. After performing the multiplication,
+addition and subtractions, we have the interval [3,12], on the range of
+the expression. Because this is all positive, we know that the box is entirely
+on the air side of the half-plane. If the <I>y</I> interval for the box
+were [-1,3] (making it bigger) then the resulting range interval would
+be [-3,12], and now the surface of the half-plane would pass through that
+bigger box.
+<P><A NAME="PRIMRANGE"></A>SvLis can categorize any box against any primitive
+using this technique, and there is a function to do it<A NAME="2141"></A><A NAME="2142"></A>:
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <TT>sv_interval
+sv_primitive::range(sv_box b);</TT>
+<P>Given any primitive and any box, this function computes the range interval.
+<P>Hold on a moment. Maybe you spotted that the `deduction' we made above--that
+an interval containing zero means that the primitive's surface passes through
+the box--is not quite correct. In fact, a range containing zero only tells
+svLis that the primitive's surface
+<I>might</I> pass through the box. In
+general, the range of potentials a primitive generates in a box by interval
+arithmetic is <I>conservative<A NAME="1990"></A><A NAME="1991"></A></I>&nbsp;
+which is to say that it is guaranteed to be the same size <I>or larger
+than</I> the actual potential range in the box. This means that if the
+range generated is all negative, svLis knows that the box must lie entirely
+in the solid region of the primitive, and if it is positive svLis knows
+that the box is entirely air with respect to that primitive. However, if
+the range interval straddles zero, then svLis only knows that the box <I>might</I>
+contain some of the surface of the primitive. Any function where an interval
+variable occurs more than once will suffer this uncertainty. However, as
+I shall show below, this uncertainty doesn't matter.
+<BR>&nbsp;
+<H2>
+<A NAME="SECTION00623000000000000000"></A><A NAME="PRUNE1"></A>Pruning</H2>
+Consider a set consisting of unions and intersections of several primitives,
+and a box. Suppose we were only interested in the shape that the set represented
+inside the box. Figure <A HREF="node6.html#fig:PRUNE">21</A> shows an example.
+The whole object,&nbsp;<IMG SRC="img43.gif" ALT="$A \cup B \cap C,$" BORDER=0 HEIGHT=24 WIDTH=76 ALIGN=CENTER>
+is the shaded wedge with a bump. If we were to calculate the range of potentials
+for each primitive in the box, we might find that <I>C</I> was all negative
+(thus solid everywhere in the box) and that <I>A</I> and <I>B</I> gave
+potential ranges in the box that straddled zero (and thus might have some
+of their surface in the box).
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<BR>
+<BR>
+<CENTER>
+<P><A NAME="fig:PRUNE"></A><IMG SRC="img44.gif" ALT="\begin{figure}% latex2html id marker 1997\epsfysize=80mm\centerline{\epsffile... ...ump $A~ \cup ~B~ \cap ~C$\space and a box.\end{minipage}\end{center}\end{figure}" HEIGHT=366 WIDTH=453></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<P>We can now say that, <I>inside the box only,</I> the set-theoretic expression
+is&nbsp;<IMG SRC="img45.gif" ALT="$A~ \cup ~B~ \cap~$" BORDER=0 HEIGHT=15 WIDTH=83 ALIGN=BOTTOM><I>
+<FONT SIZE=+2>solid</FONT></I><FONT SIZE=+2>.</FONT>
+Now, anything intersected with solid is just itself, so the expression
+simplifies to&nbsp;<IMG SRC="img46.gif" ALT="$A \cup B$" BORDER=0 HEIGHT=14 WIDTH=45 ALIGN=BOTTOM>.
+<P><A NAME="2003"></A><A NAME="2004"></A><A NAME="2005"></A>The complete
+simplification rules&nbsp; for a set <I>S</I> and airs and solids are:
+<DL>
+<DD>
+<IMG SRC="img47.gif" ALT="$S~ \cup$" BORDER=0 HEIGHT=14 WIDTH=27 ALIGN=BOTTOM>
+<I>air</I>
+= <I>S</I></DD>
+
+<DD>
+<IMG SRC="img48.gif" ALT="$S~ \cap$" BORDER=0 HEIGHT=14 WIDTH=27 ALIGN=BOTTOM>
+<I>air</I>
+= <I>air</I></DD>
+
+<DD>
+<IMG SRC="img47.gif" ALT="$S~ \cup$" BORDER=0 HEIGHT=14 WIDTH=27 ALIGN=BOTTOM>
+<I>solid</I>
+= <I>solid</I></DD>
+
+<DD>
+<IMG SRC="img48.gif" ALT="$S~ \cap$" BORDER=0 HEIGHT=14 WIDTH=27 ALIGN=BOTTOM>
+<I>solid</I>
+= <I>S</I></DD>
+</DL>
+Thus, in general, given a set and a box, svLis can use interval arithmetic
+conservatively to categorize the set's primitives against the box and then
+use those logical rules to simplify the set inside the box. This process
+is known as <I>pruning</I> the set to the box--the set-expression is a
+tree, and we are lopping off twigs (and sometimes whole branches) to simplify
+it.
+<BR>&nbsp;
+<BR>&nbsp;
+<H2>
+<A NAME="SECTION00624000000000000000"></A><A NAME="2016"></A><A NAME="2017"></A><A NAME="RECDIV"></A>Recursive
+division</H2>
+I said above that a model is an <TT>sv_set_list</TT> in a box. As you might
+imagine, the pruning process just described is used to simplify each set
+in each list in the box to remove unwanted details outside the box.
+<P>But the pruning process is much more powerful than that. It comes into
+its own when the model box is divided in two. This makes two adjacent models,
+but each is pruned to its own box, and is therefore much simpler than the
+original. The original is a parent model, and the two new ones are its
+children. The children can then be divided in turn. The whole process is
+repeated recursively to create a tree of boxes containing sets--a tree
+of models. The leaf boxes are models that contain <TT>sv_set_list</TT>s
+which are sufficiently simple that they are not worth dividing further.
+<P>What about the uncertainty when a primitive's potential range interval
+straddles zero, and thus indicates that the surface of the primitive might
+be in the box? The recursive divider overcomes this. Such primitives are
+left active in the boxes where they might have surface but, as those boxes
+are further divided, the intervals get tighter and tighter, and so the
+pruning process is able to remove them further down the model tree.
+<P>This model tree is the heart of svLis. It is what makes the modeller
+efficient, and what allows the component primitives that make up sets to
+be localized in space. As an example of all this, I will outline how the
+faceter that approximates the surface of a model with polygons for display
+(and other purposes) works.
+<P><A NAME="2144"></A><A NAME="2145"></A>The function
+<BLOCKQUOTE><TT>sv_model::facet()</TT></BLOCKQUOTE>
+<A NAME="2146"></A><A NAME="2147"></A><A NAME="2148"></A><A NAME="2149"></A>takes
+an unfaceted model and calls the recursive division procedure:
+<BLOCKQUOTE><TT>sv_model::divide(void decision(...))</TT>.</BLOCKQUOTE>
+This procedure takes a pointer to another procedure--<TT>decision</TT>--as
+its argument. The decision procedure decides, for a model, if it is complicated
+enough to divide and, if it is, how to divide it. The decision procedure
+provided for the faceter in svLis is called <TT>facet_decision(...)<A NAME="2150"></A><A NAME="2151"></A></TT>,
+but of course you can write your own.
+<P>Forget about lists of sets for a moment; suppose svLis starts faceting
+a model containing just one set. Initially, <TT>facet_decision(...)</TT>
+will get a model consisting of that set pruned to the initial model box.
+Suppose that set is made up of ten primitives. This is far too complicated
+to facet directly, so it needs to be divided. The decision procedure will
+therefore instruct the divider to cut the model in half in the longest
+model-box dimension. The halves will be pruned, and the divider called
+again recursively for the two halves. Eventually the pruning process will
+generate boxes with three or fewer primitives in. When this happens, the
+faceter treats such a box as follows:
+<UL>
+<LI>
+No primitives (that is, the box is solid or air): tell the divider that
+this box is a leaf and is therefore not to be divided further.</LI>
+
+<LI>
+One primitive in the box: check the range of directions of that primitive's
+grad vector in the box. This effectively decides how flat the primitive
+is in the box. If it's flat enough, work out a polygonal approximation
+to it in the box, attach those polygons as <A HREF="#2101">attributes </A>to
+the set at that location in the model tree, and tell the divider that the
+box is a leaf. If the primitive is too curved to approximate by a polygon,
+<TT>facet_decision(...)</TT>
+instructs the divider to divide the box in the coordinate direction corresponding
+to the greatest curvature. This will ensure that the primitive becomes
+locally flat as quickly as possible<A NAME="tex2html21" HREF="footnode.html#2152"></A><A NAME="tex2html21" HREF="footnode.html#2152"></A><A NAME="tex2html21" HREF="footnode.html#2152"></A><A NAME="tex2html21" HREF="footnode.html#2152"></A><A NAME="tex2html21" HREF="footnode.html#2152"></A><A NAME="tex2html21" HREF="footnode.html#2152"></A><A HREF="footnode.html#2152" NAME="tex2html21"><IMG SRC="foot_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>.</LI>
+
+<LI>
+Two primitives in a box: if either is too curved, divide the box to minimize
+this problem in the same way as for one primitive. Otherwise, compute the
+two collections of polygons that approximate the primitives and clip them
+with respect to each other to generate new polygons meeting at an edge.</LI>
+
+<LI>
+Three primitives in a box: treat as two, but clip to create a corner rather
+than an edge.</LI>
+</UL>
+There may occasionally be locations in models where more than three primitives
+come together at a corner. The divider will divide down at these until
+it reaches boxes which are too small to be divided further, then approximate
+the corner in the resulting small box.
+<P>The <TT>facet_decision(...)</TT> procedure also has to deal with sheets
+and wires, of course. The recursive division and pruning process manages
+them without having to treat them as special cases--in boxes where they
+generate zeros they exist (or might exist); in boxes where the interval
+of potential is all positive they are just air. Thus they can be completely
+accommodated by the clipping procedure, which just has to inspect the polygons<A NAME="2039"></A>&nbsp;
+which it is clipping to the box and to each other, and to do this clipping
+according to whether the polygons represent thin or solid primitives.&nbsp;<A NAME="DUMB"></A>A
+simple example division procedure is provided in source-code form with
+svLis in the file <TT>decision.c++<A NAME="2153"></A><A NAME="2154"></A></TT>.
+It is called <TT>dumb_decision(...)<A NAME="2155"></A><A NAME="2156"></A></TT>&nbsp;
+and, true to its name, it just divides boxes along their longest side until
+one of two user-supplied criteria is reached. The first defines the smallest
+box size beyond which division will not proceed; the second defines how
+simple the pruned contents of a box can be for it not to be divided further.
+<P>The procedure <TT>dumb_decision(...)</TT> is not really intended to
+be used as it stands, but rather to be a template upon which you can base
+your own decision procedures<A NAME="2048"></A>. Essentially what you do
+is to decide what it is you're looking for in the model, then write a decision
+procedure that--for any model--may say, ``Crikey! I can't hack this, it's
+far too complicated; divide it further in direction <I>x</I>'' (or <I>y</I>
+or <I>z</I> as appropriate). Alternatively, this decision procedure may
+think to itself ``Aha!
+<I>this</I> is what I'm after; I'll act on it, then
+tell the divider this is a leaf''. Or, yet again, it may react ``Oh. Simple
+model all right, but nothing interesting here. I'll forget this and tell
+the divider this is a leaf.'' It's probably a good idea to have a fourth
+alternative, too, which is ``Oops. This model's too complicated, but boy
+is it <I>small</I>. Better forget it and say it's a leaf''<A NAME="tex2html22" HREF="footnode.html#2157"></A><A NAME="tex2html22" HREF="footnode.html#2157"></A><A NAME="tex2html22" HREF="footnode.html#2157"></A><A NAME="tex2html22" HREF="footnode.html#2157"></A><A NAME="tex2html22" HREF="footnode.html#2157"></A><A NAME="tex2html22" HREF="footnode.html#2157"></A><A HREF="footnode.html#2157" NAME="tex2html22"><IMG SRC="foot_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>.
+That stops the divider going on for ever in regions of irreducible complexity.
+The whole idea is to write a decision procedure which is tailored to the
+particular <I>query</I> that you want to ask of the resulting divided model.
+<P>Finally, let's look at re-division<A NAME="2054"></A><A NAME="2055"></A>.
+Suppose you have a complicated model and you've divided it. You then make
+a small change to one of the sets in the list of sets comprising the model.
+Usually, this will only affect the contents of the few leaf boxes in the
+divided model, and the rest of the division structure can be left alone.
+<P>SvLis has a <TT>redivide(...)</TT> function that takes a divided model,
+a new list of sets for it, and a decision procedure as its argument. It
+divides the model as before, but whenever it finds that it is generating
+a box which is the same size and in the same place as a previous box, and
+the contents of which are identical to those of the previous box, it will
+not divide that box further. In this way the division process homes in
+on just those parts of the model which have changed, leaving the rest unaltered.
+This is obviously much more efficient than re-dividing the whole new model
+from scratch.
+<BR>&nbsp;
+<BR>&nbsp;
+<H1>
+<A NAME="SECTION00630000000000000000"></A><A NAME="2158"></A><A NAME="2159"></A><A NAME="DIYPRIM"></A>Programming
+DIY primitives</H1>
+
+<P><BR>It is sometimes the case that you can't write down a polynomial
+(or any other <I>closed form</I>) for a shape that you want, but you could
+write a procedure that, for any point in space, could say if that point
+were inside, outside, or on the surface of the shape. As an example, suppose
+you have a three-dimensional grid of data from a medical CT scan. You can
+say, for any point (<I>x</I>, <I>y</I>, <I>z</I>), if the scan is dense
+enough to correspond to bone, but you can't describe the shapes of the
+bones algebraically.
+<P>SvLis has a simple mechanism for allowing you to use such a procedure
+as a primitive (and hence, a data-set like a CT scan). The only requirements
+are that you have to be able to say for a box whether it is in the solid
+or air region of the primitive, or has some of its surface going through
+it, and you have to be able to give similar answers for the <I>x</I>, <I>y</I>,
+and <I>z</I> component primitives of the grad<A NAME="2160"></A> of your
+primitive. You don't have to be able to provide second or higher derivatives
+(unless your code needs them, of
+<BR>course).
+<P>The box functions can be conservative, as are the interval-arithmetic
+methods svLis uses for its own primitives. The potential values that your
+primitive functions generate, and the direction of the grad vectors, need
+not be particularly precise away from the primitive's surface; as long
+as the potentials more-or-less increase in absolute value as you move away
+from the surface and <I>never</I> generate a value with the wrong sign,
+and as long as the normal vectors point roughly the right way and are correct
+at the surface (where they may be used for shading calculations), then
+everything should work.
+<P>Details of how to program your own primitives are given on Page&nbsp;<A HREF="node9.html#uprim"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>,
+and in the file <TT>u_prim.c++<A NAME="2161"></A><A NAME="2162"></A></TT>.
+You can, of course, use svLis's facilities, as well as your own ingenuity,
+to make a primitive. For example, you could (rather perversely, perhaps)
+make a whole svLis model into a single primitive by employing the user
+primitive functions.
+<BR>&nbsp;
+<BR>&nbsp;
+<H1>
+<A NAME="SECTION00640000000000000000"></A><A NAME="2070"></A><A NAME="2071"></A><A NAME="MXMN"></A>Set-theory
+using maxima and minima</H1>
+
+<P><BR>Figure <A HREF="node6.html#fig:MAXMIN">22</A> shows a Venn diagram
+similar to Figure <A HREF="node3.html#fig:VENN">2</A>; inside each of <I>A</I>
+and <I>B</I> are negative potential values, outside each is positive. Suppose,
+for any point, you were to take the maximum of the two potentials. This
+would only be negative when both potentials were negative, which is to
+say that it would only be negative in&nbsp;<IMG SRC="img49.gif" ALT="$A \cap B$" BORDER=0 HEIGHT=14 WIDTH=45 ALIGN=BOTTOM>.
+Suppose you were to take the minimum of the two potentials. This would
+be negative when either of the primitives were negative, which is to say
+that it would be negative anywhere in&nbsp;<IMG SRC="img46.gif" ALT="$A \cup B$" BORDER=0 HEIGHT=14 WIDTH=45 ALIGN=BOTTOM>.
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<BR>
+<BR>
+<CENTER>
+<P><A NAME="fig:MAXMIN"></A><IMG SRC="img50.gif" ALT="\begin{figure}% latex2html id marker 2075\epsfysize=60mm\centerline{\epsffile... ... minima instead of intersection and union.\end{minipage}\end{center}\end{figure}" HEIGHT=297 WIDTH=531></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<P>This means that the <TT>max<A NAME="2164"></A><A NAME="2165"></A></TT>&nbsp;
+function works rather like intersection, and that the <TT>min<A NAME="2166"></A><A NAME="2167"></A></TT>&nbsp;
+function works rather like union. Just as there are <TT>value<A NAME="2168"></A><A NAME="2169"></A></TT>&nbsp;
+and <TT>range<A NAME="2170"></A><A NAME="2171"></A></TT>&nbsp; functions
+to find the potential of a primitive at a point, and the range of potentials
+in a box (Pages&nbsp;<A HREF="node5.html#PRIMVAL"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>
+and&nbsp;<A HREF="node6.html#PRIMRANGE"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>),
+there are <TT>value</TT> and <TT>range</TT> functions that take sets as
+arguments and use the <TT>min</TT> and <TT>max</TT> functions in the place
+of union and intersection to generate potentials from sets, and also to
+tell you the primitive or primitives that generate the final answer. This
+is not necessarily the primitive closest to the point or box that you're
+interested in, even if the primitive's distance functions are linear (imagine
+a point diagonally away from a convex corner), but they do provide you
+with much more information than the membership-test function, <TT>member<A NAME="2172"></A><A NAME="2173"></A></TT>.
+<BR>&nbsp;
+<BR>&nbsp;
+<H1>
+<A NAME="SECTION00650000000000000000"></A><A NAME="2101"></A><A NAME="ATTRIB1"></A>Attributes</H1>
+It is often convenient to attach extra information to parts of geometric
+models. An obvious example is colour<A NAME="2103"></A><A NAME="2105"></A>;
+if pictures of a model are going to be rendered, then the rendering program
+will need to know the colour of each primitive's surface. But other things
+are useful as well. Just off the top of my head I can think of text strings,
+surface hardness, texture maps, tolerances, the manufacturing process which
+will make that part of the model in real life, the type of feature that
+the part of a model is, the person guilty of designing this bit, an entry
+key in a parts database, a price, a file name; and so on and so on.
+<P>SvLis gives you a mechanism for attaching any information you like to
+any set (including a whole other model, if you want). Such information
+is called an <I>attribute</I> of the set. There is an <TT>sv_attribute<A NAME="2174"></A><A NAME="2175"></A></TT>&nbsp;
+class which implements this in the usual svLis way with hidden data<A NAME="2110"></A>,
+pointers<A NAME="2111"></A><A NAME="2112"></A>, and reference counts<A NAME="2113"></A>.
+Attributes are stored in linked lists. Each attribute has an integer tag
+value which says what sort of attribute it is, a pointer to the next attribute
+in the linked list, and a pointer to a class called <TT>sv_user_attribute<A NAME="2176"></A><A NAME="2177"></A></TT>.
+As supplied, svLis has several types of tagged attribute in <TT>sv_user_attribute</TT>
+(see the files <TT>u_attrib.h<A NAME="2178"></A><A NAME="2179"></A></TT>&nbsp;
+and
+<TT>u_attrib.cxx<A NAME="2180"></A><A NAME="2181"></A></TT>): surface
+characteristics, text strings, points, intervals, and polygons. The mechanism
+by which all this is achieved is a <TT>void*</TT> pointer, which you can
+use for anything:
+<BLOCKQUOTE>
+<PRE>sv_set s = my_set();
+my_class* my_thing = new my_class(my_data);
+sv_attribute a = sv_attribute( my_thing->tag(),&nbsp;
+&nbsp;&nbsp; new sv_user_attribute((void*) my_thing) );
+s = s.attribute(a);</PRE>
+</BLOCKQUOTE>
+In this way, you can add your own attributes. Each type of attribute you
+add to <TT>sv_user_attribute</TT> must have a unique positive tag value
+(svLis reserves negative and zero tags for internal use). It is a good
+idea if your class provides its own tag, as in the example. All svLis classes
+do. Also, you must leave the colour and text attributes in there and unaltered
+(well, you can alter them if you like, but don't blame me if your models
+all come out puce and labelled in iambic pentameters). Note that you are
+responsible for memory allocation and de-allocation for things like <TT>my_class</TT>;
+svLis will only keep track of the pointers for you.&nbsp; There are functions
+in <TT>u_attrib.cxx </TT>that get called whenever the pointer to your class
+is copied or deleted to help you do this.
+<P>The rules of attribute inheritance are simple. If a set has a list of
+attributes attached to it, that list is inherited by all the descendants
+of that set in the tree corresponding to the set-expression. That is to
+say that, if the set is&nbsp;<IMG SRC="img46.gif" ALT="$A \cup B$" BORDER=0 HEIGHT=14 WIDTH=45 ALIGN=BOTTOM>,
+then <I>A</I> and <I>B</I> will have the same attribute list as the union,
+and so on down. This inheritance continues until another set is encountered
+with an attribute list. The second list is inherited by all the descendants
+of that set in the same way.
+<P>For the attribute functions and procedures, see Page&nbsp;<A HREF="node9.html#ATTRIBUTE"><IMG SRC="cross_ref_motif.gif" ALT="[*]" BORDER=1 HEIGHT=10 WIDTH=10 ALIGN=BOTTOM></A>.
+<P>
+<HR><!--Navigation Panel--><A NAME="tex2html182" HREF="node7.html"></A><A NAME="tex2html182" HREF="node7.html"></A><A NAME="tex2html182" HREF="node7.html"></A><A NAME="tex2html182" HREF="node7.html"></A><A NAME="tex2html182" HREF="node7.html"></A><A NAME="tex2html182" HREF="node7.html"></A><A HREF="node7.html" NAME="tex2html182"><IMG SRC="next_motif.gif" ALT="next" BORDER=0 HEIGHT=24 WIDTH=37 ALIGN=BOTTOM></A><A NAME="tex2html178" HREF="svi2.html"></A><A NAME="tex2html178" HREF="svi2.html"></A><A NAME="tex2html178" HREF="svi2.html"></A><A NAME="tex2html178" HREF="svi2.html"></A><A NAME="tex2html178" HREF="svi2.html"></A><A NAME="tex2html178" HREF="svi2.html"></A><A HREF="svi2.html" NAME="tex2html178"><IMG SRC="up_motif.gif" ALT="up" BORDER=0 HEIGHT=24 WIDTH=26 ALIGN=BOTTOM></A><A NAME="tex2html172" HREF="node5.html"></A><A NAME="tex2html172" HREF="node5.html"></A><A NAME="tex2html172" HREF="node5.html"></A><A NAME="tex2html172" HREF="node5.html"></A><A NAME="tex2html172" HREF="node5.html"></A><A NAME="tex2html172" HREF="node5.html"></A><A HREF="node5.html" NAME="tex2html172"><IMG SRC="previous_motif.gif" ALT="previous" BORDER=0 HEIGHT=24 WIDTH=63 ALIGN=BOTTOM></A><A NAME="tex2html180" HREF="node1.html"></A><A NAME="tex2html180" HREF="node1.html"></A><A NAME="tex2html180" HREF="node1.html"></A><A NAME="tex2html180" HREF="node1.html"></A><A NAME="tex2html180" HREF="node1.html"></A><A NAME="tex2html180" HREF="node1.html"></A><A HREF="node1.html" NAME="tex2html180"><IMG SRC="contents_motif.gif" ALT="contents" BORDER=0 HEIGHT=24 WIDTH=65 ALIGN=BOTTOM></A><A NAME="tex2html181" HREF="node11.html"></A><A NAME="tex2html181" HREF="node11.html"></A><A NAME="tex2html181" HREF="node11.html"></A><A NAME="tex2html181" HREF="node11.html"></A><A NAME="tex2html181" HREF="node11.html"></A><A NAME="tex2html181" HREF="node11.html"></A><A HREF="node11.html" NAME="tex2html181"><IMG SRC="index_motif.gif" ALT="index" BORDER=0 HEIGHT=24 WIDTH=43 ALIGN=BOTTOM></A>
+<BR><B>Next:<A NAME="tex2html183" HREF="node7.html"></A><A NAME="tex2html183" HREF="node7.html"></A><A NAME="tex2html183" HREF="node7.html"></A><A NAME="tex2html183" HREF="node7.html"></A><A NAME="tex2html183" HREF="node7.html"></A><A NAME="tex2html183" HREF="node7.html"></A></B><A HREF="node7.html" NAME="tex2html183">Advanced
+programming and future</A>
+<B>Up:<A NAME="tex2html179" HREF="svi2.html"></A><A NAME="tex2html179" HREF="svi2.html"></A><A NAME="tex2html179" HREF="svi2.html"></A><A NAME="tex2html179" HREF="svi2.html"></A><A NAME="tex2html179" HREF="svi2.html"></A><A NAME="tex2html179" HREF="svi2.html"></A></B><A HREF="svi2.html" NAME="tex2html179">SvLis
+Introduction</A>
+<B>Previous:<A NAME="tex2html173" HREF="node5.html"></A><A NAME="tex2html173" HREF="node5.html"></A><A NAME="tex2html173" HREF="node5.html"></A><A NAME="tex2html173" HREF="node5.html"></A><A NAME="tex2html173" HREF="node5.html"></A><A NAME="tex2html173" HREF="node5.html"></A></B><A HREF="node5.html" NAME="tex2html173">Curved
+solids, surfaces and</A><!--End of Navigation Panel-->
+<ADDRESS>
+<I>Adrian Bowyer</I></ADDRESS>
+
+<BR>&nbsp;
+<P>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<P>
+<HR>
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<BR>
+<BR>
+<BR>
+<CENTER>
+<P><IMG SRC="motto.gif" ALT="PERFICTA  PERFRACTA  QVAERENDO  PERFECTA" HEIGHT=25 WIDTH=720></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<ADDRESS>
+
+<HR></ADDRESS>
+
+<BR>&nbsp;
+</BODY>
+</HTML>

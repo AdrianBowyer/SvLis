@@ -1,0 +1,194 @@
+This is TeX, Version 3.1415 (C version 6.1) (format=latex 96.8.17)  17 NOV 1997 16:35
+**./images.tex
+(images.tex
+LaTeX2e <1996/06/01>
+
+(/net/rhett/local/lib/texmf/tex/latex2e/base/book.cls
+Document Class: book 1996/05/26 v1.3r Standard LaTeX document class
+(/net/rhett/local/lib/texmf/tex/latex2e/base/bk11.clo
+File: bk11.clo 1996/05/26 v1.3r Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/net/rhett/local/lib/texmf/tex/latex209/dvips/epsf.sty
+\epsffilein=\read1
+\epsfxsize=\dimen103
+\epsfysize=\dimen104
+\epsftsize=\dimen105
+\epsfrsize=\dimen106
+\epsftmp=\dimen107
+\pspoints=\dimen108
+) (/net/rhett/local/lib/texmf/tex/latex2e/base/makeidx.sty
+Package: makeidx 1995/04/19 v1.0j Standard LaTeX package
+)
+
+! LaTeX Error: No counter 'capctr' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.98 \setcounter{capctr}{0}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+\@indexfile=\write3
+Writing index file images.idx
+\c@capctr=\count88
+\sizebox=\box26
+\lthtmlwrite=\write4
+(images.aux (/big_disk/g_mod/ensab/Svlis_docs/svi2_ack.aux)
+(/big_disk/g_mod/ensab/Svlis_docs/svi2_ch1.aux)
+(/big_disk/g_mod/ensab/Svlis_docs/svi2_ch2.aux)
+(/big_disk/g_mod/ensab/Svlis_docs/svi2_ch3.aux)
+(/big_disk/g_mod/ensab/Svlis_docs/svi2_ch4.aux)
+(/big_disk/g_mod/ensab/Svlis_docs/svi2_ch5.aux)
+(/big_disk/g_mod/ensab/Svlis_docs/svi2_awd.aux)
+(/big_disk/g_mod/ensab/Svlis_docs/svi2_man.aux)
+(/big_disk/g_mod/ensab/Svlis_docs/svi2_bib.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 234.
+LaTeX Font Info:    ... okay on input line 234.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 234.
+LaTeX Font Info:    ... okay on input line 234.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 234.
+LaTeX Font Info:    ... okay on input line 234.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 234.
+LaTeX Font Info:    ... okay on input line 234.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 234.
+LaTeX Font Info:    ... okay on input line 234.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 234.
+LaTeX Font Info:    ... okay on input line 234.
+
+latex2htmlLength hsize=349.0pt
+latex2htmlLength vsize=660.53673pt
+latex2htmlLength hoffset=0.0pt
+latex2htmlLength voffset=0.0pt
+latex2htmlLength topmargin=0.0pt
+latex2htmlLength topskip=0.00002pt
+latex2htmlLength headheight=0.0pt
+latex2htmlLength headsep=0.0pt
+latex2htmlLength parskip=3.0pt plus 1.0pt
+latex2htmlLength oddsidemargin=76.82243pt
+latex2htmlLength evensidemargin=59.75078pt
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 327.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 327.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 327.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.327 $\hbox{difference: {<TT>{<tex2html_
+                                         image_mark>#tex2html_wrap_inline552...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! You can't use `macro parameter character #' in math mode.
+l.327 ...{difference: {<TT>{<tex2html_image_mark>#
+                                                  tex2html_wrap_inline5521#}...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.327 ...tml_image_mark>#tex2html_wrap_inline5521#
+                                                  }</TT>}}$%
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Extra }, or forgotten $.
+l.327 ...ml_image_mark>#tex2html_wrap_inline5521#}
+                                                  </TT>}}$%
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.327 ...ge_mark>#tex2html_wrap_inline5521#}</TT>}
+                                                  }$%
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.327 ...e_mark>#tex2html_wrap_inline5521#}</TT>}}
+                                                  $%
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+l2hSize :tex2html_wrap_inline7089:0.0pt::0.0pt::0.0pt.
+! Missing } inserted.
+<inserted text> 
+                }
+l.329 \hfill\lthtmlcheckvsize
+                             \clearpage}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.329 \hfill\lthtmlcheckvsize
+                             \clearpage}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.329 \hfill\lthtmlcheckvsize
+                             \clearpage}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.329 \hfill\lthtmlcheckvsize
+                             \clearpage}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+(images.aux) ) 
+Here is how much of TeX's memory you used:
+ 548 strings out of 10943
+ 5419 string characters out of 73413
+ 48817 words of memory out of 262141
+ 3396 multiletter control sequences out of 9500
+ 10309 words of font info for 32 fonts, out of 100000 for 255
+ 18 hyphenation exceptions out of 607
+ 21i,6n,21p,239b,137s stack positions out of 300i,40n,60p,3000b,4000s
+
+No pages of output.

@@ -1,0 +1,101 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="description" content="An open C++ CSG geometric modelling kernel for PCs and workstations that is free.">
+   <meta name="keywords" content="svlis,sulis,free software,geometric modelling, geometric modeling, solid modelling,solid modeling, geometric modeller, geometric modeler,solid modeller, solid modeler, geometric model, solidmodel, Voronoi, CAD, CSG, Linux, Silicon Graphics, SGI, Sun,Apple Mac,VisualC++, ray tracing, ray casting, polygons, graphics, semi-algebraic set">
+   <meta name="GENERATOR" content="Mozilla/4.75 [en] (X11; U; Linux 2.2.16-22 i686) [Netscape]">
+   <title>The svLis geometric modeller</title>
+</head>
+<body background="svlis_new.gif">
+
+<center><a href="http://www.bath.ac.uk/~ensab/G_mod/Svlis/"><img SRC="svlis.gif" ALT="SvLis Website" BORDER=0 height=68 width=129></a></center>
+
+<center>
+<h3>
+The SvLis Set-theoretic Kernel Geometric Modeller</h3></center>
+
+<center><a href="mailto:svlis@bath.ac.uk">svlis@bath.ac.uk</a>
+<br>&nbsp;
+<br>&nbsp;
+<p>** svLis version 3 released - <a href="install.html">download it free
+now!</a> **
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p>Copyright &copy; 1994, 1996, 1999 <a href="http://www.inge.com">Information
+Geometers Ltd </a>and <a href="http://www.bath.ac.uk">The University of
+Bath</a>
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p>
+<hr>
+<p><img SRC="refinery.gif" ALT="" height=369 width=643>
+<p>A view of part of an oil refinery modelled and ray-traced by svLis
+<br>&nbsp;
+<br>&nbsp;
+<p><a href="install.html">Download a free copy of svLis</a>
+<p>Read the <a href="book/svi2.html">svLis book and manual</a>
+<p>Commercial users: check out the <a href="licence.html">svLis commercial
+licence</a>
+<p><a href="svlis_points.html">Key points about svLis</a>
+<p><a href="code.html">A C++ example showing how easy svLis is to use</a>
+<p><a href="tech_ov.html">A brief technical overview</a>
+<p><a href="say_svlis.html">How to pronounce `svLis'</a> (includes a pretty
+picture)
+<p><a href="book/node2.html">Who wrote svLis?</a>
+<p><a href="users/svlis_use.html">Who is using svLis?</a>
+<p>SvLis is distributed by <a href="http://www.bath.ac.uk/">The University
+of Bath</a> and <a href="http://www.inge.com/">Information Geometers Ltd</a>.
+<p>
+<hr>
+<p><img SRC="csg.gif" ALT="" height=190 width=292></center>
+
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<p>This page describes the svLis set-theoretic (or CSG) geometric modeller,
+which is coded in C++. SvLis was written at the University of Bath, where
+research has been done in <a href="http://www.bath.ac.uk/~ensab/G_mod/g_mod.html">geometric
+modelling</a> for many years.
+<p>The design philosophy of svLis is simple. It is an efficient set-theoretic
+geometric modeller which is straightforward enough for any technical person
+who knows a little C++ to get to grips with in a day or two, but which
+is sufficiently rich in operations and entities to be able to represent
+a very wide range of shapes for all aspects of engineering, for many aspects
+of science, and possibly some for art as well. It is user-extendible in
+lots of ways, and provides safe function calls to give access to all its
+internal geometric structures. It is intended to be easy and intuitive
+to program with, allowing operations to be performed using overloaded operators
+and functions in the usual object-oriented way, but using sophisticated
+memory-management strategies to allow the sharing of common data and the
+efficient passing of results in a completely transparent manner.
+<p>
+<hr>
+<center>
+<p><a href="http://www.LinuxMall.com/LinuxUsedHere.html"><img SRC="uselx_sm.gif" ALT="Linux Used Here" </A ></a><a href="http://www.freehound.com/"><img SRC="fhbuton1.gif" height=31 width=88></a><a href="http://extreme-dm.com/s/?tag=svlis" target="_top"><img SRC="http://extreme-dm.com/i/" NAME="im" BORDER=0 height=38 width=41></a>
+<b><font size=+3><a href="http://www.mathtools.net"><font color="#000099">Math</font><font color="#3366FF">tools</font><font color="#000099">.net</font></a></font></b>&nbsp;<script><!--
+an=navigator.appName;sr='http://extreme-dm.com/';c=24;srw="na";x=17;srb="na";d=document;r=41;function pr(n) {
+d.write("<img src=\""+sr+""+n+"\/?tag=svlis&j=y&srw="+srw+"&srb="+srb+"&l="+escape(d.referrer)+"&rs="+r+"\" height=1 width=1>");}//-->
+</script>
+<script language="javascript1.2"><!--
+s=screen;srw=s.width;an!="Netscape"?srb=s.colorDepth:srb=s.pixelDepth//-->
+</script>
+<script><!--
+d.images?r=d.im.width:z=0;pr("z")//-->
+</script>
+<noscript><img SRC="http://extreme-dm.com/z/" height=1 width=1></noscript></center>
+
+<p>
+<hr>
+<center>
+<p><img SRC="motto.gif" ALT="PERFICTA  PERFRACTA  QVAERENDO  PERFECTA" ></center>
+
+<p>
+<hr>
+</body>
+</html>

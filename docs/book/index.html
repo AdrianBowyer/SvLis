@@ -1,0 +1,288 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>SvLis -- Introduction and User Manual</TITLE>
+<META NAME="description" CONTENT="SvLis -- Introduction and User Manual">
+<META NAME="keywords" CONTENT="svi2">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="svi2.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<body background=../svlis_new.gif>
+<P>
+<HR>
+
+<P align=center>
+<A HREF="../home.html"> 
+<IMG SRC="../svlis.gif" ALT="SvLis Home Page" border=0></A>
+
+<P><center><A HREF="mailto:svlis@bath.ac.uk">svlis@bath.ac.uk</A>
+
+<H1 ALIGN="CENTER">SvLis -- Introduction and User Manual</H1>
+<P ALIGN="CENTER"><STRONG>Adrian Bowyer</STRONG></P>
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;<CENTER>
+<P>Copyright &copy; 1994, 1996, 1999 <A HREF="http://www.inge.com">Information
+Geometers Ltd </A>and <A HREF="http://www.bath.ac.uk">The University of
+Bath</A></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<P>
+<P ALIGN="LEFT"></P>
+
+<P><HR>
+<br><BR></center>
+<!--Navigation Panel-->
+<A NAME="tex2html30"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="icons.gif/previous_motif_gr.gif"> 
+<A NAME="tex2html28"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="icons.gif/contents_motif.gif"></A> 
+<A NAME="tex2html29"
+ HREF="node11.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index"
+ SRC="icons.gif/index_motif.gif"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html31"
+ HREF="node1.html">Contents</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html32"
+ HREF="node1.html#SECTION00100000000000000000">
+Contents</A>
+<LI><A NAME="tex2html33"
+ HREF="node2.html#SECTION00200000000000000000">
+Acknowledgements</A>
+<LI><A NAME="tex2html34"
+ HREF="node3.html#SECTION00300000000000000000">
+Introduction </A>
+<UL>
+<LI><A NAME="tex2html35"
+ HREF="node3.html#SECTION00310000000000000000">
+Set-theoretic modelling</A>
+<UL>
+<LI><A NAME="tex2html36"
+ HREF="node3.html#SECTION00311000000000000000">
+Primitives and half-spaces</A>
+</UL>
+<LI><A NAME="tex2html37"
+ HREF="node3.html#SECTION00320000000000000000">
+Design philosophy and overview</A>
+</UL>
+<LI><A NAME="tex2html38"
+ HREF="node4.html#SECTION00400000000000000000">
+Fundamental geometric structures</A>
+<UL>
+<LI><A NAME="tex2html39"
+ HREF="node4.html#SECTION00410000000000000000">
+Numbers</A>
+<LI><A NAME="tex2html40"
+ HREF="node4.html#SECTION00420000000000000000">
+Points and lines in space</A>
+<LI><A NAME="tex2html41"
+ HREF="node4.html#SECTION00430000000000000000">
+Solids with flat faces, and inequalities</A>
+</UL>
+<LI><A NAME="tex2html42"
+ HREF="node5.html#SECTION00500000000000000000">
+Curved solids, surfaces and lines</A>
+<UL>
+<LI><A NAME="tex2html43"
+ HREF="node5.html#SECTION00510000000000000000">
+Solids with simple curved surfaces</A>
+<LI><A NAME="tex2html44"
+ HREF="node5.html#SECTION00520000000000000000">
+Blends</A>
+<LI><A NAME="tex2html45"
+ HREF="node5.html#SECTION00530000000000000000">
+Potentials and non-polynomials</A>
+<LI><A NAME="tex2html46"
+ HREF="node5.html#SECTION00540000000000000000">
+Sheets and wires</A>
+<LI><A NAME="tex2html47"
+ HREF="node5.html#SECTION00550000000000000000">
+The <TT>sv_primitive</TT> class</A>
+</UL>
+<LI><A NAME="tex2html48"
+ HREF="node6.html#SECTION00600000000000000000">
+Sets, models, and DIY primitives and attributes</A>
+<UL>
+<LI><A NAME="tex2html49"
+ HREF="node6.html#SECTION00610000000000000000">
+Sets</A>
+<UL>
+<LI><A NAME="tex2html50"
+ HREF="node6.html#SECTION00611000000000000000">
+Lists of sets</A>
+</UL>
+<LI><A NAME="tex2html51"
+ HREF="node6.html#SECTION00620000000000000000">
+Models</A>
+<UL>
+<LI><A NAME="tex2html52"
+ HREF="node6.html#SECTION00621000000000000000">
+Interval arithmetic</A>
+<LI><A NAME="tex2html53"
+ HREF="node6.html#SECTION00622000000000000000">
+Boxes and primitives</A>
+<LI><A NAME="tex2html54"
+ HREF="node6.html#SECTION00623000000000000000">
+Pruning</A>
+<LI><A NAME="tex2html55"
+ HREF="node6.html#SECTION00624000000000000000">
+Recursive division</A>
+</UL>
+<LI><A NAME="tex2html56"
+ HREF="node6.html#SECTION00630000000000000000">
+Programming DIY primitives</A>
+<LI><A NAME="tex2html57"
+ HREF="node6.html#SECTION00640000000000000000">
+Set-theory using maxima and minima</A>
+<LI><A NAME="tex2html58"
+ HREF="node6.html#SECTION00650000000000000000">
+Attributes</A>
+</UL>
+<LI><A NAME="tex2html59"
+ HREF="node7.html#SECTION00700000000000000000">
+Advanced programming and future developments</A>
+<UL>
+<LI><A NAME="tex2html60"
+ HREF="node7.html#SECTION00710000000000000000">
+Trees and recursion</A>
+<UL>
+<LI><A NAME="tex2html61"
+ HREF="node7.html#SECTION00711000000000000000">
+Membership test for a point</A>
+<LI><A NAME="tex2html62"
+ HREF="node7.html#SECTION00712000000000000000">
+The potential range of a box in a set</A>
+</UL>
+<LI><A NAME="tex2html63"
+ HREF="node7.html#SECTION00720000000000000000">
+Future enhancements</A>
+</UL>
+<LI><A NAME="tex2html64"
+ HREF="node8.html#SECTION00800000000000000000">
+Afterword</A>
+<LI><A NAME="tex2html65"
+ HREF="node9.html#SECTION00900000000000000000">
+SvLis User Manual</A>
+<UL>
+<LI><A NAME="tex2html66"
+ HREF="node9.html#SECTION00910000000000000000">
+Introduction</A>
+<LI><A NAME="tex2html67"
+ HREF="node9.html#SECTION00920000000000000000">
+Errors</A>
+<LI><A NAME="tex2html68"
+ HREF="node9.html#SECTION00930000000000000000">
+Classes and functions</A>
+<UL>
+<LI><A NAME="tex2html69"
+ HREF="node9.html#SECTION00931000000000000000">
+Sums</A>
+<LI><A NAME="tex2html70"
+ HREF="node9.html#SECTION00932000000000000000">
+Geometry</A>
+<UL>
+<LI><A NAME="tex2html71"
+ HREF="node9.html#SECTION00932100000000000000">
+The <TT>sv_point</TT> struct</A>
+<LI><A NAME="tex2html72"
+ HREF="node9.html#SECTION00932200000000000000">
+The <TT>sv_line</TT> struct</A>
+<LI><A NAME="tex2html73"
+ HREF="node9.html#SECTION00932300000000000000">
+The <TT>sv_plane</TT> struct</A>
+</UL>
+<LI><A NAME="tex2html74"
+ HREF="node9.html#SECTION00933000000000000000">
+The <TT>sv_interval</TT> and <TT>sv_box</TT> structs</A>
+<LI><A NAME="tex2html75"
+ HREF="node9.html#SECTION00934000000000000000">
+The <TT>sv_primitive</TT> class</A>
+<LI><A NAME="tex2html76"
+ HREF="node9.html#SECTION00935000000000000000">
+The <TT>sv_set</TT> class</A>
+<LI><A NAME="tex2html77"
+ HREF="node9.html#SECTION00936000000000000000">
+The <TT>sv_attribute</TT> class</A>
+<LI><A NAME="tex2html78"
+ HREF="node9.html#SECTION00937000000000000000">
+The <TT>sv_surface</TT> class</A>
+<LI><A NAME="tex2html79"
+ HREF="node9.html#SECTION00938000000000000000">
+The <TT>sv_view</TT> class</A>
+<LI><A NAME="tex2html80"
+ HREF="node9.html#SECTION00939000000000000000">
+The <TT>sv_lightsource</TT> and <TT>sv_light_list classes</TT></A>
+<LI><A NAME="tex2html81"
+ HREF="node9.html#SECTION009310000000000000000">
+The <TT>sv_picture</TT> class</A>
+<LI><A NAME="tex2html82"
+ HREF="node9.html#SECTION009311000000000000000">
+The <TT>p_gon</TT> struct</A>
+<LI><A NAME="tex2html83"
+ HREF="node9.html#SECTION009312000000000000000">
+The <TT>sv_set_list</TT> class</A>
+<LI><A NAME="tex2html84"
+ HREF="node9.html#SECTION009313000000000000000">
+The <TT>sv_model</TT> class</A>
+</UL>
+<LI><A NAME="tex2html85"
+ HREF="node9.html#SECTION00940000000000000000">
+Utilities</A>
+<LI><A NAME="tex2html86"
+ HREF="node9.html#SECTION00950000000000000000">
+Test programs</A>
+</UL>
+<LI><A NAME="tex2html87"
+ HREF="node10.html#SECTION001000000000000000000">
+Bibliography</A>
+<LI><A NAME="tex2html88"
+ HREF="node11.html#SECTION001100000000000000000">
+Index</A>
+<LI><A NAME="tex2html89"
+ HREF="node12.html#SECTION001200000000000000000">
+About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+<I>Adrian Bowyer</I>
+<BR><I>11/17/1997</I>
+</ADDRESS>
+<P>
+<HR>
+<P>
+<P align=center>
+<img SRC="../motto.gif" alt="PERFICTA  PERFRACTA  QVAERENDO  PERFECTA">
+<P>
+<HR>
+
+</BODY>
+</HTML>

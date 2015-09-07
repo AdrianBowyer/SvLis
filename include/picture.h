@@ -1,0 +1,278 @@
+/* 
+ *  The SvLis Geometric Modelling Kernel
+ *  ------------------------------------
+ *
+ *  Copyright (C) 1993, 1997, 1998, 2000 
+ *  University of Bath & Information Geometers Ltd
+ *
+ *  http://www.bath.ac.uk/
+ *  http://www.inge.com/
+ *
+ *  Principal author:
+ *
+ *     Adrian Bowyer
+ *     Department of Mechanical Engineering
+ *     Faculty of Engineering and Design
+ *     University of Bath
+ *     Bath BA2 7AY
+ *     U.K.
+ *
+ *     e-mail: A.Bowyer@bath.ac.uk
+ *        web: http://www.bath.ac.uk/~ensab/
+ *
+ *   SvLis is free software; you can redistribute it and/or
+ *   modify it under the terms of the GNU Library General Public
+ *   Licence as published by the Free Software Foundation; either
+ *   version 2 of the Licence, or (at your option) any later version.
+ *
+ *   SvLis is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ *   Library General Public Licence for more details.
+ *
+ *   You should have received a copy of the GNU Library General Public
+ *   Licence along with svLis; if not, write to the Free
+ *   Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA,
+ *   or see
+ *
+ *      http://www.gnu.org/
+ * 
+ * =====================================================================
+ *
+ * SvLis - The picture class stores picture parameters
+ *
+ * Andy Wallis
+ *
+ * See the svLis web site for the manual and other details:
+ *
+ *    http://www.bath.ac.uk/~ensab/G_mod/Svlis/
+ *
+ * or see the file
+ *
+ *    docs/svlis.html
+ *
+ * First version: May 1994
+ * This version: 23 September 2000
+ *
+ */
+
+
+// Much modified by Adrian 20/5/96
+
+// The picture class stores picture parameters
+
+#ifndef SVLIS_PICTURE
+#define SVLIS_PICTURE
+
+struct sv_pixel 
+{
+   GLubyte r, g, b; // Use the OpenGL definitions
+
+   sv_pixel()
+   {
+	r = 0;
+	g = 0;
+	b = 0;
+   }
+
+   sv_pixel(sv_point p)
+   {
+     r = (GLubyte)(255.9*p.x);
+     g = (GLubyte)(255.9*p.y);
+     b = (GLubyte)(255.9*p.z);
+   }
+
+   sv_point colour() const { return(sv_point(((sv_real)r)/255.0, 
+				((sv_real)g)/255.0, ((sv_real)b)/255.0)); }
+
+   sv_integer tag() const { return(SVT_F*SVT_PIXEL); }
+};
+
+class sv_picture
+{
+   sv_integer		x_res;
+   sv_integer		y_res;
+   char*	mask;
+   sv_pixel*	image_bitmap;	// pointer to malloced data area`
+
+// OpenGL to sv_picture procedure
+
+   friend sv_picture* get_pic_from_screen(int, int);
+
+ public:
+
+// Constructors and destructor for a picture
+
+   sv_picture();
+   sv_picture(sv_picture&);    // Copy constructor
+   sv_picture(int);            // Create from GL image (code in sv_graph.cxx)
+   ~sv_picture();
+
+// Assignment operator
+
+   sv_picture operator=(sv_picture&);
+
+// Member-setting functions
+
+   sv_integer resolution(sv_integer, sv_integer);
+
+// Member accessing functions
+
+   sv_integer x_resolution(void) const { return(x_res);}
+   sv_integer y_resolution(void) const { return(y_res);}
+
+   void pixel(sv_integer, sv_integer, sv_pixel);
+   sv_pixel pixel(sv_integer, sv_integer) const;
+
+   GLubyte* image() const
+   {
+	if(!image_bitmap) return(0);
+	return(&(image_bitmap->r)); 
+   }
+
+// Set entire picture to a given pixel value
+
+   sv_integer picture_to_colour(sv_pixel);
+
+// Write out a picture as a ppm/bmp file
+
+   friend void write_ppm(ostream&, const sv_picture*, const char*);
+   friend void write_bmp(ostream&, const sv_picture*);
+
+// Read a picture from a ppm/bmp file
+
+   friend void read_ppm_pic(istream &, sv_picture **);
+   friend void read_bmp_pic(istream &, sv_picture **);
+   friend void read_ppm_pic1(istream &, sv_picture **);
+   friend void read_bmp_pic1(istream &, sv_picture **);
+   friend void read1(istream&, sv_picture**);
+
+   sv_integer tag() const { return(SVT_F*SVT_PIC); }
+      
+// Debug print for picture
+
+   friend void debug_print_picture(const sv_picture&, char*);
+};
+
+// Picture i/o
+
+// Set and get the image format to be used for writing
+
+extern void image_type(sv_image_type);
+extern sv_image_type image_type();
+
+// The actual procedures that write the image...
+
+extern void write_bmp(ostream&, const sv_picture*);
+extern void write_ppm(ostream&, const sv_picture*, const char*);
+
+// ... and read it
+
+extern void read(istream&, sv_picture**);
+
+// Write out an image in the current format (with a comment)
+
+inline void write_image(ostream& s, const sv_picture* p, const char* comment)
+{
+	if(image_type() == SV_BMP)
+		write_bmp(s, p);
+        else
+		write_ppm(s, p, comment);
+}
+
+// The write function used by internal i/o - this always
+// uses ppm format for portability
+
+inline void write(ostream& s, const sv_picture* p, 
+	const char* comment)
+{
+	write_ppm(s, p, comment);
+}
+
+#define DEFAULT_COMMENT "SvLis image."
+
+// These read both ppm and bmp files
+
+inline sv_picture* sv_read_image(istream& ipf)
+{
+    sv_picture* p = 0;
+    read(ipf, &p);
+    return(p);
+}
+
+inline sv_picture* sv_read_image(const char* file_name)
+{
+    ifstream ipf(file_name);
+    if(!ipf)
+    {
+	svlis_error("read_image","can't open input file", SV_WARNING);
+        return(0);
+    }
+
+    sv_picture* p = sv_read_image(ipf);
+    ipf.close();
+    return(p); 
+}
+
+// This writes a ppm file regardless of the current image type
+
+inline void write_ppm(const char* file_name, const sv_picture* p, const char* comment)
+{ 
+    ofstream opf(file_name);
+    if(!opf)
+    {
+	svlis_error("write_ppm","can't open output file", SV_WARNING);
+        return;
+    }
+    
+    write_ppm(opf, p, comment);
+    opf.close();
+}
+
+// This writes a ppm file regardless of the current image type.
+// It pastes in the default comment
+ 
+inline void write_ppm(const char* file_name, const sv_picture* p)
+{   
+    write_ppm(file_name, p, DEFAULT_COMMENT);
+}
+
+// This writes a bmp file regardless of the current image type
+
+inline void write_bmp(const char* file_name, const sv_picture* p)
+{  
+    ofstream opf(file_name);
+    if(!opf)
+    {
+	svlis_error("write_bmp","can't open output file", SV_WARNING);
+	return;
+    }
+
+    write_bmp(opf, p);
+    opf.close();
+}
+
+// This writes in whatever the current format is set to
+
+inline void write_image(const char* file_name, const sv_picture* p,  const char* comment)
+{  
+    ofstream opf(file_name);
+    if(!opf)
+    {
+	svlis_error("write_image","can't open output file", SV_WARNING);
+	return;
+    }
+
+    write_image(opf, p, comment);
+    opf.close();
+}
+
+// This writes in whatever the current format is set to
+// It pastes in the default comment
+
+inline void write_image(const char* file_name, const sv_picture* p)
+{
+    write_image(file_name, p, DEFAULT_COMMENT);
+}
+
+#endif

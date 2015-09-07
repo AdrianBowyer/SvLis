@@ -1,0 +1,44 @@
+
+
+a) A short title describing your project(s) or application(s).
+
+    CAD-Based Vision
+
+b) The names of the people involved, and your department and institution
+   name (how you want them to appear).
+
+   Department of Computer Science, the University of Reading, England.
+        http://www.cs.reading.ac.uk/cs/
+
+   Dr James Anderson
+        http://www.cs.reading.ac.uk/cs/people/jadwa/home.html
+
+   Mr Behrouz M-Rouhani
+        http://www.cs.reading.ac.uk/cs/people/bm/home.html
+
+   Mr Magnus Byne
+        no URL yet
+
+c) Up to 100 words of aims and/or description of your work.
+
+   Many people in the Department are working on Computational Vision
+        http://www.cs.reading.ac.uk/cs/research/
+   Work on CAD-Based vision is lead by Dr James Anderson
+        http://www.cs.reading.ac.uk/cs/people/jadwa/home.html
+   The objective of our work on CAD-Based Vision is two fold.
+
+   Our primary aim is to generate computer vision programs automatically from
+   CAD 'drawings'. These programs should then be able to recognise real
+   examples of the objects. We test these vision programs in both a robot
+   workcell and in outdoor scenes.
+
+   Our secondary aim is to construct CAD 'drawings' semi-automatically from
+   video footage. We work with footage of indoor scenes using an uncalibrated
+   camera and with footage from the robot workcell using a self-calibrating
+   camera.
+
+   We currently use Svlis and a proprietry CAD modeller in this research.
+
+d) The URLs of your relevant WWW pages.
+   See above.
+

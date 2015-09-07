@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.07 [en] (X11; I; Linux 2.0.36 i686) [Netscape]">
+   <TITLE>SvLis Microsoft Windows Installation</TITLE>
+</HEAD>
+<BODY BACKGROUND="svlis_new.gif">
+
+<HR>
+<BR>&nbsp;
+<P><BR>
+<CENTER>
+<P><A HREF="http://www.bath.ac.uk/~ensab/G_mod/Svlis/"><IMG SRC="svlis.gif" ALT="SvLis Home Page" BORDER=0 ></A></CENTER>
+
+<CENTER>
+<H2>
+Microsoft Windows Installation</H2></CENTER>
+
+<CENTER><A HREF="mailto:svlis@bath.ac.uk">svlis@bath.ac.uk</A>
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<P>Copyright &copy; 1994, 1996, 1999 <A HREF="http://www.inge.com">Information
+Geometers Ltd </A>and <A HREF="http://www.bath.ac.uk">The University of
+Bath</A></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<P>
+<HR>
+<P>As Visual C++ supports OpenGL, the first stage in the installation of
+svLis under Microsoft Windows (assuming that you already have a copy of
+<A HREF="http://www.microsoft.com/products/prodref/197_ov.htm">Visual C++</A>)
+is to obtain <A HREF="http://trant.sgi.com/opengl/toolkits/glut.html">GLUT</A>
+(and maybe also some of the <A HREF="http://trant.sgi.com/opengl/toolkits/glut-3.5/progs/progs.html">GLUT
+demonstration programs</A> for testing). Get OpenGL/GLUT all working, then
+start on svLis.
+<P>The compressed svLis distribution file to run under Windows 95 or NT
+is <TT><A HREF="ftp://ftp.bath.ac.uk/pub/ensab/svlis/pc_svlis.zip">PC_SVLIS.ZIP</A></TT>.
+The stages of the installation of svLis under Microsoft Windows are:
+<OL>
+<LI>
+Make the directory where you want svLis to be, usually <TT>C:\SVLIS</TT>;</LI>
+
+<LI>
+Put <TT>PC_SVLIS.ZIP</TT> in <TT>C:\SVLIS</TT>;</LI>
+
+<LI>
+Extract the directories and files from <TT>PC_SVLIS.ZIP</TT> using
+<TT><A HREF="http://www.interpages.co.uk/pkzipage/">WINZIP</A></TT>;</LI>
+
+<LI>
+Set up Visual C++ so that it searches for library files in <TT>C:\SVLIS\LIB</TT>
+and for include files in <TT>C:\SVLIS\INCLUDE</TT> in addition to the locations
+already searched;</LI>
+
+<LI>
+Build all the projects in the directories in <TT>C:\SVLIS\PROJECTS</TT>,
+starting with <TT>USER_LIB</TT>.</LI>
+</OL>
+The result will be a collection of executables in
+<TT>C:\SVLIS\BIN</TT>
+and the user library in <TT>C:\SVLIS\LIB</TT>. The test executables are
+all simple console applications; they are: <TT>SV_TST_1, SV_TST_2, </TT>and<TT>
+SV_TST_G</TT> .
+<P>Open an MSDOS window and <TT>CD</TT> to <TT>C:\SVLIS</TT>. Type <TT>BIN\SV_TST_1</TT>.
+This will create a simple test model (a cube intersected with a sphere)
+in <TT>C:\SVLIS\RESULTS\SV_TST.MOD</TT>. Type this file out if you like.
+It will start something like:
+<PRE>SvLis(3)
+
+# SvLis created this file on Sun Feb 21 15:59:16 1999
+
+model
+{
+&nbsp;268482224 L 0
+&nbsp;box\interval\0, 10/, interval\0, 10/, interval\0, 10//
+&nbsp;set_list
+&nbsp;[
+&nbsp; 268482032 0
+&nbsp; set
+&nbsp; (
+&nbsp;&nbsp; 268481656 7 0 &amp;
+&nbsp;&nbsp; set
+&nbsp;&nbsp; (
+&nbsp;&nbsp;&nbsp; 268481600 1 0
+&nbsp;&nbsp;&nbsp; primitive
+&nbsp;&nbsp;&nbsp; &lt;
+&nbsp;&nbsp;&nbsp;&nbsp; 268481528 3 0 -
+&nbsp;&nbsp;&nbsp;&nbsp; primitive
+&nbsp;&nbsp;&nbsp;&nbsp; &lt;
+.
+.
+.
+.</PRE>
+though the numbers will be different.
+<P>If you run <TT>BIN\SV_TST_2</TT>, this will read the model, then divide
+and facet it, then print some statistics. Finally running <TT>BIN\SV_TST_G</TT>
+should produce a picture of the model. The faceting of this picture is
+deliberately crude; you can refine it by picking the `Facet quality' menu
+item with the right mouse button in the graphics window. Typing `?' in
+the graphics window gives a list of options. Also, if you turn texturing
+on from the menu, you should get the svLis logo tiled across the flat faces.
+<P>There are a number of other programs provided with svLis; for details
+of them see the <A HREF="book/node9.html#ab900">svLis manual here.</A>
+<P>
+<HR>
+<BR>&nbsp;
+<P><BR>
+<CENTER>
+<P><IMG SRC="motto.gif" ALT="PERFICTA  PERFRACTA  QVAERENDO  PERFECTA" ></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<P>
+<HR>
+</BODY>
+</HTML>

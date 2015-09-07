@@ -1,0 +1,409 @@
+<TITLE>SvLis installation</TITLE>
+<body background=svlis_new.gif>
+<P>
+<HR>
+
+<P align=center>
+<A HREF="http://www.bath.ac.uk/~ensab/G_mod/Svlis/"> 
+<IMG SRC="svlis.gif" ALT=" " border=0></A>
+
+<H2 align=center> Installation</H2>
+
+<P><center><A HREF="mailto:svlis@bath.ac.uk">svlis@bath.ac.uk</A>
+</center>
+<P>
+<HR>
+
+<P>
+
+                                          
+
+<H3 align=center> Introduction</H3>
+
+<P> SvLis is a kernel set-theoretic geometric modeller.  Details of how
+to use it can be found in the <A
+HREF="http://www.bath.ac.uk/~ensab/G_mod/Svlis/Book/svi2.html">SvLis
+Book</A> and the <A HREF="http://www.bath.ac.uk/~ensab/G_mod/Svlis/Book/node9.html">SvLis User Manual</A>.  This
+document describes svLis's distribution and installation.
+
+<P> SvLis is a library written in C++, and it is free,
+though it is copyrighted by <A
+HREF="http://www.bath.ac.uk/"> The University of Bath</A>
+and <A HREF="http://www.inge.com/"> Information Geometers
+Ltd</A>.  You may not sell svLis, nor may you sell any code
+or programs incorporating svLis.  If you need the source
+code for the core of svLis, or if you wish to use svLis
+commercially, have a look at the <A
+HREF="http://www.bath.ac.uk/~ensab/G_mod/Svlis/licence.html">
+svLis commercial licence</a>. SvLis is not in the public
+domain.
+
+<P> The free svLis is distributed as a compiled library, a
+set of <tt>.h</tt> files, some user-modifiable procedures
+in source code (which form an ancilliary library), and the
+source code for test programs and utilities.  <P> SvLis
+currently runs on PCs under <A
+HREF="http://www.linux.org/"> Linux</a> using the Gnu g++
+compiler, on <A HREF="http://www.sun.com/">Suns</a> also
+using the Gnu compiler, and on <A
+HREF="http://www.sgi.com/">Silicon Graphics</a> computers
+using SG's own C++ compiler, CC.
+
+<P> On a PC the minimum memory needed is 16Mb, but this is really a bit
+tight; you are recommended to have 32Mb.  On a Sun or Silicon Graphics
+system svLis will run on just about any sensible configuaration.
+
+<P>
+
+<HR>
+
+<P>
+
+<H3 align=center> Obtaining SvLis</H3>
+
+<P>When you download svLis, we would appreciate it
+if you would send us your email address (though this is not a prerequisite
+of taking a copy).
+
+<center>
+<BODY onLoad ="document.hiddenform.subbutton">
+<FORM NAME="hiddenform" ACTION="mailto:svlis@bath.ac.uk" METHOD=post>
+<INPUT TYPE="hidden" VALUE="svLis user's email">
+<INPUT TYPE="submit" 
+VALUE="Click here to send your email address automatically">
+</FORM>
+</BODY>
+</center>
+ 
+<P>Your address will <i>not</i>
+be forwarded to anyone else; we will merely use it to keep you abreast of
+updates.
+If at any time you wish to remove yourself from the list email
+<A HREF="mailto:svlis@bath.ac.uk">svlis</A> with the word `remove' in
+the body of the message.
+
+<P>
+As distributed, svLis consists of a
+compressed archive containing the whole of the the system.
+SvLis can be obtained by clicking on:
+
+<UL>
+<LI><a href="ftp://ftp.bath.ac.uk/pub/ensab/svlis/linux_svlis.tar.gz">
+	Linux svLis</a> (300Kb, compiled under Linux 1.2.1),
+<LI><a href="ftp://ftp.bath.ac.uk/pub/ensab/svlis/sun_svlis.tar.gz">
+	Sun svLis</a> (300Kb, compiled under SunOS 5.5.1), or
+<LI><a href="ftp://ftp.bath.ac.uk/pub/ensab/svlis/sg_svlis.tar.gz">
+	Silicon Graphics svLis</a> (530Kb, compiled under Irix 5.3).
+</UL>
+<P>
+These files were updated on 28 November 1997.
+<P>
+Coming soon:
+<UL>
+<LI>SvLis graphics goes entirely <A HREF="http://www.opengl.org/">
+OpenGL</a>, and 
+<LI>SvLis for <A HREF="http://www.microsoft.com/">
+Microsoft</a>
+<A HREF="http://www.microsoft.com/products/prodref/426_ov.htm">
+Windows 95</a> and
+<A HREF="http://www.microsoft.com/products/prodref/428_ov.htm"> 
+Windows NT</a> using
+<A HREF="http://www.microsoft.com/products/prodref/197_ov.htm">
+Visual C++</a>.
+</UL>
+
+<P>
+If you take a copy of svLis, we would appreciate an acknowledgement in 
+any publications or other materials that result from your using it. For
+example, you could cut-and-paste the following:
+
+<br><br> 
+<P><i> 
+This work uses the svLis CSG geometric modelling kernel
+which is distributed free by the <A HREF="http://www.bath.ac.uk/">
+University of Bath</a> and by <A HREF="http://www.inge.com/">
+Information Geometers Ltd</a>.  See <A
+HREF="http://www.bath.ac.uk/~ensab/G_mod/Svlis/">
+http://www.bath.ac.uk/~ensab/G_mod/Svlis/</a> for details.  </i>
+
+<P>
+<HR>
+
+<H3 align=center>Unix Installation</H3>
+
+
+<p> The compressed svLis distribution file for all Unix systems is a
+gzipped tar set.  In the
+following <tt>svlis.tar.gz</tt> stands for one of 
+<tt>linux_svlis.tar.gz</tt>,
+<tt>sun_svlis.tar.gz</tt>, or <tt>sg_svlis.tar.gz</tt> obtained by clicking on one of
+the above highlights.  The stages of the installation of svLis under
+Unix are:
+
+<OL> 
+<LI> Log in as the super-user; 
+<LI> Make the directory where you want svLis to be; usually <tt>/usr/local/Svlis</tt>; 
+<LI> <tt>cd</tt> to that directory; 
+<LI> <tt>mv svlis.tar.gz</tt> into that directory; 
+<LI> <tt>gunzip svlis.tar.gz</tt> 
+<LI> <tt>tar -xvf svlis.tar</tt> 
+<LI> Edit the Makefile to define the directory SVLIS if you are not in
+	<tt>/usr/local/Svlis</tt>; 
+<LI> <tt>make</tt> 
+</OL>
+
+<P> Typing <tt>make</tt> will generate the whole of svLis.  It also
+creates a symbolic link from <tt>/usr/local/bin/sxgi</tt> to <tt>bin/sxgi</tt> in the
+svLis directory.  The <tt>sxgi</tt> program is a rather weedy set of graphics
+procedures for X-Windows.  Clearly <tt>/usr/local/bin</tt> must exist for this
+to work.  SvLis also expects to find the <tt>xv</tt> utility in <tt>/usr/local/bin</tt>;
+if it's not there you'll have to create a symbolic link from
+<tt>/usr/local/bin/xv</tt> to wherever it is.
+
+<p> The files and directories that you will end up with in the svlis
+directory after stage 6 will be:
+
+<OL>
+<LI><tt>Makefile</tt>
+<LI><tt>bin</tt> - directory, contains executables
+<LI><tt>data</tt> - directory, contains test data 
+<LI><tt>include</tt> - directory, contains the svLis <tt>.h</tt> files
+<LI><tt>lib</tt> - directory, contains the libraries
+<LI><tt>obj</tt> - directory, contains compiled object modules 
+<LI><tt>programs</tt> - directory, contains test programs and other utilities
+<LI><tt>results</tt> - directory, where the test programs store output 
+<LI><tt>svlis.tar</tt> - the <tt>.tar</tt> file created by <tt>gunzip</tt>
+<LI><tt>sv_user</tt> - directory, contains the source code for the
+          parts of svLis that are user-modifiable.
+</OL>
+
+<p>
+The <tt>Makefile</tt> is well-commented; just follow the instructions in it for
+step 7. 
+
+<p> After you've done those 8 steps check if all is working by runing
+the program <tt>bin/sv_tst_1</tt>.  This will create a single file in
+the directory <tt>results</tt> called <tt>sv_tst.mod</tt> (cat it out if you
+like; it will start something like:
+
+<pre>
+SvLis(2)
+
+# SvLis created this file on Fri Oct 17 16:40:20 1997
+
+model
+{
+ 268482224 L 0
+ box\interval\0, 10/, interval\0, 10/, interval\0, 10//
+ set_list
+ [
+  268482032 0
+  set
+  (
+   268481656 7 0 &
+   set
+   (
+    268481600 1 0 
+    primitive
+    <
+     268481528 3 0 -
+     primitive
+     <
+.
+.
+.
+.
+</pre>
+
+<P>
+though the numbers will be different).  The file created is a svLis
+model of a green cube intersected with a sphere.  If you run
+<tt>bin/sv_tst_2</tt>, this will read the model, then divide and facet it,
+then print some statistics.  Finally running <tt>bin/sv_tst_g</tt> should
+produce a picture of the model.
+
+<P>
+If you're running svLis on a Sun or under Linux, one of the vagiaries of
+X means that the graphics window sometimes (though not always...) needs
+a redraw signal before svLis starts plotting.  Just promote a window
+over it, then demote that window again.
+
+<P>
+If filespace is tight, you can now backup <tt>svlis.tar</tt> and then delete it.
+
+<P>
+There is an interactive svLis model building and editing program in
+<tt>bin/svlis</tt>.  This has an option to log all its actions to a text file.
+Such a log of a session to make a raytraced picture of the svLis oil
+refinery model is in <tt>data/r_pic.log</tt>.  So, if you run <tt>bin/refinery</tt> (to
+create the refinery model), then run<tt> bin/svlis data/r_pic.log</tt> this will
+make you such a picture (in <tt>results/refinery.ppm</tt>).
+
+<P>
+Finally, there is a file called <tt>programs/tst_prgs/expt.cxx</tt>.  This
+is intended for trying simple experiments with svLis - edit it, then
+<tt>make expt</tt>, then <tt>bin/expt</tt>.
+
+
+
+<!--
+Installation on a PC
+--------------------
+
+<P>
+The compressed svLis distribution file for all PCs to run under
+Windows is a .ZIP file.  Let's call it SVLIS.ZIP for the sake of
+example.  The stages of the installation of svLis on a PC are:
+
+<OL>                                       
+<LI> Make the directory where you want svLis to be, usually C:\SVLIS;
+<LI> Get SVLIS.ZIP and this README file by anonymous ftp as described above;
+<LI> Put them in C:\SVLIS (or wherever you want);
+<LI> Read the README; it may be more up-to-date than this one;
+<LI> PKUNZIP -DE SVLIS.ZIP
+<LI> Set up directories and options in Visual C++ (see below).
+</OL>
+
+<P>
+The result of the PKUNZIP will be the following files in C:\SVLIS:
+
+<OL>                                       
+<LI> SVLIS.ZIP
+<LI>    README
+</OL>
+
+<P>    
+and the following directories:
+
+<OL>                                       
+<LI>    LIB
+<LI>    INCLUDE
+<LI>    PROGRAMS
+<LI>    SV_USER
+<LI>    DOCS
+</OL>
+
+<P> 
+The LIB directory contains the main svlis library.  The INCLUDE
+directory contains the .h files.  The PROGRAMS directory contains
+sub-directories with test programs, GUIs, and other utilities.  The
+SV_USER directory contains the source code for the parts of svLis that
+are user-modifiable, and their resulting library file.  The DOCS
+directory also contains this README file, and any other useful text
+that is available.  Visual C++'s .MAK files for projects are contained
+in the appropriate directories in PROGRAMS, and the resulting
+executables and object modules are there too.  There is a .MAK file
+for the user-defined parts of svLis in SV_USER.
+
+
+Setting-up Visual C++ for svLis
+-------------------------------
+
+<P> 
+You need to add some things to the Visual C++ `Directories' item
+(under `Options').  Firstly add C:\SVLIS\INCLUDE to the include path,
+then add C:\SVLIS\LIB and C:\SVLIS\SV_USER to the library files path.
+SvLis needs the `huge' memory model, so don't forget to set that for
+any new svLis projects that you create.  Also you will need to add
+`svlis' and `sv_user' to the library files searched to resolve
+external references (`Linker' in the `Project' option under
+`Options').  Note that if you install svLis elsewhere than C:\SVLIS
+Visual C++ will have to rescan dependencies whenever you open a svLis
+project.
+
+<P>     
+To check if all is working:
+
+<OL>
+<LI> `Rebuild all' for the project C:\SVLIS\PROGRAMS\TST_PRGS\SV_TST_1.MAK
+<LI> Use the File Manager to run SV_TST_1.EXE
+<LI> `Rebuild all' for the project C:\SVLIS\PROGRAMS\TST_PRGS\SV_TST_2.MAK
+<LI> Use the File Manager to run SV_TST_2.EXE
+<LI> Delete the file C:\SVLIS\PROGRAMS\TST_PRGS\SV_TST.MOD
+</OL>
+
+<P> 
+This makes and runs two simple test programs; the first creates a
+model file (SV_TST.MOD), and the second reads it, divides it, and
+prints statistics on it.  Step 5 is just being tidy...
+
+<P> 
+When all this is working, you should be able to rebuild the svLis
+Microsoft Windows GUI (in C:\SVLIS\PROGRAMS\GUI\MSWIN\GUI.MAK) and run
+it.  There is a rather tedious problem in Microsoft's WINDOWS.H file which
+you need to fix first.  It concerns the definition of a procedure type
+called DLGPROC.  The part of the original file (which will be somewhere like
+C:\MSVC\INCLUDE\WINDOWS.H) that you need to change goes like this:
+
+<pre>
+#ifdef STRICT
+   typedef BOOL (CALLBACK* DLGPROC)(HWND, UINT, WPARAM, LPARAM);
+#else
+   typedef FARPROC DLGPROC;
+#endif
+</pre>
+
+<P>
+and you need to change it to:
+
+<pre>
+// #ifdef STRICT
+      typedef BOOL (CALLBACK* DLGPROC)(HWND, UINT, WPARAM, LPARAM);
+// #else
+//    typedef FARPROC DLGPROC;
+// #endif
+</pre>
+
+<P>
+In other words, comment out the #ifdef STRICT bit.  Note that doing
+a #define STRICT _doesn't_ work; that just causes further problems...
+
+<P>
+If filespace is tight, you can now backup SVLIS.ZIP onto a tape or
+disc and then delete it too.
+
+
+
+The PC Linux version of svLis
+-----------------------------
+
+<P>
+The Linux installation is just the same as for any other Unix
+installation, and is described above.  However, the PROGRAMS, SV_USER,
+DOCS, and INCLUDE directories for the Microsoft Windows and Linux
+versions (indeed for all versions) are identical, so, if you want to
+save space and enhance consistency, you can delete the Linux versions
+of those directories (with rm -rf) and create symbolic links to the
+Windows versions instead.  In /usr/local/svlis you:
+  
+<OL>  
+<LI>	rm -rf programs
+<LI>	rm -rf sv_user
+<LI>	rm -rf docs
+<LI>	rm -rf include
+<LI>	ln -s /dosc/svlis/programs programs
+<LI>	ln -s /dosc/svlis/sv_user sv_user
+<LI>	ln -s /dosc/svlis/docs docs
+<LI>	ln -s /dosc/svlis/include include
+</OL>
+
+<P>	
+(this assumes that your Linux mounts DOS drive C as /dosc).  The only
+problem here is that, if you want to change any programs, or any files
+in sv_user, you will have to su root.  But then, if you want to make
+such changes, you probably should have to do that anyway.
+
+<P>
+Note that these directories (particularly PROGRAMS and SV_USER)
+necessarily contain some files only useful to Microsoft Windows and
+Visual C++.  After you have made the symbolic links it is probably a
+bad idea to delete these when you are super-user under Linux by
+mistake.  Also, it is a really terrible idea to do the rm -rf
+instructions after you've made the symbolic links...
+            
+-->
+
+<P>
+<HR>
+
+
